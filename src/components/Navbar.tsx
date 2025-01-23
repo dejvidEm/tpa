@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import ButtonComponent from './ButtonComponent';
 
 const Navbar = () => {
   // State to manage the navbar's visibility
@@ -20,12 +21,14 @@ const Navbar = () => {
   ];
 
   return (
-    <div className='w-full bg-black flex justify-between items-center h-24 mx-auto px-4 text-white'>
+    <div className='w-full bg-[#0A2125] flex justify-between items-center h-24 mx-auto px-4 text-white'>
       {/* Logo */}
-      <h1 className='w-full text-3xl font-bold text-[#00df9a]'>REACT.</h1>
+      <div className='flex items-center'>
+        <img src="/images/logo.png" alt="company logo" className='w-32'/>
+      </div>
 
       {/* Desktop Navigation */}
-      <ul className='hidden md:flex'>
+      <ul className='hidden md:flex absolute left-1/2 transform -translate-x-1/2'>
         {navItems.map(item => (
           <li
             key={item.id}
@@ -36,21 +39,29 @@ const Navbar = () => {
         ))}
       </ul>
 
+      {/* Right Side Buttons */}
+      <div className='hidden md:flex items-center space-x-4'>
+        <ButtonComponent variant='secondary' size='small'>Contact</ButtonComponent>
+        <span className='text-xl font-bold cursor-pointer'>SK</span>
+      </div>
+
       {/* Mobile Navigation Icon */}
-      <div onClick={handleNav} className='block md:hidden'>
-        {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
+      <div onClick={handleNav} className='block md:hidden cursor-pointer'>
+        {!nav && <AiOutlineMenu size={20} />}
       </div>
 
       {/* Mobile Navigation Menu */}
       <ul
         className={
           nav
-            ? 'fixed md:hidden left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500'
-            : 'ease-in-out w-[60%] duration-500 fixed top-0 bottom-0 left-[-100%]'
+            ? 'fixed md:hidden right-0 top-0 w-[60%] h-full border-l border-l-gray-900 bg-[#000300] ease-in-out duration-500'
+            : 'ease-in-out w-[60%] duration-500 fixed top-0 bottom-0 right-[-100%]'
         }
       >
-        {/* Mobile Logo */}
-        <h1 className='w-full text-3xl font-bold text-[#00df9a] m-4'>REACT.</h1>
+        {/* Close Button */}
+        <div className='flex justify-end p-4'>
+          <AiOutlineClose size={20} className='cursor-pointer' onClick={handleNav} />
+        </div>
 
         {/* Mobile Navigation Items */}
         {navItems.map(item => (
@@ -61,6 +72,14 @@ const Navbar = () => {
             {item.text}
           </li>
         ))}
+
+        {/* Mobile Right Side Buttons */}
+        <div className='p-4 flex flex-col items-start space-y-4'>
+          <button className='bg-[#00df9a] text-black px-4 py-2 rounded-xl hover:bg-[#00bf8a] duration-300 w-full text-left'>
+            Contact
+          </button>
+          <span className='text-xl font-bold cursor-pointer'>SK</span>
+        </div>
       </ul>
     </div>
   );
