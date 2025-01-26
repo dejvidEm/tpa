@@ -20,8 +20,7 @@ const Homepage: React.FC = () => {
 
   return (
     <div className='flex flex-col gap-0'>
-        {/* Nadpis podnadpis a button */}
-        <Heading mainHeading={'Where Top Talent Meets Global Opportunities'} maxWidth='max-w-[800px]' rotateClass='-rotate-2'/>
+        
 
         {/* Posuvny pas s partnermi */}
         <Partners logos={logos} title={'Built on Trust, Driven by Partnership'}/>
