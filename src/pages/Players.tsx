@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PlayerCard from '../components/PlayerCard';
 
 export const players = [
@@ -126,7 +126,28 @@ export const players = [
 
 const Players: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const postsPerPage = 8;
+  const [postsPerPage, setPostsPerPage] = useState(8);
+  
+  const updatePostsPerPage = () => {
+    if (window.innerWidth < 768) {
+      setPostsPerPage(2); // Mobilné zariadenia
+    } else {
+      setPostsPerPage(8); // Desktop
+    }
+  };
+
+  useEffect(() => {
+    // Nastavenie postsPerPage pri prvom načítaní
+    updatePostsPerPage();
+
+    // Pridanie listenera na zmenu veľkosti okna
+    window.addEventListener('resize', updatePostsPerPage);
+
+    // Vyčistenie event listeneru pri odmontovaní komponentu
+    return () => {
+      window.removeEventListener('resize', updatePostsPerPage);
+    };
+  }, []);
 
   const totalPages = Math.ceil(players.length / postsPerPage);
 
@@ -167,12 +188,9 @@ const Players: React.FC = () => {
 
       {/* Pagination Section */}
       <section className="max-w-[1400px] mx-auto px-4 sm:px-20 py-8 flex flex-row justify-between items-center gap-4">
-        <div className="text-sm text-gray-500">
-          {`${startPostIndex}-${endPostIndex} from ${players.length} total`}
-        </div>
-        <div className="flex items-center gap-2">
+        <div className="flex mx-auto items-center justify-center gap-2">
           <button
-            className={`w-10 h-10 flex items-center justify-center border rounded ${
+            className={`w-10 h-10 text-white flex items-center justify-center border rounded ${
               currentPage === 1
                 ? "text-gray-400 cursor-not-allowed"
                 : "hover:bg-gray-200"
