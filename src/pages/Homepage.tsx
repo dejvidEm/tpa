@@ -1,6 +1,5 @@
 import React from 'react';
 import FooterBanner from '../components/FooterBanner';
-import Heading from '../components/Heading';
 import Partners from '../components/Partnership';
 
 const Homepage: React.FC = () => {
