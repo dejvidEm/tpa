@@ -160,9 +160,6 @@ const Players: React.FC = () => {
     (currentPage - 1) * postsPerPage,
     currentPage * postsPerPage
   );
-
-  const startPostIndex = (currentPage - 1) * postsPerPage + 1;
-  const endPostIndex = Math.min(currentPage * postsPerPage, players.length);
  
   return (
     <div className='bg-blue_primary'>
