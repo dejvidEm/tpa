@@ -27,7 +27,7 @@ const Banner: React.FC<BannerProps> = ({
 
       {/* Veľký nadpis je vždy zobrazený, s dynamickým max-width a rotáciou */}
       <h1
-        className={`text-3xl sm:text-4xl md:text-6xl font-bold uppercase mt-4 mx-8 md:mx-0 my-16 ${maxWidth} ${rotateClass} break-words`}
+        className={`text-3xl sm:text-4xl md:text-6xl font-bold uppercase mt-4 mx-8 md:mx-0 my-16 ${maxWidth} ${rotateClass} break-words text-gold_primary`}
       >
         {mainHeading}
       </h1>

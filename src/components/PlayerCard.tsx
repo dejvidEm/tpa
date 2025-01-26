@@ -26,14 +26,14 @@ const PlayerCard: React.FC<PlayerCardProps> = ({
   age,
 }) => {
   return (
-    <div className="max-w-sm text-white rounded-lg overflow-hidden p-8">
+    <div className="text-white rounded-lg overflow-hidden">
       <h2 className="text-xl font-bold uppercase">{name}</h2>
       <p className="text-white">{team}</p>
-      <div className="my-6">
+      <div className="my-4">
         <img
           src={image}
           alt={`${name} photo`}
-          className="w-full h-auto rounded-md"
+          className="w-full h-96 object-cover rounded"
         />
       </div>
       <div className="text-sm flex flex-col gap-2">
