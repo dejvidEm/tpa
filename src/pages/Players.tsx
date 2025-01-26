@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PlayerCard from '../components/PlayerCard';
+import FooterBanner from '../components/FooterBanner';
+import Heading from '../components/Heading';
 
 export const players = [
   {
@@ -163,6 +165,8 @@ const Players: React.FC = () => {
  
   return (
     <div className='bg-blue_primary'>
+      <Heading mainHeading={'Players proudly represented by the top players agency'} maxWidth='max-w-[1000px]' rotateClass='-rotate-2'/>
+
       <section className="bg-blue_primary py-8">
   <div className="max-w-[1600px] mx-4 md:mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 gap-y-20">
     {displayedPosts.map((post, index) => (
@@ -225,6 +229,25 @@ const Players: React.FC = () => {
           </button>
         </div>
       </section>
+
+      {/* Nadpis podnadpis a button */}
+      <FooterBanner
+        mainHeading={
+          "Your journey to greatness starts here. Lets make it happen."
+        }
+        smallHeading={
+          "Step into the future with Top Players Agency, where we turn ambition into achievement."
+        }
+        smallFirst={false}
+        maxWidth="max-w-3xl"
+        buttonText="Contact us"
+      />
+
+      {/* Wavy nadpis, ktory zatial nie je wavy*/}
+      <FooterBanner
+        mainHeading={"Fifa certified to represent minors"}
+        maxWidth="w-full"
+      />
     </div>
   );
 };

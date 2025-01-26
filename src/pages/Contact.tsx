@@ -12,9 +12,11 @@ import {
 import { TbPhoneCall } from "react-icons/tb";
 import { AiFillTikTok } from "react-icons/ai";
 
+import RotateLinks from "../components/rotateLinks";
+
 const Contact: React.FC = () => {
   return (
-    <div>
+    <div className="bg-blue_primary">
       <section className="bg-blue_primary text-white py-16 px-8">
         <div className="flex flex-col lg:flex-row items-start gap-32 max-w-[1600px] mx-auto">
           <div className="lg:w-1/2">
@@ -145,7 +147,7 @@ const Contact: React.FC = () => {
       </section>
 
       <section className="bg-blue_primary text-white pb-10 pt-10 pl-8 pr-8 md:p-40">
-        <div className="grid grid-cols-1 md:grid-cols-3 md:gap-36 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 md:gap-12 gap-8">
           <FeatureItem
             number="01"
             title="EXPERIENCE AND EXPERTISE"
@@ -165,37 +167,7 @@ const Contact: React.FC = () => {
       </section>
 
 <section className="relative bg-white text-white py-8">
-  <div className="absolute w-[110%] inset-x-0 -bottom-8 h-16 bg-[#0E2A2F] -rotate-2 hidden lg:block">
-    <div className="relative z-10 max-w-[1400px] mx-auto pt-5">
-      <div className="hidden lg:flex justify-around items-center gap-24">
-        <div className="flex items-center gap-2">
-          <BsInstagram size={24} />
-          <span className="border-l border-gray-400 h-5 mx-2"></span>
-          <h3 className="text-heading">Instagram</h3>
-        </div>
-        <div className="flex items-center gap-2">
-          <BsFacebook size={24} />
-          <span className="border-l border-gray-400 h-5 mx-2"></span>
-          <h3 className="text-heading">Facebook</h3>
-        </div>
-        <div className="flex items-center gap-2">
-          <BsYoutube size={24} />
-          <span className="border-l border-gray-400 h-5 mx-2"></span>
-          <h3 className="text-heading">YouTube</h3>
-        </div>
-        <div className="flex items-center gap-2">
-          <BsLinkedin size={24} />
-          <span className="border-l border-gray-400 h-5 mx-2"></span>
-          <h3 className="text-heading">LinkedIn</h3>
-        </div>
-        <div className="flex items-center gap-2">
-          <AiFillTikTok size={28} />
-          <span className="border-l border-gray-400 h-5 mx-2"></span>
-          <h3 className="text-heading">TikTok</h3>
-        </div>
-      </div>
-    </div>
-  </div>
+  <RotateLinks/>
 
   <div className="grid grid-cols-2 gap-4 lg:hidden pl-8 pr-8">
     <div className="flex items-center gap-2 p-4 rounded-lg">
