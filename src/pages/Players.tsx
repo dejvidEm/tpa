@@ -144,9 +144,9 @@ const Players: React.FC = () => {
   const endPostIndex = Math.min(currentPage * postsPerPage, players.length);
  
   return (
-    <div>
+    <div className='bg-blue_primary'>
       <section className="bg-blue_primary py-8">
-  <div className="max-w-[1600px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 gap-y-20">
+  <div className="max-w-[1600px] mx-4 md:mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 gap-y-20">
     {displayedPosts.map((post, index) => (
       <PlayerCard
         key={index} // Pridanie unikátneho kľúča pre každý prvok v zozname
@@ -186,9 +186,9 @@ const Players: React.FC = () => {
             (page) => (
               <button
                 key={page}
-                className={`w-10 h-10 flex items-center justify-center border rounded ${
+                className={`w-10 h-10 flex text-white items-center justify-center border rounded ${
                   currentPage === page
-                    ? "border-[#1C2820] text-[#1C2820]"
+                    ? "border-gold_primary text-white"
                     : "hover:bg-gray-200"
                 }`}
                 onClick={() => handlePageChange(page)}
@@ -198,7 +198,7 @@ const Players: React.FC = () => {
             )
           )}
           <button
-            className={`w-10 h-10 flex items-center justify-center border rounded ${
+            className={`w-10 h-10 text-white flex items-center justify-center border rounded ${
               currentPage === totalPages
                 ? "text-gray-400 cursor-not-allowed"
                 : "hover:bg-gray-200"
