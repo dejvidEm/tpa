@@ -1,5 +1,6 @@
 import React from 'react';
 import FooterBanner from '../components/FooterBanner';
+import Heading from '../components/Heading';
 import Partners from '../components/Partnership';
 
 const Homepage: React.FC = () => {
@@ -19,7 +20,8 @@ const Homepage: React.FC = () => {
 
   return (
     <div className='flex flex-col gap-0'>
-        
+        {/* Nadpis podnadpis a button */}
+        <Heading mainHeading={'Where Top Talent Meets Global Opportunities'} maxWidth='max-w-[800px]' rotateClass='-rotate-2'/>
 
         {/* Posuvny pas s partnermi */}
         <Partners logos={logos} title={'Built on Trust, Driven by Partnership'}/>
