@@ -8,6 +8,8 @@ import Card from "../components/Card";
 import { BsAsterisk } from "react-icons/bs";
 import PlayerTransfers from "../components/PlayerTransfers";
 import ImageStrip from "../components/ImageStrip";
+import FinancialManagement from "../components/MainComp";
+import SportsLawProfessionals from "../components/MainCompMobile";
 
 // data kariet s podsránkami
 const cardData = [
@@ -134,8 +136,10 @@ const Homepage: React.FC = () => {
         maxWidth="max-w-[800px]"
         rotateClass="-rotate-2"
       />
+      
+      <FinancialManagement/>
 
-      {/* Slider s kartami podstránok */}
+      {/* Sekcia s kartami podstránok */}
       <section className="w-full mx-auto slider bg-blue_primary py-16 px-8 hidden md:flex flex-col gap-12">
         <div className="flex max-w-[1500px] mx-auto flex-col justify-between items-start">
           <div className="w-full flex flex-row pb-8 justify-between items-end">
@@ -166,7 +170,7 @@ const Homepage: React.FC = () => {
               </div>
             </div>
           </div>
-          {/* Slider s kurzami */}
+          {/* Slider s kartami podstránok */}
           <ResponsiveSlider
             ref={coursesSliderRef}
             items={cardData.map((data, index) => (
@@ -184,19 +188,18 @@ const Homepage: React.FC = () => {
         </div>
       </section>
 
-      <section className="bg-[#1C2820] w-full mx-auto py-16 block md:hidden">
+      {/* Sekcia pre mobilné zariadenia s kartami podstránok */}
+      <section className="bg-blue_primary w-full mx-auto py-16 block md:hidden">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-slate-100 pb-4">
-            Objavte kurzy, ktoré <br /> Vás posunú vpred!
+          <h2 className="text-3xl md:text-6xl font-bold text-slate-100 pb-4 uppercase">
+          Comprehensive services tailored to your needs
           </h2>
-          <p className="text-slate-100 pb-8">
-            Pripojte sa k našim profesionálnym kurzom a získajte praktické
-            zručnosti, aktuálne vedomosti a certifikáciu, ktorá vám otvorí nové
-            možnosti. Naše kurzy sú navrhnuté tak, aby ste sa naučili konkrétne
-            techniky a postupy, ktoré uplatníte.
+          <div className="flex flex-row items-end">
+          <p className="text-slate-100  md:pb-8">
+            At Top Players Agency, we provide end-to-end services designed to help you succeed on and off the pitch.
           </p>
 
-          <div className="arrows flex flex-row gap-4">
+          <div className="arrows flex flex-row gap-4 h-min">
             <div
               className="bg-slate-100 rounded-lg p-4 cursor-pointer hover:bg-gray-200 transition"
               onClick={handleCoursesPrevMobile}
@@ -209,6 +212,7 @@ const Homepage: React.FC = () => {
             >
               <FaArrowRight />
             </div>
+          </div>
           </div>
 
           {/* Slider pre mobilné zariadenia */}

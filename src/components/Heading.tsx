@@ -24,7 +24,7 @@ const Heading: React.FC<HeadingProps> = ({
         />
       </div>
       <h1
-        className={`text-3xl md:text-6xl font-bold uppercase mt-4 my-16 ${maxWidth} ${rotateClass} break-words text-gold_primary`}
+        className={`text-3xl md:text-6xl font-bold uppercase mt-4 my-16 ${maxWidth} ${rotateClass} break-words bg-gradient-to-r from-gold_secondary to-gold_primary inline-block text-transparent bg-clip-text`}
       >
         {mainHeading}
       </h1>
