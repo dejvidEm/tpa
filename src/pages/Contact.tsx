@@ -16,7 +16,7 @@ import RotateLinks from "../components/rotateLinks";
 
 const Contact: React.FC = () => {
   return (
-    <div className="bg-blue_primary">
+    <div className="bg-blue_primary pt-40">
       <section className="bg-blue_primary text-white py-16 px-8">
         <div className="flex flex-col lg:flex-row items-start gap-32 max-w-[1600px] mx-auto">
           <div className="lg:w-1/2">

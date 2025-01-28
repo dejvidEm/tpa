@@ -7,7 +7,7 @@ type Props = {
   images: string[]; // Array of image URLs or paths
 };
 
-const ImageStrip: React.FC<Props> = ({ title, images }) => {
+const ImageStrip: React.FC<Props> = ({ images }) => {
   return (
     <div className="w-full bg-blue_primary">
       <h1 className="text-4xl md:text-6xl font-bold uppercase mt-4 my-16 mx-32 md:max-w-3xl break-words bg-gradient-to-r from-gold_secondary to-gold_primary inline-block text-transparent bg-clip-text"><span className='ml-16'>Follow the journey,</span> frame by frame</h1>
