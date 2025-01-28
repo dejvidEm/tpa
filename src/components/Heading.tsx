@@ -16,7 +16,7 @@ const Heading: React.FC<HeadingProps> = ({
 }) => {
   return (
     <div
-      className="bg-blue_primary text-white py-20 pt-40 flex flex-col items-center justify-center text-center relative overflow-hidden"
+      className="bg-[#0A2125] text-white py-20 pt-40 flex flex-col items-center justify-center text-center relative overflow-hidden"
       style={{
         backgroundImage: backgroundImage ? `url(${backgroundImage})` : undefined,
         backgroundSize: "cover",

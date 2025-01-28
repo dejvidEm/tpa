@@ -20,13 +20,17 @@ const StepsComp: React.FC<StepsCompProps> = ({
   imageSrc,
   imageAlt,
 }) => {
+
+  const [firstWord, ...rest] = heading.split(' ');
+
   return (
-    <div className="bg-blue_primary text-white px-8 py-16 md:py-24 lg:py-32 relative">
+    <div className="bg-[#0A2125] text-white px-8 py-16 md:py-24 lg:py-32 relative">
       <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row md:space-x-12">
         <div className="flex-1 mb-12">
-          <h1 className="flex justify-start max-w-96 text-5xl font-bold mb-12 text-heading">
-            {heading}
-          </h1>
+        <h1 className="justify-start max-w-96 text-5xl font-bold mb-12 bg-gradient-to-r from-gold_secondary to-gold_primary inline-block text-transparent bg-clip-text">
+      <span className="ml-20">{firstWord}</span>
+      {rest.join(' ')}
+    </h1>
 
           <div className="space-y-64 ml-80 mt-32 max-w-[490px]">
             {features.slice(1, 3).map((feature, index) => (

@@ -1,8 +1,10 @@
 import React from 'react';
 
-import { pageContent } from '../../components/data';
+import { mainCompMobileContent, pageContent } from '../../components/data';
 import Heading from '../../components/Heading';
 import MainComp from '../../components/MainComp';
+import MainCompMobile from '../../components/MainCompMobile';
+import FooterBanner from '../../components/FooterBanner';
 
 const HealthCare: React.FC = () => {
   return (
@@ -27,6 +29,35 @@ const HealthCare: React.FC = () => {
       image="/images/figures/healthcare.png"
     />
     </section>
+
+    <section className="block md:hidden">
+    <MainCompMobile
+  zltyNadpis={mainCompMobileContent.zltyNadpis}
+  prvyText={mainCompMobileContent.prvyText}
+  nadpisStranky={mainCompMobileContent.nadpisStranky}
+  prvyBadge={mainCompMobileContent.prvyBadge}
+  druhyBadge={mainCompMobileContent.druhyBadge}
+  druhyText={mainCompMobileContent.druhyText}
+  prednadpis={mainCompMobileContent.prednadpis}
+  podnadpisZltehoTextu={mainCompMobileContent.podnadpisZltehoTextu}
+  playerImage="/images/figures/healthcare.png"
+/>
+      </section>
+      
+      {/* Nadpis podnadpis a button */}
+      <FooterBanner
+        mainHeading={
+          "Your journey to greatness starts here. Lets make it happen."
+        }
+        smallHeading={
+          "Step into the future with Top Players Agency, where we turn ambition into achievement."
+        }
+        smallFirst={false}
+        maxWidth="max-w-3xl"
+        buttonText="Contact us"
+        backgroundImage="/images/footerBanner.png"
+      />
+
     </div>
   );
 };

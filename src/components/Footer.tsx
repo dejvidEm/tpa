@@ -4,7 +4,7 @@ import { CiGlobe } from "react-icons/ci";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-blue_primary text-white px-8 py-8 md:px-16 md:py-16">
+    <footer className="bg-[#0A2125] text-white px-8 py-8 md:px-16 md:py-16">
       <div className="flex flex-col md:flex-row justify-between items-center">
         <div className="hidden md:flex flex-row items-center mb-4 md:mb-0">
           <img src="/images/logo-footer.png" alt="" className="w-12" />

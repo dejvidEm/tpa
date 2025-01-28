@@ -14,6 +14,7 @@ import StepsComp from "../components/StepsComp";
 import StepsCompMobile from "../components/StepsCompMobile";
 
 import { pageContent } from "../components/data";
+import ImageWavyBanner from "../components/ImageWavyBanner";
 
 // data kariet s podsránkami
 const cardData = [
@@ -196,21 +197,19 @@ we specialize in comprehensive support, including career management, legal servi
         <StepsComp
           heading="SPORTS LAW PROFESSIONALS SPECIALIZES IN"
           features={features}
-          imageSrc="/src/photos/ball.png"
+          imageSrc="/images/ball.png"
           imageAlt="Football"
         />
-        ;
       </section>
       <section className="block md:hidden">
         <StepsCompMobile
           heading="SPORTS LAW PROFESSIONALS SPECIALIZES IN"
           features={features}
         />
-        ;
       </section>
 
       {/* Sekcia s kartami podstránok */}
-      <section className="w-full mx-auto slider bg-blue_primary py-16 px-8 hidden md:flex flex-col gap-12">
+      <section className="w-full mx-auto slider bg-[#0A2125] py-16 px-8 hidden md:flex flex-col gap-12">
         <div className="flex max-w-[1500px] mx-auto flex-col justify-between items-start">
           <div className="w-full flex flex-row pb-8 justify-between items-end">
             <div className="flex flex-col gap-2 w-3/5">
@@ -260,7 +259,7 @@ we specialize in comprehensive support, including career management, legal servi
       </section>
 
       {/* Sekcia pre mobilné zariadenia s kartami podstránok */}
-      <section className="bg-blue_primary w-full mx-auto py-16 block md:hidden">
+      <section className="bg-[#0A2125] w-full mx-auto py-16 block md:hidden">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl md:text-6xl font-bold text-slate-100 pb-4 uppercase">
             Comprehensive services tailored to your needs
@@ -352,13 +351,11 @@ we specialize in comprehensive support, including career management, legal servi
         smallFirst={false}
         maxWidth="max-w-3xl"
         buttonText="Contact us"
+        backgroundImage="/images/footerBanner.png"
       />
 
       {/* Wavy nadpis, ktory zatial nie je wavy*/}
-      <FooterBanner
-        mainHeading={"Fifa certified to represent minors"}
-        maxWidth="w-full"
-      />
+      <ImageWavyBanner/>
     </div>
   );
 };

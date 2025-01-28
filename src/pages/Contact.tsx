@@ -20,7 +20,7 @@ const Contact: React.FC = () => {
       <section className="bg-blue_primary text-white py-16 px-8">
         <div className="flex flex-col lg:flex-row items-start gap-32 max-w-[1600px] mx-auto">
           <div className="lg:w-1/2">
-            <h1 className="md:text-[80px] md:leading-[80px] text-[38px] leading-[40px] mb-4 text-heading font-bold">
+            <h1 className="md:text-[80px] md:leading-[80px] text-[38px] leading-[40px] mb-4 text-gold_primary font-bold">
               LET’S BUILD YOUR FOOTBALL LEGACY
             </h1>
             <p className="md:mb-12 mb:2 md:text-[18px] md:leading-[24px] text-[16px] leading-[24px] max-w-[480px]">
@@ -170,35 +170,35 @@ const Contact: React.FC = () => {
   <RotateLinks/>
 
   <div className="grid grid-cols-2 gap-4 lg:hidden pl-8 pr-8">
-    <div className="flex items-center gap-2 p-4 rounded-lg">
+    <div className="flex items-center gap-2 bg-[#112A2F] p-4 rounded-lg">
       <BsInstagram size={24} />
       <span className="border-l border-gray-400 h-5 mx-2"></span>
-      <h3 className="text-heading">Instagram</h3>
+      <h3 className="text-gold_primary">Instagram</h3>
     </div>
     <div className="flex items-center gap-2 bg-[#112A2F] p-4 rounded-lg">
       <BsFacebook size={24} />
       <span className="border-l border-gray-400 h-5 mx-2"></span>
-      <h3 className="text-heading">Facebook</h3>
+      <h3 className="text-gold_primary">Facebook</h3>
     </div>
     <div className="flex items-center gap-2 bg-[#112A2F] p-4 rounded-lg">
       <BsYoutube size={24} />
       <span className="border-l border-gray-400 h-5 mx-2"></span>
-      <h3 className="text-heading">YouTube</h3>
+      <h3 className="text-gold_primary">YouTube</h3>
     </div>
     <div className="flex items-center gap-2 bg-[#112A2F] p-4 rounded-lg">
       <BsLinkedin size={24} />
       <span className="border-l border-gray-400 h-5 mx-2"></span>
-      <h3 className="text-heading">LinkedIn</h3>
+      <h3 className="text-gold_primary">LinkedIn</h3>
     </div>
     <div className="flex items-center gap-2 bg-[#112A2F] p-4 rounded-lg">
       <AiFillTikTok size={28} />
       <span className="border-l border-gray-400 h-5 mx-2"></span>
-      <h3 className="text-heading">TikTok</h3>
+      <h3 className="text-gold_primary">TikTok</h3>
     </div>
     <div className="flex items-center gap-2 bg-[#112A2F] p-4 rounded-lg">
       <AiFillTikTok size={28} />
       <span className="border-l border-gray-400 h-5 mx-2"></span>
-      <h3 className="text-heading">TikTok</h3>
+      <h3 className="text-gold_primary">TikTok</h3>
     </div>
   </div>
 </section>

@@ -27,7 +27,7 @@ const PlayerTransfers: React.FC = () => {
   const highlightedIndex = 2; // Index riadku, ktorý chceme zvýrazniť (tu napr. tretí hráč)
 
   return (
-    <div className="bg-blue_primary text-white px-6 py-8">
+    <div className="bg-[#0A2125] text-white px-6 py-8">
         <h1 className='text-3xl md:text-6xl bg-gradient-to-r from-gold_secondary to-gold_primary inline-block text-transparent bg-clip-text mb-10 uppercase font-bold leading-8'>From Players <br />
         <span className='ml-16'>to transfers</span></h1>
       <div className="gap-8">

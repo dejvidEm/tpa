@@ -1,8 +1,9 @@
 import React from 'react';
 
-import { pageContent } from '../../components/data';
+import { mainCompMobileContent, pageContent } from '../../components/data';
 import Heading from '../../components/Heading';
 import MainComp from '../../components/MainComp';
+import MainCompMobile from '../../components/MainCompMobile';
 
 const YouthRepre: React.FC = () => {
   return (
@@ -27,6 +28,21 @@ const YouthRepre: React.FC = () => {
       image="/images/figures/youth.png"
     />
     </section>
+
+    <section className="block md:hidden">
+    <MainCompMobile
+  zltyNadpis={mainCompMobileContent.zltyNadpis}
+  prvyText={mainCompMobileContent.prvyText}
+  nadpisStranky={mainCompMobileContent.nadpisStranky}
+  prvyBadge={mainCompMobileContent.prvyBadge}
+  druhyBadge={mainCompMobileContent.druhyBadge}
+  druhyText={mainCompMobileContent.druhyText}
+  prednadpis={mainCompMobileContent.prednadpis}
+  podnadpisZltehoTextu={mainCompMobileContent.podnadpisZltehoTextu}
+  playerImage="/images/figures/youth.png"
+/>
+      </section>
+
     </div>
   );
 };

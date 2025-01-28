@@ -27,7 +27,7 @@ const MainCompMobile: FC<MainCompMobileProps> = ({
   icon: Icon = BsLinkedin,
 }) => {
   return (
-    <div className="bg-blue_primary text-white px-4 py-16 md:py-24 lg:py-32 flex flex-col items-center">
+    <div className="bg-[#0A2125] text-white px-4 py-16 md:py-24 lg:py-32 flex flex-col items-center">
       <div className="flex flex-col items-center space-y-12 w-full">
         <div className="flex flex-col items-center text-center space-y-4">
           <p className="text-gray-300">{prvyText}</p>
@@ -72,7 +72,7 @@ const MainCompMobile: FC<MainCompMobileProps> = ({
           <div className="flex items-center gap-4 bg-[#0c2327] p-4 rounded-lg">
             <Icon size={24} />
             <span className="border-l border-gray-400 h-5 mx-2"></span>
-            <h3 className="text-heading">{druhyBadge}</h3>
+            <h3 className="text-gold_primary">{druhyBadge}</h3>
           </div>
         </div>
       </div>

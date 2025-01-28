@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PlayerCard from '../components/PlayerCard';
 import FooterBanner from '../components/FooterBanner';
 import Heading from '../components/Heading';
+import ImageWavyBanner from '../components/ImageWavyBanner';
 
 export const players = [
   {
@@ -164,10 +165,10 @@ const Transfers: React.FC = () => {
   );
  
   return (
-    <div className='bg-blue_primary'>
+    <div className='bg-[#0A2125]'>
       <Heading mainHeading={'Successful transfers facilitated by our expertise'} maxWidth='max-w-[1000px]' rotateClass='-rotate-2'/>
 
-      <section className="bg-blue_primary py-8">
+      <section className="bg-[#0A2125] py-8">
   <div className="max-w-[1600px] mx-4 md:mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 gap-y-20">
     {displayedPosts.map((post, index) => (
       <PlayerCard
@@ -241,13 +242,11 @@ const Transfers: React.FC = () => {
         smallFirst={false}
         maxWidth="max-w-3xl"
         buttonText="Contact us"
+        backgroundImage="/images/footerBanner.png"
       />
 
       {/* Wavy nadpis, ktory zatial nie je wavy*/}
-      <FooterBanner
-        mainHeading={"Fifa certified to represent minors"}
-        maxWidth="w-full"
-      />
+      <ImageWavyBanner/>
     </div>
   );
 };
