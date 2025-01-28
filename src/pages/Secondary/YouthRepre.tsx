@@ -4,6 +4,7 @@ import { mainCompMobileContent, pageContent } from '../../components/data';
 import Heading from '../../components/Heading';
 import MainComp from '../../components/MainComp';
 import MainCompMobile from '../../components/MainCompMobile';
+import ImageWavyBanner from '../../components/ImageWavyBanner';
 
 const YouthRepre: React.FC = () => {
   return (
@@ -42,6 +43,8 @@ const YouthRepre: React.FC = () => {
   playerImage="/images/figures/youth.png"
 />
       </section>
+      
+      <ImageWavyBanner/>
 
     </div>
   );

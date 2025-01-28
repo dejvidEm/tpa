@@ -33,13 +33,13 @@ const Footer: React.FC = () => {
       </div>
 
       <div className="flex justify-center mt-16 md:mt-32">
-        <div className="hidden lg:flex flex-row items-center px-8 py-2 rounded-md border-2 border-gray-500 border-opacity-30">
-          <img src="/images/image.png" alt="" className="w-32" />
+        <div className="flex flex-row items-center px-8 py-2 rounded-md border-2 border-gray-500 border-opacity-30">
+          <img src="/images/fifa_logo.png" alt="" className="w-16" />
           <span className="bg-gray-500 opacity-30 h-[60%] w-0.5 ml-4 mr-6"></span>
           <p className="text-gold_primary">Certified agents</p>
         </div>
         <div className="flex md:hidden flex-row items-center mb-4 md:mb-0">
-          <img src="/images/logo-footer.png" alt="" className="w-12" />
+          <img src="/images/fifa_logo.png" alt="" className="w-12" />
           <span className="bg-gray-500 opacity-30 h-[40%] w-0.5 ml-2 mr-4"></span>
           <p className="text-sm text-gold_primary">2025 © All rights reserved</p>
         </div>

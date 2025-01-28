@@ -10,8 +10,6 @@ import PlayerTransfers from "../components/PlayerTransfers";
 import ImageStrip from "../components/ImageStrip";
 import MainComp from "../components/MainComp";
 import MainCompMobile from "../components/MainCompMobile";
-import StepsComp from "../components/StepsComp";
-import StepsCompMobile from "../components/StepsCompMobile";
 
 import { pageContent } from "../components/data";
 import ImageWavyBanner from "../components/ImageWavyBanner";
@@ -82,29 +80,6 @@ const Homepage: React.FC = () => {
     "/images/mbape.png",
     "/images/haaland.png",
     "/images/kane.png",
-  ];
-
-  const features = [
-    {
-      number: "01",
-      title: "CONTRACT REVIEW AND NEGOTIATION",
-      text: "We meticulously negotiate and review contracts to ensure they reflect your best interests and safeguard your future.",
-    },
-    {
-      number: "02",
-      title: "DISPUTE RESOLUTION",
-      text: "Should conflicts arise, we provide expert advice and representation to protect your rights and reputation.",
-    },
-    {
-      number: "03",
-      title: "INTELLECTUAL PROPERTY",
-      text: "We help you secure and manage your personal brand, including image rights, trademarks, and digital presence.",
-    },
-    {
-      number: "04",
-      title: "COMPLIANCE AND REGULATIONS",
-      text: "We ensure you remain compliant with league, federation, and governing body rules, including those specific to transfers, employment, and eligibility.",
-    },
   ];
 
   // Referencie pre oba slidery
@@ -190,21 +165,6 @@ we specialize in comprehensive support, including career management, legal servi
           prednadpis={"Whether youre"}
           podnadpisZltehoTextu={"Our team is dedicated to elevating your career with seamless, world-class representation."}
           playerImage={"/images/figures/homepage.png"}
-        />
-      </section>
-
-      <section className="hidden md:block">
-        <StepsComp
-          heading="SPORTS LAW PROFESSIONALS SPECIALIZES IN"
-          features={features}
-          imageSrc="/images/ball.png"
-          imageAlt="Football"
-        />
-      </section>
-      <section className="block md:hidden">
-        <StepsCompMobile
-          heading="SPORTS LAW PROFESSIONALS SPECIALIZES IN"
-          features={features}
         />
       </section>
 
@@ -332,13 +292,13 @@ we specialize in comprehensive support, including career management, legal servi
 
       <PlayerTransfers />
 
+      {/* Posuvny pas s partnermi */}
+      <Partners logos={logos} title={"Built on Trust, Driven by Partnership"} />
+
       <ImageStrip
         title={"Follow the Journey, Frame by Frame"}
         images={stripData}
       />
-
-      {/* Posuvny pas s partnermi */}
-      <Partners logos={logos} title={"Built on Trust, Driven by Partnership"} />
 
       {/* Nadpis podnadpis a button */}
       <FooterBanner

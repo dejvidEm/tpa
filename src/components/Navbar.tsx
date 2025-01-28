@@ -33,7 +33,7 @@ const Navbar = () => {
     },
     { id: 2, text: 'Players', link: '/players' },
     { id: 3, text: 'Transfers', link: '/transfers' },
-    { id: 4, text: 'About Us', link: '/contact' },
+    { id: 4, text: 'About Us', link: '/about' },
   ];
 
   const handleMouseLeaveWithDelay = () => {

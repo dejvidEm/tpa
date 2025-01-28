@@ -28,8 +28,8 @@ const MainComp: React.FC<MainCompProps> = ({
         <div className="flex flex-col items-start space-y-8">
           <div className="text-left">
             <div className="flex items-center space-x-4 mb-4">
-              <div className="flex justify-start gap-2 bg-[#112A2F] border border-gray-500 p-4 rounded-lg mb-4">
-                <BsLinkedin size={24} />
+              <div className="flex justify-center gap-2 bg-[#112A2F] border border-gray-500 p-4 rounded-lg mb-4">
+                <img src="/images/fifa_logo.png" className="w-16"></img>
                 <span className="border-l border-gray-400 h-5 mx-2"></span>
                 <h3 className="text-gold_primary">{nadpisStranky}</h3>
               </div>
