@@ -1,36 +1,78 @@
-import FeatureItem from "../components/FeatureItem";
+import { BsLinkedin } from "react-icons/bs";
+import { FC } from "react";
 
-const SportsLawProfessionals = () => {
+type MainCompMobileProps = {
+  zltyNadpis: string;
+  prvyText: string;
+  nadpisStranky: string;
+  prvyBadge: string;
+  druhyBadge: string;
+  druhyText: string;
+  prednadpis: string;
+  podnadpisZltehoTextu: string;
+  playerImage: string;
+  icon?: React.ElementType;
+};
+
+const MainCompMobile: FC<MainCompMobileProps> = ({
+  zltyNadpis,
+  prvyText,
+  nadpisStranky,
+  prvyBadge,
+  druhyBadge,
+  druhyText,
+  prednadpis,
+  podnadpisZltehoTextu,
+  playerImage,
+  icon: Icon = BsLinkedin,
+}) => {
   return (
-    <div className="bg-blue_primary text-white px-8 py-16 md:py-24 lg:py-32 relative">
-      <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row md:space-x-12">
-        <div className="flex-1 mb-12">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-8 text-gold_primary">
-            SPORTS LAW PROFESSIONALS <br /> SPECIALIZES IN
-          </h1>
+    <div className="bg-blue_primary text-white px-4 py-16 md:py-24 lg:py-32 flex flex-col items-center">
+      <div className="flex flex-col items-center space-y-12 w-full">
+        <div className="flex flex-col items-center text-center space-y-4">
+          <p className="text-gray-300">{prvyText}</p>
+          <h3 className="text-gold_primary pb-6 pt-2 uppercase">Scroll to explore</h3>
+        </div>
 
-          {/* Feature Items */}
-          <div className="space-y-16 md:space-y-20 lg:space-y-24">
-            <FeatureItem
-              number="01"
-              title="CONTRACT REVIEW AND NEGOTIATION"
-              text="We meticulously negotiate and review contracts to ensure they reflect your best interests and safeguard your future."
-            />
-            <FeatureItem
-              number="02"
-              title="DISPUTE RESOLUTION"
-              text="Should conflicts arise, we provide expert advice and representation to protect your rights and reputation."
-            />
-            <FeatureItem
-              number="03"
-              title="INTELLECTUAL PROPERTY"
-              text="We help you secure and manage your personal brand, including image rights, trademarks, and digital presence."
-            />
-            <FeatureItem
-              number="04"
-              title="COMPLIANCE AND REGULATIONS"
-              text="We ensure you remain compliant with league, federation, and governing body rules, including those specific to transfers, employment, and eligibility."
-            />
+        <div className="flex items-center gap-4 bg-[#112A2F] border border-gray-500 p-4 rounded-lg">
+          <Icon size={24} />
+          <span className="border-l border-gray-400 h-5 mx-2"></span>
+          <h3 className="text-gold_primary">{nadpisStranky}</h3>
+        </div>
+
+        <div className="text-center">
+          <p className="text-gray-300">{druhyText}</p>
+        </div>
+
+        <div className="text-left max-w-full">
+          <h2 className="text-lg font-light text-gray-300">
+            {prednadpis}
+            <span className="text-gold_primary text-3xl font-bold ml-2 uppercase">
+              {zltyNadpis}
+            </span>
+          </h2>
+          <p className="text-lg text-gray-300 mt-4">{podnadpisZltehoTextu}</p>
+        </div>
+
+        <div className="relative">
+          <img
+            src={playerImage}
+            alt="Player Holding Trophy"
+            className="w-[1200px] -mt-10 rounded-lg"
+          />
+        </div>
+
+        <div className="flex flex-col gap-4">
+          <div className="flex items-center gap-4 bg-[#0c2327] p-4 rounded-lg">
+            <Icon size={24} />
+            <span className="border-l border-gray-400 h-5 mx-2"></span>
+            <h3 className="text-gold_primary">{prvyBadge}</h3>
+          </div>
+
+          <div className="flex items-center gap-4 bg-[#0c2327] p-4 rounded-lg">
+            <Icon size={24} />
+            <span className="border-l border-gray-400 h-5 mx-2"></span>
+            <h3 className="text-heading">{druhyBadge}</h3>
           </div>
         </div>
       </div>
@@ -38,4 +80,4 @@ const SportsLawProfessionals = () => {
   );
 };
 
-export default SportsLawProfessionals;
+export default MainCompMobile;

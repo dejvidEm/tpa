@@ -1,34 +1,34 @@
+import React from "react";
 import FeatureItem from "../components/FeatureItem";
 
-const SportsLawProfessionals = () => {
+type Feature = {
+  number: string;
+  title: string;
+  text: string;
+};
+
+type StepsCompMobileProps = {
+  heading: string;
+  features: Feature[];
+};
+
+const StepsCompMobile: React.FC<StepsCompMobileProps> = ({ heading, features }) => {
   return (
-    <div className="bg-[#0D1B2A] text-white px-8 py-16 md:py-24 lg:py-32 relative">
+    <div className="bg-blue_primary text-white px-8 py-16 md:py-24 lg:py-32 relative">
       <div className="mx-auto flex flex-col ">
         <div className="flex-1 mb-12">
-          <h1 className="text-left  text-[38px] leading-[38px] font-bold mb-12 text-heading">
-            SPORTS LAW PROFESSIONALS <br /> SPECIALIZES IN
+          <h1 className="text-left text-[38px] leading-[38px] font-bold mb-12 text-heading">
+            {heading}
           </h1>
           <div className="space-y-6">
-          <FeatureItem
-            number="01"
-            title="CONTRACT REVIEW AND NEGOTIATION"
-            text="We meticulously negotiate and review contracts to ensure they reflect your best interests and safeguard your future."
-          />
-            <FeatureItem
-              number="02"
-              title="DISPUTE  RESOLUTION"
-              text="Should conflicts arise, we provide expert advice and representation to protect your rights and reputation."
-            />
-             <FeatureItem
-            number="03"
-            title="INTELLECTUAL PROPERTY"
-            text="We help you secure and manage your personal brand, including image rights, trademarks, and digital presence."
-          />
-            <FeatureItem
-              number="04"
-              title="COMPLIANCE AND REGULATIONS"
-              text="We ensure you remain compliant with league, federation, and governing body rules, including those specific to transfers, employment, and eligibility."
-            />
+            {features.map((feature, index) => (
+              <FeatureItem
+                key={index}
+                number={feature.number}
+                title={feature.title}
+                text={feature.text}
+              />
+            ))}
           </div>
         </div>
       </div>
@@ -36,4 +36,4 @@ const SportsLawProfessionals = () => {
   );
 };
 
-export default SportsLawProfessionals;
+export default StepsCompMobile;

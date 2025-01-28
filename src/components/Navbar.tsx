@@ -51,11 +51,11 @@ const Navbar = () => {
   };
 
   return (
-    <div className="w-full bg-[#0A2125] flex justify-between items-center h-24 mx-auto px-4 text-white z-[9999]">
+    <div className="absolute top-0 left-0 w-full flex justify-between items-center h-24 mx-auto px-4 text-white z-[9999]">
       {/* Logo */}
       <Link to="/">
       <div className="flex items-center">
-        <img src="/images/logo.png" alt="company logo" className="w-32" />
+        <img src="/images/g8.png" alt="company logo" className="w-32" />
       </div>
       </Link>
 
@@ -126,7 +126,7 @@ const Navbar = () => {
       <ul
         className={
           nav
-            ? 'fixed md:hidden right-0 top-5 w-[100%] h-full border-l border-l-gray-900 bg-[#0A2125] ease-in-out duration-500'
+            ? 'fixed md:hidden right-0 top-0 w-[100%] h-full border-l border-l-gray-900 bg-[#0A2125] ease-in-out duration-500'
             : 'ease-in-out w-[60%] duration-500 fixed top-0 bottom-0 right-[-100%]'
         }
       >
@@ -134,7 +134,7 @@ const Navbar = () => {
         <div onClick={handleNav} className="flex justify-between p-4">
           {/* Mobile navbar Logo */}
           <div className="flex items-center">
-            <img src="/images/logo.png" alt="company logo" className="w-32" />
+            <img src="/images/g8.png" alt="company logo" className="w-32" />
           </div>
           <div>
             <ButtonComponent variant="secondary" size="small">

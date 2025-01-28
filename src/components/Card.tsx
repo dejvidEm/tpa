@@ -17,7 +17,7 @@ const Card: React.FC<Props> = ({
 }) => {
   return (
     <div 
-      className="w-[324px] h-[460px] md:h-[440px] bg-gray-300 flex flex-col justify-between p-4 mr-4 rounded" 
+      className="w-[300px] h-[460px] md:h-[440px] bg-gray-300 flex flex-col justify-between p-4 mr-4 rounded" 
       style={{
         backgroundImage: background ? 
           `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url(${background})` : 

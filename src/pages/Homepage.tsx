@@ -8,8 +8,12 @@ import Card from "../components/Card";
 import { BsAsterisk } from "react-icons/bs";
 import PlayerTransfers from "../components/PlayerTransfers";
 import ImageStrip from "../components/ImageStrip";
-import FinancialManagement from "../components/MainComp";
-import SportsLawProfessionals from "../components/MainCompMobile";
+import MainComp from "../components/MainComp";
+import MainCompMobile from "../components/MainCompMobile";
+import StepsComp from "../components/StepsComp";
+import StepsCompMobile from "../components/StepsCompMobile";
+
+import { pageContent } from "../components/data";
 
 // data kariet s podsránkami
 const cardData = [
@@ -67,16 +71,39 @@ const Homepage: React.FC = () => {
   ];
 
   const stripData = [
-    '/images/messi.png',
-    '/images/ronaldo.png',
-    '/images/mbape.png',
-    '/images/haaland.png',
-    '/images/kane.png',
-    '/images/messi.png',
-    '/images/ronaldo.png',
-    '/images/mbape.png',
-    '/images/haaland.png',
-    '/images/kane.png',
+    "/images/messi.png",
+    "/images/ronaldo.png",
+    "/images/mbape.png",
+    "/images/haaland.png",
+    "/images/kane.png",
+    "/images/messi.png",
+    "/images/ronaldo.png",
+    "/images/mbape.png",
+    "/images/haaland.png",
+    "/images/kane.png",
+  ];
+
+  const features = [
+    {
+      number: "01",
+      title: "CONTRACT REVIEW AND NEGOTIATION",
+      text: "We meticulously negotiate and review contracts to ensure they reflect your best interests and safeguard your future.",
+    },
+    {
+      number: "02",
+      title: "DISPUTE RESOLUTION",
+      text: "Should conflicts arise, we provide expert advice and representation to protect your rights and reputation.",
+    },
+    {
+      number: "03",
+      title: "INTELLECTUAL PROPERTY",
+      text: "We help you secure and manage your personal brand, including image rights, trademarks, and digital presence.",
+    },
+    {
+      number: "04",
+      title: "COMPLIANCE AND REGULATIONS",
+      text: "We ensure you remain compliant with league, federation, and governing body rules, including those specific to transfers, employment, and eligibility.",
+    },
   ];
 
   // Referencie pre oba slidery
@@ -88,7 +115,7 @@ const Homepage: React.FC = () => {
   const handleCoursesPrev = () => coursesSliderRef.current?.handlePrev();
   const handleCoursesNext = () => coursesSliderRef.current?.handleNext();
 
-  const [activeKurzSlide, setActiveKurzSlide] = useState(0); // Rozlišujeme názov
+  const [activeKurzSlide, setActiveKurzSlide] = useState(0);
   const kurzSliderRef = useRef<HTMLDivElement | null>(null); // Rozlišujeme referenciu
 
   const handleKurzScroll = () => {
@@ -129,15 +156,58 @@ const Homepage: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col gap-0">
+    <div className="flex flex-col gap-0 bg-[#0A2125]">
       {/* Nadpis podnadpis a button */}
       <Heading
         mainHeading={"Where Top Talent Meets Global Opportunities"}
         maxWidth="max-w-[800px]"
         rotateClass="-rotate-2"
+        backgroundImage="/images/hero1.png"
       />
-      
-      <FinancialManagement/>
+
+      <section className="hidden md:block">
+      <MainComp
+      nadpisStranky={pageContent.nadpisStranky}
+      prvyText={pageContent.prvyText}
+      lavyBadge={pageContent.lavyBadge}
+      careerMessage={pageContent.careerMessage}
+      pravyBadge={pageContent.pravyBadge}
+      zltyNadpis={pageContent.zltyNadpis}
+      pravText={pageContent.pravText}
+      image="/images/figures/homepage.png"
+    />
+      </section>
+      <section className="block md:hidden">
+        <MainCompMobile
+          zltyNadpis={"a rising star or an established professional"}
+          prvyText={"Top Players Agency is your trusted partner in football player representation. Our mission is simple: to unlock your potential and guide you toward a legacy of success both on and off the pitch."}
+          nadpisStranky={"Certified agents"}
+          prvyBadge={"Player focused approach"}
+          druhyBadge={"Carreer Management"}
+          druhyText="As a profesional football agency,
+we specialize in comprehensive support, including career management, legal services, financial planning, and personal brand development."
+          prednadpis={"Whether youre"}
+          podnadpisZltehoTextu={"Our team is dedicated to elevating your career with seamless, world-class representation."}
+          playerImage={"/images/figures/homepage.png"}
+        />
+      </section>
+
+      <section className="hidden md:block">
+        <StepsComp
+          heading="SPORTS LAW PROFESSIONALS SPECIALIZES IN"
+          features={features}
+          imageSrc="/src/photos/ball.png"
+          imageAlt="Football"
+        />
+        ;
+      </section>
+      <section className="block md:hidden">
+        <StepsCompMobile
+          heading="SPORTS LAW PROFESSIONALS SPECIALIZES IN"
+          features={features}
+        />
+        ;
+      </section>
 
       {/* Sekcia s kartami podstránok */}
       <section className="w-full mx-auto slider bg-blue_primary py-16 px-8 hidden md:flex flex-col gap-12">
@@ -151,21 +221,22 @@ const Homepage: React.FC = () => {
             </div>
             <div className="flex flex-col w-[400px] gap-4">
               <p className="text-slate-100 text-xl">
-              At Top Players Agency, we provide <br />
-              end-to-end services designed to help you succeed on and off the pitch.
+                At Top Players Agency, we provide <br />
+                end-to-end services designed to help you succeed on and off the
+                pitch.
               </p>
               <div className="arrows flex flex-row gap-4 -ml-2">
                 <div
                   className="text-gray-400 hover:text-gold_primary transition-all duration-300 rounded-lg p-2 cursor-pointer"
                   onClick={handleCoursesPrev}
                 >
-                  <FaArrowLeft size={24}/>
+                  <FaArrowLeft size={24} />
                 </div>
                 <div
                   className="text-gray-400 hover:text-gold_primary transition-all duration-300 rounded-lg p-2 cursor-pointer"
                   onClick={handleCoursesNext}
                 >
-                  <FaArrowRight size={24}/>
+                  <FaArrowRight size={24} />
                 </div>
               </div>
             </div>
@@ -192,27 +263,28 @@ const Homepage: React.FC = () => {
       <section className="bg-blue_primary w-full mx-auto py-16 block md:hidden">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl md:text-6xl font-bold text-slate-100 pb-4 uppercase">
-          Comprehensive services tailored to your needs
+            Comprehensive services tailored to your needs
           </h2>
           <div className="flex flex-row items-end">
-          <p className="text-slate-100  md:pb-8">
-            At Top Players Agency, we provide end-to-end services designed to help you succeed on and off the pitch.
-          </p>
+            <p className="text-slate-100  md:pb-8">
+              At Top Players Agency, we provide end-to-end services designed to
+              help you succeed on and off the pitch.
+            </p>
 
-          <div className="arrows flex flex-row gap-4 h-min">
-            <div
-              className="bg-slate-100 rounded-lg p-4 cursor-pointer hover:bg-gray-200 transition"
-              onClick={handleCoursesPrevMobile}
-            >
-              <FaArrowLeft />
+            <div className="arrows flex flex-row gap-4 h-min">
+              <div
+                className="bg-slate-100 rounded-lg p-4 cursor-pointer hover:bg-gray-200 transition"
+                onClick={handleCoursesPrevMobile}
+              >
+                <FaArrowLeft />
+              </div>
+              <div
+                className="bg-slate-100 rounded-lg p-4 cursor-pointer hover:bg-gray-200 transition"
+                onClick={handleCoursesNextMobile}
+              >
+                <FaArrowRight />
+              </div>
             </div>
-            <div
-              className="bg-slate-100 rounded-lg p-4 cursor-pointer hover:bg-gray-200 transition"
-              onClick={handleCoursesNextMobile}
-            >
-              <FaArrowRight />
-            </div>
-          </div>
           </div>
 
           {/* Slider pre mobilné zariadenia */}
@@ -259,9 +331,12 @@ const Homepage: React.FC = () => {
         </div>
       </section>
 
-      <PlayerTransfers/>
+      <PlayerTransfers />
 
-      <ImageStrip title={"Follow the Journey, Frame by Frame"} images={stripData}/>
+      <ImageStrip
+        title={"Follow the Journey, Frame by Frame"}
+        images={stripData}
+      />
 
       {/* Posuvny pas s partnermi */}
       <Partners logos={logos} title={"Built on Trust, Driven by Partnership"} />
