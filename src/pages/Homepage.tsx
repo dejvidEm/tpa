@@ -170,53 +170,51 @@ we specialize in comprehensive support, including career management, legal servi
 
       {/* Sekcia s kartami podstránok */}
       <section className="w-full mx-auto slider bg-[#0A2125] py-16 px-8 hidden md:flex flex-col gap-12">
-        <div className="flex max-w-[1500px] mx-auto flex-col justify-between items-start">
-          <div className="w-full flex flex-row pb-8 justify-between items-end">
-            <div className="flex flex-col gap-2 w-3/5">
-              <h1 className="text-3xl md:text-6xl font-bold mb-4 w-[600px] uppercase text-gold_primary">
-                <span className="ml-20">Comprehensive</span> services tailored
-                to your needs
-              </h1>
-            </div>
-            <div className="flex flex-col w-[400px] gap-4">
-              <p className="text-slate-100 text-xl">
-                At Top Players Agency, we provide <br />
-                end-to-end services designed to help you succeed on and off the
-                pitch.
-              </p>
-              <div className="arrows flex flex-row gap-4 -ml-2">
-                <div
-                  className="text-gray-400 hover:text-gold_primary transition-all duration-300 rounded-lg p-2 cursor-pointer"
-                  onClick={handleCoursesPrev}
-                >
-                  <FaArrowLeft size={24} />
-                </div>
-                <div
-                  className="text-gray-400 hover:text-gold_primary transition-all duration-300 rounded-lg p-2 cursor-pointer"
-                  onClick={handleCoursesNext}
-                >
-                  <FaArrowRight size={24} />
-                </div>
-              </div>
-            </div>
+  <div className="flex max-w-[1500px] mx-auto flex-col justify-between items-start px-4 md:px-8 lg:px-12">
+    <div className="w-full flex flex-row pb-8 justify-between items-end">
+      <div className="flex flex-col gap-2 w-3/5">
+        <h1 className="text-3xl md:text-6xl font-bold mb-4 max-w-[600px] uppercase text-gold_primary">
+          <span className="ml-20">Comprehensive</span> services tailored to your needs
+        </h1>
+      </div>
+      <div className="flex flex-col max-w-[400px] w-full gap-4">
+        <p className="text-slate-100 text-xl">
+          At Top Players Agency, we provide <br />
+          end-to-end services designed to help you succeed on and off the pitch.
+        </p>
+        <div className="arrows flex flex-row gap-4 -ml-2">
+          <div
+            className="text-gray-400 hover:text-gold_primary transition-all duration-300 rounded-lg p-2 cursor-pointer"
+            onClick={handleCoursesPrev}
+          >
+            <FaArrowLeft size={24} />
           </div>
-          {/* Slider s kartami podstránok */}
-          <ResponsiveSlider
-            ref={coursesSliderRef}
-            items={cardData.map((data, index) => (
-              <Card
-                key={index}
-                cardName={data.cardName}
-                title={data.title}
-                icon={data.icon}
-                background={data.background}
-              />
-            ))}
-            visibleItems={3}
-            showPartialNext={true}
-          />
+          <div
+            className="text-gray-400 hover:text-gold_primary transition-all duration-300 rounded-lg p-2 cursor-pointer"
+            onClick={handleCoursesNext}
+          >
+            <FaArrowRight size={24} />
+          </div>
         </div>
-      </section>
+      </div>
+    </div>
+    {/* Slider s kartami podstránok */}
+    <ResponsiveSlider
+      ref={coursesSliderRef}
+      items={cardData.map((data, index) => (
+        <Card
+          key={index}
+          cardName={data.cardName}
+          title={data.title}
+          icon={data.icon}
+          background={data.background}
+        />
+      ))}
+      visibleItems={2}
+      showPartialNext={true}
+    />
+  </div>
+</section>
 
       {/* Sekcia pre mobilné zariadenia s kartami podstránok */}
       <section className="bg-[#0A2125] w-full mx-auto py-16 block md:hidden">
