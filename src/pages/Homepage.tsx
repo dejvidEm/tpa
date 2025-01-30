@@ -210,7 +210,7 @@ we specialize in comprehensive support, including career management, legal servi
           background={data.background}
         />
       ))}
-      visibleItems={2}
+      visibleItems={4}
       showPartialNext={true}
     />
   </div>

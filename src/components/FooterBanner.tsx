@@ -1,5 +1,6 @@
 import React from "react";
 import ButtonComponent from "./ButtonComponent";
+import { Link } from "react-router-dom";
 
 type BannerProps = {
   smallHeading?: string; // Malý nadpis je voliteľný
@@ -61,9 +62,11 @@ const Banner: React.FC<BannerProps> = ({
 
         {/* Tlačidlo sa zobrazí iba ak je definované */}
         {buttonText && (
+          <Link to="/contact">
           <ButtonComponent variant="primary" size="small">
             {buttonText}
           </ButtonComponent>
+          </Link>
         )}
       </div>
     </div>

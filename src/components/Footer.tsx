@@ -1,6 +1,7 @@
 import React from "react";
 import ButtonComponent from "./ButtonComponent";
 import { CiGlobe } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {
   return (
@@ -24,7 +25,9 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="flex flex-col md:flex-row gap-6 items-center">
-          <ButtonComponent variant="secondary" size="small">Contact</ButtonComponent>
+          <Link to="/contact">
+           <ButtonComponent variant="secondary" size="small">Contact</ButtonComponent>
+          </Link>
           <div className="flex flex-row items-center gap-2">
             <CiGlobe size={24} />
             <h2>EN</h2>

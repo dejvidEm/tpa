@@ -4,6 +4,7 @@ import FooterBanner from '../components/FooterBanner';
 import Heading from '../components/Heading';
 import ImageWavyBanner from '../components/ImageWavyBanner';
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const players = [
   {
     name: "Lionel Messi",
@@ -168,7 +169,7 @@ const Players: React.FC = () => {
     <div className='bg-[#0A2125]'>
       <Heading mainHeading={'Players proudly represented by the top players agency'} maxWidth='max-w-[1000px]' rotateClass='-rotate-2'/>
 
-      <section className="bg-[#0A2125] py-8">
+      <section className="bg-[#0A2125] py-8 px-8">
   <div className="max-w-[1600px] mx-4 md:mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 gap-y-20">
     {displayedPosts.map((post, index) => (
       <PlayerCard

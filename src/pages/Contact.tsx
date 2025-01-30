@@ -16,8 +16,8 @@ import RotateLinks from "../components/rotateLinks";
 
 const Contact: React.FC = () => {
   return (
-    <div className="bg-blue_primary pt-40">
-      <section className="bg-blue_primary text-white py-16 px-8">
+    <div className="bg-[#0A2125] pt-40">
+      <section className="bg-[#0A2125] text-white py-16 px-8">
         <div className="flex flex-col lg:flex-row items-start gap-32 max-w-[1600px] mx-auto">
           <div className="lg:w-1/2">
             <h1 className="md:text-[80px] md:leading-[80px] text-[38px] leading-[40px] mb-4 text-gold_primary font-bold">
@@ -146,7 +146,7 @@ const Contact: React.FC = () => {
         </div>
       </section>
 
-      <section className="bg-blue_primary text-white pb-10 pt-10 pl-8 pr-8 md:p-40">
+      <section className="bg-[#0A2125] text-white pb-10 pt-10 pl-8 pr-8 md:p-40">
         <div className="grid grid-cols-1 md:grid-cols-3 md:gap-12 gap-8">
           <FeatureItem
             number="01"
@@ -166,8 +166,11 @@ const Contact: React.FC = () => {
         </div>
       </section>
 
-<section className="relative bg-white text-white py-8">
-  <RotateLinks/>
+<section className="relative text-white py-8">
+  <div className="w-full bg-[#0A2125] my-20">
+   <RotateLinks/>
+
+  </div>
 
   <div className="grid grid-cols-2 gap-4 lg:hidden pl-8 pr-8">
     <div className="flex items-center gap-2 bg-[#112A2F] p-4 rounded-lg">
