@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import PlayerCard from '../components/PlayerCard';
+import TransferCard from '../components/TransferCard';
 import FooterBanner from '../components/FooterBanner';
 import Heading from '../components/Heading';
 import ImageWavyBanner from '../components/ImageWavyBanner';
+import { IoArrowBackSharp, IoArrowForwardSharp } from 'react-icons/io5';
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const players = [
   {
     name: "Lionel Messi",
     team: "Inter Miami",
+    transferTeam: "Inter Miami CF",
+    transferDate: "June 2023",
+    transferInfo: "From contract negotiation and legal protection to financial planning and personal brand development, we take care of every detail so you can focus on the game. With a team of FIFA-certified professionals and a global network of connections",
     image: "/images/messi.png",
     nationality: "Argentina",
     league: "MLS",
@@ -21,6 +25,9 @@ export const players = [
   {
     name: "Cristiano Ronaldo",
     team: "Al-Nassr",
+    transferTeam: "Inter Miami CF",
+    transferDate: "June 2023",
+    transferInfo: "From contract negotiation and legal protection to financial planning and personal brand development, we take care of every detail so you can focus on the game. With a team of FIFA-certified professionals and a global network of connections",
     image: "/images/ronaldo.png",
     nationality: "Portugal",
     league: "Saudi Pro League",
@@ -33,6 +40,9 @@ export const players = [
   {
     name: "Kylian Mbappé",
     team: "Paris Saint-Germain",
+    transferTeam: "Inter Miami CF",
+    transferDate: "June 2023",
+    transferInfo: "From contract negotiation and legal protection to financial planning and personal brand development, we take care of every detail so you can focus on the game. With a team of FIFA-certified professionals and a global network of connections",
     image: "/images/mbape.png",
     nationality: "France",
     league: "Ligue 1",
@@ -45,6 +55,9 @@ export const players = [
   {
     name: "Erling Haaland",
     team: "Manchester City",
+    transferTeam: "Inter Miami CF",
+    transferDate: "June 2023",
+    transferInfo: "From contract negotiation and legal protection to financial planning and personal brand development, we take care of every detail so you can focus on the game. With a team of FIFA-certified professionals and a global network of connections",
     image: "/images/haaland.png",
     nationality: "Norway",
     league: "Premier League",
@@ -57,6 +70,9 @@ export const players = [
   {
     name: "Robert Lewandowski",
     team: "FC Barcelona",
+    transferTeam: "Inter Miami CF",
+    transferDate: "June 2023",
+    transferInfo: "From contract negotiation and legal protection to financial planning and personal brand development, we take care of every detail so you can focus on the game. With a team of FIFA-certified professionals and a global network of connections",
     image: "/images/mbape.png",
     nationality: "Poland",
     league: "La Liga",
@@ -69,6 +85,9 @@ export const players = [
   {
     name: "Kevin De Bruyne",
     team: "Manchester City",
+    transferTeam: "Inter Miami CF",
+    transferDate: "June 2023",
+    transferInfo: "From contract negotiation and legal protection to financial planning and personal brand development, we take care of every detail so you can focus on the game. With a team of FIFA-certified professionals and a global network of connections",
     image: "/images/haaland.png",
     nationality: "Belgium",
     league: "Premier League",
@@ -81,6 +100,9 @@ export const players = [
   {
     name: "Neymar Jr",
     team: "Al-Hilal",
+    transferTeam: "Inter Miami CF",
+    transferDate: "June 2023",
+    transferInfo: "From contract negotiation and legal protection to financial planning and personal brand development, we take care of every detail so you can focus on the game. With a team of FIFA-certified professionals and a global network of connections",
     image: "/images/messi.png",
     nationality: "Brazil",
     league: "Saudi Pro League",
@@ -93,6 +115,9 @@ export const players = [
   {
     name: "Luka Modrić",
     team: "Real Madrid",
+    transferTeam: "Inter Miami CF",
+    transferDate: "June 2023",
+    transferInfo: "From contract negotiation and legal protection to financial planning and personal brand development, we take care of every detail so you can focus on the game. With a team of FIFA-certified professionals and a global network of connections",
     image: "/images/ronaldo.png",
     nationality: "Croatia",
     league: "La Liga",
@@ -105,6 +130,9 @@ export const players = [
   {
     name: "Mohamed Salah",
     team: "Liverpool",
+    transferTeam: "Inter Miami CF",
+    transferDate: "June 2023",
+    transferInfo: "From contract negotiation and legal protection to financial planning and personal brand development, we take care of every detail so you can focus on the game. With a team of FIFA-certified professionals and a global network of connections",
     image: "/images/messi.png",
     nationality: "Egypt",
     league: "Premier League",
@@ -117,6 +145,9 @@ export const players = [
   {
     name: "Harry Kane",
     team: "Bayern Munich",
+    transferTeam: "Inter Miami CF",
+    transferDate: "June 2023",
+    transferInfo: "From contract negotiation and legal protection to financial planning and personal brand development, we take care of every detail so you can focus on the game. With a team of FIFA-certified professionals and a global network of connections",
     image: "/images/messi.png",
     nationality: "England",
     league: "Bundesliga",
@@ -172,10 +203,13 @@ const Transfers: React.FC = () => {
       <section className="bg-[#0A2125] py-8 px-8">
   <div className="max-w-[1600px] mx-4 md:mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 gap-y-20">
     {displayedPosts.map((post, index) => (
-      <PlayerCard
+      <TransferCard
         key={index} // Pridanie unikátneho kľúča pre každý prvok v zozname
         name={post.name}
         team={post.team}
+        transferTeam={post.transferTeam}
+        transferDate={post.transferDate}
+        transferInfo={post.transferInfo}
         image={post.image}
         nationality={post.nationality}
         league={post.league}
@@ -190,47 +224,47 @@ const Transfers: React.FC = () => {
 </section>
 
       {/* Pagination Section */}
-      <section className="max-w-[1400px] mx-auto px-4 sm:px-20 py-8 flex flex-row justify-between items-center gap-4">
-        <div className="flex mx-auto items-center justify-center gap-2">
+            <section className="max-w-[1400px] mx-auto px-4 sm:px-20 py-8 flex flex-row justify-between items-center gap-4">
+              <div className="flex mx-auto items-center justify-center gap-2">
+                <button
+                  className={`w-10 h-10 text-white flex items-center justify-center ${
+                    currentPage === 1
+                      ? "opacity-50 cursor-not-allowed"
+                      : "hover:bg-gray-200"
+                  }`}
+                  disabled={currentPage === 1}
+                  onClick={() => handlePageChange(currentPage - 1)}
+                >
+                  <IoArrowBackSharp className="" size={18}/>
+                </button>
+                {Array.from({ length: totalPages }, (_, index) => index + 1).map(
+        (page) => (
           <button
-            className={`w-10 h-10 text-white flex items-center justify-center border rounded ${
-              currentPage === 1
-                ? "text-gray-400 cursor-not-allowed"
-                : "hover:bg-gray-200"
+            key={page}
+            className={`w-10 h-10 flex text-xl font-bold items-center justify-center rounded ${
+              currentPage === page
+                ? " text-gold_primary" // Aktuálna stránka svieti na žlto s čiernym textom
+                : "hover:text-gold_primary text-white"
             }`}
-            disabled={currentPage === 1}
-            onClick={() => handlePageChange(currentPage - 1)}
+            onClick={() => handlePageChange(page)}
           >
-            &lsaquo;
+            {page}
           </button>
-          {Array.from({ length: totalPages }, (_, index) => index + 1).map(
-            (page) => (
-              <button
-                key={page}
-                className={`w-10 h-10 flex text-white items-center justify-center border rounded ${
-                  currentPage === page
-                    ? "border-gold_primary text-white"
-                    : "hover:bg-gray-200"
-                }`}
-                onClick={() => handlePageChange(page)}
-              >
-                {page}
-              </button>
-            )
-          )}
-          <button
-            className={`w-10 h-10 text-white flex items-center justify-center border rounded ${
-              currentPage === totalPages
-                ? "text-gray-400 cursor-not-allowed"
-                : "hover:bg-gray-200"
-            }`}
-            disabled={currentPage === totalPages}
-            onClick={() => handlePageChange(currentPage + 1)}
-          >
-            &rsaquo;
-          </button>
-        </div>
-      </section>
+        )
+      )}
+                <button
+                  className={`w-10 h-10 text-white flex items-center justify-center ${
+                    currentPage === totalPages
+                      ? "text-gray-400 cursor-not-allowed"
+                      : ""
+                  }`}
+                  disabled={currentPage === totalPages}
+                  onClick={() => handlePageChange(currentPage + 1)}
+                >
+                  <IoArrowForwardSharp className="hover:text-gold_primary" size={18}/>
+                </button>
+              </div>
+            </section>
 
       {/* Nadpis podnadpis a button */}
       <FooterBanner

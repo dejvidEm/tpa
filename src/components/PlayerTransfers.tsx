@@ -1,67 +1,60 @@
-import React from 'react';
+import { useState } from 'react';
 
-type Player = {
-  name: string;
-  position: string;
-  team: string;
-  photo: string;
-};
-
-const players: Player[] = [
-  { name: 'Kylian Mbappé', position: 'Forward (LW)', team: 'Real Madrid', photo: "/images/messi.png" },
-  { name: 'Erling Haaland', position: 'Forward (ST)', team: 'Manchester City', photo: "/images/messi.png" },
+const players = [
+  { name: 'Kylian Mbappé', position: 'Forward (LW)', team: 'Real Madrid', photo: "/images/mbape.png" },
+  { name: 'Erling Haaland', position: 'Forward (ST)', team: 'Manchester City', photo: "/images/haaland.png" },
   { name: 'Lionel Messi', position: 'Forward (RW)', team: 'Inter Miami', photo: "/images/messi.png" },
-  { name: 'Harry Kane', position: 'Forward (ST)', team: 'Bayern Munich', photo: "/images/messi.png" },
-  { name: 'Kevin De Bruyne', position: 'Midfielder (CAM)', team: 'Manchester City', photo: "/images/messi.png" },
-  { name: 'Lionel Messi', position: 'Forward (RW)', team: 'Inter Miami', photo: "/images/messi.png" },
-  { name: 'Kylian Mbappé', position: 'Forward (LW)', team: 'Real Madrid', photo: "/images/messi.png" },
-  { name: 'Erling Haaland', position: 'Forward (ST)', team: 'Manchester City', photo: "/images/messi.png" },
-  { name: 'Lionel Messi', position: 'Forward (RW)', team: 'Inter Miami', photo: "/images/messi.png" },
-  { name: 'Lionel Messi', position: 'Forward (RW)', team: 'Inter Miami', photo: "/images/messi.png" },
-  { name: 'Kylian Mbappé', position: 'Forward (LW)', team: 'Real Madrid', photo: "/images/messi.png" },
-  { name: 'Erling Haaland', position: 'Forward (ST)', team: 'Manchester City', photo: "/images/messi.png" },
-  { name: 'Lionel Messi', position: 'Forward (RW)', team: 'Inter Miami', photo: "/images/messi.png" },
+  { name: 'Harry Kane', position: 'Forward (ST)', team: 'Bayern Munich', photo: "/images/kane.png" },
+  { name: 'Ronaldo', position: 'Midfielder (CAM)', team: 'Manchester City', photo: "/images/ronaldo.png" },
+  { name: 'Lionel Mess', position: 'Forward (RW)', team: 'Inter Miami', photo: "/images/messi.png" },
+  { name: 'Lionel Mess', position: 'Forward (RW)', team: 'Inter Miami', photo: "/images/messi.png" },
+  { name: 'Lionel Mess', position: 'Forward (RW)', team: 'Inter Miami', photo: "/images/messi.png" },
+  { name: 'Lionel Mess', position: 'Forward (RW)', team: 'Inter Miami', photo: "/images/messi.png" },
+  { name: 'Lionel Mess', position: 'Forward (RW)', team: 'Inter Miami', photo: "/images/messi.png" },
+  { name: 'Lionel Mess', position: 'Forward (RW)', team: 'Inter Miami', photo: "/images/messi.png" },
+  { name: 'Lionel Mess', position: 'Forward (RW)', team: 'Inter Miami', photo: "/images/messi.png" },
+  { name: 'Lionel Mess', position: 'Forward (RW)', team: 'Inter Miami', photo: "/images/messi.png" },
 ];
 
-const PlayerTransfers: React.FC = () => {
-  const highlightedIndex = players.findIndex(player => player.name === 'Lionel Messi'); // Prvý Messi
+const PlayerTransfers = () => {
+  const [selectedPlayer, setSelectedPlayer] = useState(players[0]);
 
   return (
     <div className="bg-[#0A2125] text-white px-6 py-8 relative">
+      <div className="flex justify-end -mb-20">
       <h1 className='text-3xl md:text-6xl bg-gradient-to-r from-gold_secondary to-gold_primary inline-block text-transparent bg-clip-text mb-10 uppercase font-bold leading-8'>
         From Players <br />
         <span className='ml-16'>to transfers</span>
       </h1>
-      <div className="gap-8 relative">
-        {/* VEĽKÁ fotka úplne prekryje podčiarknutie */}
-        <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2 z-20 bg-[#0A2125]">
-          <img src="/images/messi.png" alt="Player" className="w-72 h-72" />
-        </div>
-        
-        <div className="col-span-1 md:col-span-2 lg:col-span-2">
-          <div className="flex justify-between text-xl font-semibold mb-8">
-            <span className="text-2xl bg-gradient-to-r from-gold_secondary to-gold_primary inline-block text-transparent bg-clip-text font-bold">
-              13 PLAYERS
+      </div>
+      
+      <div className="flex justify-start gap-24 lg:gap-32 text-xl font-semibold mb-16">
+        <span className="text-2xl bg-gradient-to-r from-gold_secondary to-gold_primary inline-block text-transparent bg-clip-text font-bold">
+          {players.length} PLAYERS
+        </span>
+        <span className="text-2xl font-bold">12 TRANSFERS</span>
+      </div>
+      
+      {/* Tabuľka hráčov */}
+      <div className="w-full">
+        {players.map((player, index) => (
+          <div
+            key={index}
+            className={`grid grid-cols-4 text-lg py-2 cursor-pointer items-center relative ${
+              selectedPlayer.name === player.name ? 'border-b-2 border-gold_primary' : 'border-b-2 border-[#0A2125]'
+            }`}
+            onClick={() => setSelectedPlayer(player)}
+          >
+            <span>{player.name}</span>
+            <span className="flex justify-center relative h-0">
+              {selectedPlayer.name === player.name && (
+                <img src={player.photo} className="w-32 h-32 md:w-56 md:h-56 absolute -top-16 md:-left-10 lg:-left-28" alt={player.name} />
+              )}
             </span>
-            <span className="text-2xl font-bold">12 TRANSFERS</span>
+            <span>{player.position}</span>
+            <span className='text-right'>{player.team}</span>
           </div>
-          <div className="space-y-2 relative">
-            {players.map((player, index) => (
-              <div
-                key={index}
-                className={`flex justify-between text-lg ${
-                  index === highlightedIndex ? 'border-b-2 border-gold_primary relative z-10' : ''
-                }`}
-              >
-                <div className="flex flex-row gap-6">
-                  <img src={player.photo} className="w-6 h-6 md:hidden" />
-                  <span>{player.name}</span>
-                </div>
-                <span>{player.team}</span>
-              </div>
-            ))}
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

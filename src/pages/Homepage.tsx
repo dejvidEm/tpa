@@ -21,6 +21,7 @@ const cardData = [
     title: "Dedicated to the Details That Define Greatness",
     icon: <BsAsterisk size={20} className="text-white" />,
     background: "/images/cards1.png",
+    backgroundVideo: "videos/playerRepresentation.mp4"
   },
   {
     cardName: "Healthcare & Well-Being",
@@ -142,79 +143,86 @@ const Homepage: React.FC = () => {
       />
 
       <section className="hidden md:block">
-      <MainComp
-      nadpisStranky={pageContent.nadpisStranky}
-      prvyText={pageContent.prvyText}
-      lavyBadge={pageContent.lavyBadge}
-      careerMessage={pageContent.careerMessage}
-      pravyBadge={pageContent.pravyBadge}
-      zltyNadpis={pageContent.zltyNadpis}
-      pravText={pageContent.pravText}
-      image="/images/figures/homepage.png"
-    />
+        <MainComp
+          nadpisStranky={pageContent.nadpisStranky}
+          prvyText={pageContent.prvyText}
+          lavyBadge={pageContent.lavyBadge}
+          careerMessage={pageContent.careerMessage}
+          pravyBadge={pageContent.pravyBadge}
+          zltyNadpis={pageContent.zltyNadpis}
+          pravText={pageContent.pravText}
+          image="/images/figures/homepage.png"
+        />
       </section>
       <section className="block md:hidden">
         <MainCompMobile
           zltyNadpis={"a rising star or an established professional"}
-          prvyText={"Top Players Agency is your trusted partner in football player representation. Our mission is simple: to unlock your potential and guide you toward a legacy of success both on and off the pitch."}
+          prvyText={
+            "Top Players Agency is your trusted partner in football player representation. Our mission is simple: to unlock your potential and guide you toward a legacy of success both on and off the pitch."
+          }
           nadpisStranky={"Certified agents"}
           prvyBadge={"Player focused approach"}
           druhyBadge={"Carreer Management"}
           druhyText="As a profesional football agency,
 we specialize in comprehensive support, including career management, legal services, financial planning, and personal brand development."
           prednadpis={"Whether youre"}
-          podnadpisZltehoTextu={"Our team is dedicated to elevating your career with seamless, world-class representation."}
+          podnadpisZltehoTextu={
+            "Our team is dedicated to elevating your career with seamless, world-class representation."
+          }
           playerImage={"/images/figures/homepage.png"}
         />
       </section>
 
       {/* Sekcia s kartami podstránok */}
-      <section className="w-full mx-auto slider bg-[#0A2125] py-16 px-8 hidden md:flex flex-col gap-12">
-  <div className="flex max-w-[1500px] mx-auto flex-col justify-between items-start px-4 md:px-8 lg:px-12">
-    <div className="w-full flex flex-row pb-8 justify-between items-end">
-      <div className="flex flex-col gap-2 w-3/5">
-        <h1 className="text-3xl md:text-6xl font-bold mb-4 max-w-[600px] uppercase text-gold_primary">
-          <span className="ml-20">Comprehensive</span> services tailored to your needs
-        </h1>
-      </div>
-      <div className="flex flex-col max-w-[400px] w-full gap-4">
-        <p className="text-slate-100 text-xl">
-          At Top Players Agency, we provide <br />
-          end-to-end services designed to help you succeed on and off the pitch.
-        </p>
-        <div className="arrows flex flex-row gap-4 -ml-2">
-          <div
-            className="text-gray-400 hover:text-gold_primary transition-all duration-300 rounded-lg p-2 cursor-pointer"
-            onClick={handleCoursesPrev}
-          >
-            <FaArrowLeft size={24} />
+      <section className="w-full mx-auto slider bg-[#0A2125] py-16 mb-32 px-8 hidden md:flex flex-col gap-12">
+        <div className="flex max-w-[1500px] mx-auto flex-col justify-between items-start px-4 md:px-8 lg:px-12">
+          <div className="w-full flex flex-row pb-8 justify-between items-end">
+            <div className="flex flex-col gap-2 w-3/5">
+              <h1 className="text-3xl md:text-6xl font-bold mb-4 max-w-[600px] uppercase text-gold_primary">
+                <span className="ml-20">Comprehensive</span> services tailored
+                to your needs
+              </h1>
+            </div>
+            <div className="flex flex-col max-w-[400px] w-full gap-4">
+              <p className="text-slate-100 text-xl">
+                At Top Players Agency, we provide <br />
+                end-to-end services designed to help you succeed on and off the
+                pitch.
+              </p>
+              <div className="arrows flex flex-row gap-4 -ml-2">
+                <div
+                  className="text-gray-400 hover:text-gold_primary transition-all duration-300 rounded-lg p-2 cursor-pointer"
+                  onClick={handleCoursesPrev}
+                >
+                  <FaArrowLeft size={24} />
+                </div>
+                <div
+                  className="text-gray-400 hover:text-gold_primary transition-all duration-300 rounded-lg p-2 cursor-pointer"
+                  onClick={handleCoursesNext}
+                >
+                  <FaArrowRight size={24} />
+                </div>
+              </div>
+            </div>
           </div>
-          <div
-            className="text-gray-400 hover:text-gold_primary transition-all duration-300 rounded-lg p-2 cursor-pointer"
-            onClick={handleCoursesNext}
-          >
-            <FaArrowRight size={24} />
-          </div>
+          {/* Slider s kartami podstránok */}
+          <ResponsiveSlider
+            ref={coursesSliderRef}
+            items={cardData.map((data, index) => (
+              <Card
+  key={index}
+  cardName={data.cardName}
+  title={data.title}
+  icon={data.icon}
+  background={data.background} // Fallback na obrázok
+  backgroundVideo={data.backgroundVideo} // Ak existuje, video má prednosť
+/>
+            ))}
+            visibleItems={2}
+            showPartialNext={true}
+          />
         </div>
-      </div>
-    </div>
-    {/* Slider s kartami podstránok */}
-    <ResponsiveSlider
-      ref={coursesSliderRef}
-      items={cardData.map((data, index) => (
-        <Card
-          key={index}
-          cardName={data.cardName}
-          title={data.title}
-          icon={data.icon}
-          background={data.background}
-        />
-      ))}
-      visibleItems={4}
-      showPartialNext={true}
-    />
-  </div>
-</section>
+      </section>
 
       {/* Sekcia pre mobilné zariadenia s kartami podstránok */}
       <section className="bg-[#0A2125] w-full mx-auto py-16 block md:hidden">
@@ -313,7 +321,7 @@ we specialize in comprehensive support, including career management, legal servi
       />
 
       {/* Wavy nadpis, ktory zatial nie je wavy*/}
-      <ImageWavyBanner/>
+      <ImageWavyBanner />
     </div>
   );
 };

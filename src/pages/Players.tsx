@@ -3,6 +3,7 @@ import PlayerCard from '../components/PlayerCard';
 import FooterBanner from '../components/FooterBanner';
 import Heading from '../components/Heading';
 import ImageWavyBanner from '../components/ImageWavyBanner';
+import { IoArrowForwardSharp, IoArrowBackSharp  } from "react-icons/io5";
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const players = [
@@ -193,41 +194,41 @@ const Players: React.FC = () => {
       <section className="max-w-[1400px] mx-auto px-4 sm:px-20 py-8 flex flex-row justify-between items-center gap-4">
         <div className="flex mx-auto items-center justify-center gap-2">
           <button
-            className={`w-10 h-10 text-white flex items-center justify-center border rounded ${
+            className={`w-10 h-10 text-white flex items-center justify-center ${
               currentPage === 1
-                ? "text-gray-400 cursor-not-allowed"
+                ? "opacity-50 cursor-not-allowed"
                 : "hover:bg-gray-200"
             }`}
             disabled={currentPage === 1}
             onClick={() => handlePageChange(currentPage - 1)}
           >
-            &lsaquo;
+            <IoArrowBackSharp className="" size={18}/>
           </button>
           {Array.from({ length: totalPages }, (_, index) => index + 1).map(
-            (page) => (
-              <button
-                key={page}
-                className={`w-10 h-10 flex text-white items-center justify-center border rounded ${
-                  currentPage === page
-                    ? "border-gold_primary text-white"
-                    : "hover:bg-gray-200"
-                }`}
-                onClick={() => handlePageChange(page)}
-              >
-                {page}
-              </button>
-            )
-          )}
+  (page) => (
+    <button
+      key={page}
+      className={`w-10 h-10 flex text-xl font-bold items-center justify-center rounded ${
+        currentPage === page
+          ? " text-gold_primary" // Aktuálna stránka svieti na žlto s čiernym textom
+          : "hover:text-gold_primary text-white"
+      }`}
+      onClick={() => handlePageChange(page)}
+    >
+      {page}
+    </button>
+  )
+)}
           <button
-            className={`w-10 h-10 text-white flex items-center justify-center border rounded ${
+            className={`w-10 h-10 text-white flex items-center justify-center ${
               currentPage === totalPages
                 ? "text-gray-400 cursor-not-allowed"
-                : "hover:bg-gray-200"
+                : ""
             }`}
             disabled={currentPage === totalPages}
             onClick={() => handlePageChange(currentPage + 1)}
           >
-            &rsaquo;
+            <IoArrowForwardSharp className="hover:text-gold_primary" size={18}/>
           </button>
         </div>
       </section>

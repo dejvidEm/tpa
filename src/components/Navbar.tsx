@@ -51,7 +51,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="absolute top-0 left-0 w-full flex justify-between items-center h-24 mx-auto px-4 text-white z-[9999]">
+    <div className="absolute top-0 left-0 w-full flex justify-between items-center h-24 mx-auto px-16 text-white z-[9999]">
       {/* Logo */}
       <Link to="/">
       <div className="flex items-center">
@@ -64,7 +64,7 @@ const Navbar = () => {
         {navItems.map((item) => (
           <li
             key={item.id}
-            className="relative p-4 cursor-pointer transition-all duration-300 hover:text-gold_primary font-semibold uppercase"
+            className="relative py-2 px-11 cursor-pointer transition-all duration-300 hover:text-gold_primary font-semibold uppercase"
             onMouseEnter={() => item.dropdown && handleMouseEnter()}
             onMouseLeave={() => item.dropdown && handleMouseLeaveWithDelay()}
           >
