@@ -146,6 +146,7 @@ const Homepage: React.FC = () => {
         rotateClass="-rotate-2"
         backgroundVideo="/videos/homepage.mp4"
         gradientOverlay="/images/gradient.png"
+        icon="/images/icons/Global.png"
       />
 
       <section className="hidden md:block">
@@ -158,6 +159,9 @@ const Homepage: React.FC = () => {
           zltyNadpis={pageContent.zltyNadpis}
           pravText={pageContent.pravText}
           image="/images/figures/homepage.png"
+          icon1="/images/fifa_logo.png"
+          icon2="/images/icons/check.png"
+          icon3="/images/icons/target.png"
         />
       </section>
       <section className="block md:hidden">

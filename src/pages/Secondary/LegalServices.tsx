@@ -41,6 +41,7 @@ const LegalServices: React.FC = () => {
         rotateClass="-rotate-2"
         backgroundVideo="/videos/legal.mp4"
         gradientOverlay="/images/gradient.png"
+        icon="/images/icons/retaz.png"
       />
 
       <section className="hidden md:block">
@@ -53,6 +54,9 @@ const LegalServices: React.FC = () => {
       zltyNadpis={pageContent.zltyNadpis}
       pravText={pageContent.pravText}
       image="/images/figures/legal.png"
+      icon1="/images/icons/retaz.png"
+      icon2="/images/icons/otlacok.png"
+      icon3="/images/icons/shield.png"
     />
     </section>
 

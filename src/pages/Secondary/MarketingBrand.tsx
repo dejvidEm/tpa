@@ -39,8 +39,9 @@ const MarketingBrand: React.FC = () => {
         mainHeading={"Transforming Players into Global brands"}
         maxWidth="max-w-[800px]"
         rotateClass="-rotate-2"
-        backgroundVideo="/videos/marketing.mp4"
+        backgroundVideo="/videos/homepage.mp4"
         gradientOverlay="/images/gradient.png"
+        icon='/images/icons/hviezda.png'
       />
 
       <section className="hidden md:block">
@@ -53,6 +54,9 @@ const MarketingBrand: React.FC = () => {
       zltyNadpis={pageContent.zltyNadpis}
       pravText={pageContent.pravText}
       image="/images/figures/marketing.png"
+      icon1='/images/icons/hviezda.png'
+      icon2='/images/icons/zamok.png'
+      icon3='/images/icons/oktagon.png'
     />
     </section>
 

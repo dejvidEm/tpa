@@ -42,6 +42,7 @@ const FinancialManagement: React.FC = () => {
         rotateClass="-rotate-2"
         backgroundVideo="/videos/financial.mp4"
         gradientOverlay="/images/gradient.png"
+        icon="/images/icons/Finance.png"
       />
 
       <section className="hidden md:block">
@@ -54,6 +55,9 @@ const FinancialManagement: React.FC = () => {
       zltyNadpis={pageContent.zltyNadpis}
       pravText={pageContent.pravText}
       image="/images/figures/financial.png"
+      icon1="/images/icons/Finance.png"
+      icon2="/images/icons/safe.png"
+      icon3="/images/icons/graf_kolac.png"
     />
     </section>
 

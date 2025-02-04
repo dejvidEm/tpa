@@ -13,11 +13,12 @@ import { TbPhoneCall } from "react-icons/tb";
 import { AiFillTikTok } from "react-icons/ai";
 
 import RotateLinks from "../components/rotateLinks";
+import ImageWavyBanner from "../components/ImageWavyBanner";
 
 const Contact: React.FC = () => {
   return (
     <div className="bg-[#0A2125] pt-40">
-      <section className="bg-[#0A2125] text-white py-16 px-8">
+      <section className="bg-[#0A2125] text-white py-16 px-16 pr-24">
         <div className="flex flex-col lg:flex-row items-start gap-32 max-w-[1600px] mx-auto">
           <div className="lg:w-1/2">
             <h1 className="md:text-[80px] md:leading-[80px] text-[38px] leading-[40px] mb-4 text-gold_primary font-bold">
@@ -166,10 +167,10 @@ const Contact: React.FC = () => {
         </div>
       </section>
 
-<section className="relative text-white py-8">
-  <div className="w-full bg-[#0A2125] my-20">
+<section className="relative text-white pt-8">
+  <div className="w-full bg-[#0A2125]">
    <RotateLinks/>
-
+   <ImageWavyBanner/>
   </div>
 
   <div className="grid grid-cols-2 gap-4 lg:hidden pl-8 pr-8">
@@ -205,8 +206,6 @@ const Contact: React.FC = () => {
     </div>
   </div>
 </section>
-
-<div className="h-96 bg-blue"></div>
 </div>
   );
 };

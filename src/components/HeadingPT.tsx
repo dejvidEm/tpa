@@ -45,16 +45,10 @@ const Heading: React.FC<HeadingProps> = ({
       {/* Overlay pre lepšiu čitateľnosť textu */}
 
       <div className="relative flex flex-row items-center z-[100]">
-        <img src={icon} alt="ikona nadpisu" className="w-12"/>
-        <img
-          src="/images/ball.png"
-          alt="/images/ball.png"
-          className="absolute w-12 opacity-90 z-50"
-          style={{ right: "50%" }}
-        />
+        <img src={icon} alt="ikona nadpisu" className="w-14"/>
       </div>
       <h1
-        className={`text-3xl md:text-6xl font-extrabold uppercase mt-4 my-16 ${maxWidth} ${rotateClass} break-words font-barlow bg-gradient-to-r from-gold_secondary to-gold_primary inline-block text-transparent bg-clip-text relative  z-[100]`}
+        className={`text-3xl md:text-6xl font-extrabold uppercase mt-8 my-16 ${maxWidth} ${rotateClass} break-words font-barlow bg-gradient-to-r from-gold_secondary to-gold_primary inline-block text-transparent bg-clip-text relative  z-[100]`}
       >
         {mainHeading}
       </h1>

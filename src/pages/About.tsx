@@ -1,5 +1,5 @@
 import React from 'react';
-import Heading from '../components/Heading';
+import Heading from '../components/HeadingPT';
 import AboutComp from '../components/aboutUs';
 import AboutCompMobile from '../components/aboutUsMobile';
 import FooterBanner from '../components/FooterBanner';
@@ -9,7 +9,7 @@ const About: React.FC = () => {
   return (
     <div>
       <Heading mainHeading={'Top Players Agency: Shaping the Future of Football'} backgroundVideo="/videos/homepage.mp4"
-        gradientOverlay="/images/gradient.png" rotateClass='-rotate-2'/>
+        gradientOverlay="/images/gradient.png" rotateClass='-rotate-2' icon='/images/icons/13.png'/>
 
       <section className="hidden md:block">
       <AboutComp/>

@@ -16,6 +16,7 @@ const HealthCare: React.FC = () => {
         rotateClass="-rotate-2"
         backgroundVideo="/videos/healthCare.mp4"
         gradientOverlay="/images/gradient.png"
+        icon='/images/icons/Health.png'
       />
 
       <section className="hidden md:block">
@@ -28,6 +29,9 @@ const HealthCare: React.FC = () => {
       zltyNadpis={pageContent.zltyNadpis}
       pravText={pageContent.pravText}
       image="/images/figures/healthcare.png"
+      icon1='/images/icons/Health.png'
+      icon2='/images/icons/Physio.png'
+      icon3='/images/icons/srdce.png'
     />
     </section>
 

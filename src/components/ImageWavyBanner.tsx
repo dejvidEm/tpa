@@ -19,7 +19,7 @@ const FullWidthVideoBackground: React.FC = () => {
       <img
         src="/images/gradient.png"
         alt="Gradient Transition"
-        className="absolute -bottom-16 left-0 w-full h-auto object-cover z-[99]"
+        className="absolute -bottom-20 left-0 w-full h-auto object-cover z-[99]"
       />
 
       {/* Image Content */}

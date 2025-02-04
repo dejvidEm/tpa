@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PlayerCard from '../components/PlayerCard';
 import FooterBanner from '../components/FooterBanner';
-import Heading from '../components/Heading';
+import Heading from '../components/HeadingPT';
 import ImageWavyBanner from '../components/ImageWavyBanner';
 import { IoArrowForwardSharp, IoArrowBackSharp  } from "react-icons/io5";
 
@@ -168,7 +168,7 @@ const Players: React.FC = () => {
  
   return (
     <div className='bg-[#0A2125]'>
-      <Heading mainHeading={'Players proudly represented by the top players agency'} maxWidth='max-w-[1000px]' rotateClass='-rotate-2'/>
+      <Heading mainHeading={'Players proudly represented by the top players agency'} maxWidth='max-w-[1000px]' rotateClass='-rotate-2' icon='/images/icons/13.png'/>
 
       <section className="bg-[#0A2125] py-8 px-8">
   <div className="max-w-[1600px] mx-4 md:mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 gap-y-20">

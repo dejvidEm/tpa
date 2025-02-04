@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import TransferCard from '../components/TransferCard';
 import FooterBanner from '../components/FooterBanner';
-import Heading from '../components/Heading';
+import Heading from '../components/HeadingPT';
 import ImageWavyBanner from '../components/ImageWavyBanner';
 import { IoArrowBackSharp, IoArrowForwardSharp } from 'react-icons/io5';
 
@@ -198,7 +198,7 @@ const Transfers: React.FC = () => {
  
   return (
     <div className='bg-[#0A2125]'>
-      <Heading mainHeading={'Successful transfers facilitated by our expertise'} maxWidth='max-w-[1000px]' rotateClass='-rotate-2'/>
+      <Heading mainHeading={'Successful transfers facilitated by our expertise'} maxWidth='max-w-[1000px]' rotateClass='-rotate-2' icon='/images/icons/12.png'/>
 
       <section className="bg-[#0A2125] py-8 px-8">
   <div className="max-w-[1600px] mx-4 md:mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 gap-y-20">

@@ -16,6 +16,7 @@ const YouthRepre: React.FC = () => {
         rotateClass="-rotate-2"
         backgroundVideo="/videos/youth.mp4"
         gradientOverlay="/images/gradient.png"
+        icon='/images/icons/Youth.png'
       />
 
       <section className="hidden md:block">
@@ -28,6 +29,9 @@ const YouthRepre: React.FC = () => {
       zltyNadpis={pageContent.zltyNadpis}
       pravText={pageContent.pravText}
       image="/images/figures/youth.png"
+      icon1='/images/icons/Youth.png'
+      icon2='/images/icons/home_smile.png'
+      icon3='/images/icons/uniciapka.png'
     />
     </section>
 

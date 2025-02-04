@@ -41,6 +41,7 @@ const PlayerRepresentation: React.FC = () => {
         rotateClass="-rotate-2"
         backgroundVideo="/videos/playerRepresentation.mp4"
         gradientOverlay="/images/gradient.png"
+        icon='/images/icons/Representation.png'
       />
 
       <section className="hidden md:block">
@@ -53,6 +54,9 @@ const PlayerRepresentation: React.FC = () => {
       zltyNadpis={pageContent.zltyNadpis}
       pravText={pageContent.pravText}
       image="/images/figures/representation.png"
+      icon1='/images/icons/Representation.png'
+      icon2='/images/icons/sipka_hore.png'
+      icon3='/images/icons/Global.png'
     />
     </section>
 

@@ -1,4 +1,3 @@
-import { BsLinkedin } from "react-icons/bs";
 import { FaArrowDown } from "react-icons/fa6";
 
 interface MainCompProps {
@@ -10,6 +9,9 @@ interface MainCompProps {
   zltyNadpis: string;
   pravText: string;
   image: string;
+  icon1:string;
+  icon2:string;
+  icon3:string;
 }
 
 const MainComp: React.FC<MainCompProps> = ({
@@ -20,7 +22,10 @@ const MainComp: React.FC<MainCompProps> = ({
   pravyBadge,
   zltyNadpis,
   pravText,
-  image
+  image,
+  icon1,
+  icon2,
+  icon3,
 }) => {
   return (
     <div className="bg-[#0A2125] text-white px-8 py-16 md:py-24 lg:py-32 flex flex-col items-center">
@@ -28,8 +33,8 @@ const MainComp: React.FC<MainCompProps> = ({
         <div className="flex flex-col items-start space-y-8">
           <div className="text-left">
             <div className="flex items-center space-x-4 mb-4">
-              <div className="flex justify-center gap-2 bg-[#112A2F] border border-gray-500 p-4 rounded-lg mb-4">
-                <img src="/images/fifa_logo.png" className="w-16"></img>
+              <div className="flex items-center justify-center gap-2 bg-[#112A2F] border border-gray-500 p-4 rounded-lg mb-4">
+                <img src={icon1} alt="icon1" className="w-7"/>
                 <span className="border-l border-gray-400 h-5 mx-2"></span>
                 <h3 className="text-gold_primary">{nadpisStranky}</h3>
               </div>
@@ -37,8 +42,8 @@ const MainComp: React.FC<MainCompProps> = ({
             <p className="text-gray-300 mb-40 mr-20">{prvyText}</p>
           </div>
           <div className="flex justify-end space-x-4 mb-4 w-max ml-44">
-            <div className="flex flex-row gap-2 bg-[#0c2327] p-4 rounded-lg w-max">
-              <BsLinkedin size={24} />
+            <div className="flex flex-row gap-2 bg-[#0c2327] items-center justify-center p-4 rounded-lg w-max">
+            <img src={icon2} alt="icon2" className="w-7 h-auto"/>
               <span className="border-l border-gray-400 h-5 mx-2"></span>
               <h3 className="text-gold_primary">{lavyBadge}</h3>
             </div>
@@ -61,8 +66,8 @@ const MainComp: React.FC<MainCompProps> = ({
                 <h3 className="text-gold_primary mb-28 uppercase font-bold">Scroll to explore</h3>
               </div>
               <div className="flex items-center space-x-4 mb-4">
-                <div className="flex justify-start gap-2 border-gray-400 bg-[#0c2327] p-4 rounded-lg w-max mb-40">
-                  <BsLinkedin size={24} />
+                <div className="flex justify-center items-center gap-2 border-gray-400 bg-[#0c2327] p-4 rounded-lg w-max mb-40">
+                <img src={icon3} alt="icon3" className="w-7 h-auto"/>
                   <span className="border-l border-gray-400 h-5 mx-2"></span>
                   <h3 className="text-gold_primary">{pravyBadge}</h3>
                 </div>
