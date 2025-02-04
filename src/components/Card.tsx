@@ -18,7 +18,7 @@ const Card: React.FC<Props> = ({
   icon = <BsAsterisk size={20} className="text-white" /> 
 }) => {
   return (
-    <div className="relative w-[460px] h-[560px] md:h-[660px] flex flex-col justify-between p-7 mr-4 rounded overflow-hidden">
+    <div className="relative w-[440px] h-[560px] lg:h-[640px] flex flex-col justify-between p-7 mr-4 rounded overflow-hidden">
       {/* Video pozadie */}
       {backgroundVideo ? (
         <video 

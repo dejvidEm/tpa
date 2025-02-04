@@ -5,15 +5,13 @@ const players = [
   { name: 'Erling Haaland', position: 'Forward (ST)', team: 'Manchester City', photo: "/images/haaland.png" },
   { name: 'Lionel Messi', position: 'Forward (RW)', team: 'Inter Miami', photo: "/images/messi.png" },
   { name: 'Harry Kane', position: 'Forward (ST)', team: 'Bayern Munich', photo: "/images/kane.png" },
-  { name: 'Ronaldo', position: 'Midfielder (CAM)', team: 'Manchester City', photo: "/images/ronaldo.png" },
-  { name: 'Lionel Mess', position: 'Forward (RW)', team: 'Inter Miami', photo: "/images/messi.png" },
-  { name: 'Lionel Mess', position: 'Forward (RW)', team: 'Inter Miami', photo: "/images/messi.png" },
-  { name: 'Lionel Mess', position: 'Forward (RW)', team: 'Inter Miami', photo: "/images/messi.png" },
-  { name: 'Lionel Mess', position: 'Forward (RW)', team: 'Inter Miami', photo: "/images/messi.png" },
-  { name: 'Lionel Mess', position: 'Forward (RW)', team: 'Inter Miami', photo: "/images/messi.png" },
-  { name: 'Lionel Mess', position: 'Forward (RW)', team: 'Inter Miami', photo: "/images/messi.png" },
-  { name: 'Lionel Mess', position: 'Forward (RW)', team: 'Inter Miami', photo: "/images/messi.png" },
-  { name: 'Lionel Mess', position: 'Forward (RW)', team: 'Inter Miami', photo: "/images/messi.png" },
+  { name: 'Cristiano Ronaldo', position: 'Forward (ST)', team: 'Al-Nassr', photo: "/images/ronaldo.png" },
+  { name: 'Kevin De Bruyne', position: 'Midfielder (CAM)', team: 'Manchester City', photo: "/images/debruyne.png" },
+  { name: 'Jude Bellingham', position: 'Midfielder (CM)', team: 'Real Madrid', photo: "/images/beli.png" },
+  { name: 'Vinícius Júnior', position: 'Forward (LW)', team: 'Real Madrid', photo: "/images/junior.png" },
+  { name: 'Robert Lewandowski', position: 'Forward (ST)', team: 'Barcelona', photo: "/images/lew.png" },
+  { name: 'Mohamed Salah', position: 'Forward (RW)', team: 'Liverpool', photo: "/images/salah.png" },
+  { name: 'Bruno Fernandes', position: 'Midfielder (CAM)', team: 'Manchester United', photo: "/images/fer.png" },
 ];
 
 const PlayerTransfers = () => {
@@ -21,7 +19,7 @@ const PlayerTransfers = () => {
 
   return (
     <div className="bg-[#0A2125] text-white px-6 py-8 relative">
-      <div className="flex justify-end -mb-20">
+      <div className="flex lg:justify-end lg:-mb-20">
       <h1 className='text-3xl md:text-6xl bg-gradient-to-r from-gold_secondary to-gold_primary inline-block text-transparent bg-clip-text mb-10 uppercase font-bold leading-8'>
         From Players <br />
         <span className='ml-16'>to transfers</span>
@@ -46,9 +44,9 @@ const PlayerTransfers = () => {
             onClick={() => setSelectedPlayer(player)}
           >
             <span>{player.name}</span>
-            <span className="flex justify-center relative h-0">
+            <span className="hidden lg:flex justify-center relative h-0">
               {selectedPlayer.name === player.name && (
-                <img src={player.photo} className="w-32 h-32 md:w-56 md:h-56 absolute -top-16 md:-left-10 lg:-left-28" alt={player.name} />
+                <img src={player.photo} className="w-32 h-32 md:w-56 md:h-56 absolute -top-16 md:-left-10 lg:-left-28 z-[50] object-cover" alt={player.name} />
               )}
             </span>
             <span>{player.position}</span>

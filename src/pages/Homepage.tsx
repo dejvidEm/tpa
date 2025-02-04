@@ -28,30 +28,35 @@ const cardData = [
     title: "Empowering Your Game Through Optimal Health",
     icon: <BsAsterisk size={20} className="text-white" />,
     background: "/images/cards2.png",
+    backgroundVideo: "videos/healthCare.mp4"
   },
   {
     cardName: "Legal Services for Players",
     title: "Defending Your Rights, Protecting Your Career",
     icon: <BsAsterisk size={20} className="text-white" />,
     background: "/images/cards3.png",
+    backgroundVideo: "videos/legal.mp4"
   },
   {
     cardName: "Financial Management",
     title: "Where Financial Goals Meet Football Dreams",
     icon: <BsAsterisk size={20} className="text-white" />,
     background: "/images/cards4.png",
+    backgroundVideo: "videos/financial.mp4"
   },
   {
     cardName: "Marketing & Brand Development",
     title: "Transforming Players into Global brands",
     icon: <BsAsterisk size={20} className="text-white" />,
     background: "/images/cards5.png",
+    backgroundVideo: "videos/marketing.mp4"
   },
   {
     cardName: "Youth Football Representation",
     title: "We support young athletes with integrity and care",
     icon: <BsAsterisk size={20} className="text-white" />,
     background: "/images/cards6.png",
+    backgroundVideo: "videos/youth.mp4"
   },
 ];
 
@@ -139,7 +144,8 @@ const Homepage: React.FC = () => {
         mainHeading={"Where Top Talent Meets Global Opportunities"}
         maxWidth="max-w-[800px]"
         rotateClass="-rotate-2"
-        backgroundImage="/images/hero1.png"
+        backgroundVideo="/videos/homepage.mp4"
+        gradientOverlay="/images/gradient.png"
       />
 
       <section className="hidden md:block">
