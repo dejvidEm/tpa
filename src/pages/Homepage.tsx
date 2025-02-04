@@ -326,8 +326,8 @@ we specialize in comprehensive support, including career management, legal servi
         backgroundImage="/images/footerBanner.png"
       />
 
-      {/* Wavy nadpis, ktory zatial nie je wavy*/}
-      <ImageWavyBanner />
+      {/* Wavy nadpis*/}
+      <ImageWavyBanner/>
     </div>
   );
 };

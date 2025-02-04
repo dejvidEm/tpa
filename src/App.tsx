@@ -40,7 +40,7 @@ const App = () => {
         </main>
 
         {/* Footer */}
-        <Footer />
+        <Footer backgroundImage="/images/footer_bg.png"/>
       </div>
     </Router>
   )
