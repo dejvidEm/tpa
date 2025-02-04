@@ -240,27 +240,27 @@ we specialize in comprehensive support, including career management, legal servi
       {/* Sekcia pre mobilné zariadenia s kartami podstránok */}
       <section className="bg-[#0A2125] w-full mx-auto py-16 block md:hidden">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl md:text-6xl font-bold text-slate-100 pb-4 uppercase">
-            Comprehensive services tailored to your needs
+          <h2 className="text-3xl md:text-6xl font-extrabold text-slate-100 pb-4 uppercase bg-gradient-to-r from-gold_secondary to-gold_primary inline-block text-transparent bg-clip-text">
+            <span className="ml-16">Comprehensive</span> services tailored to your needs
           </h2>
           <div className="flex flex-row items-end">
-            <p className="text-slate-100  md:pb-8">
+            <p className="text-slate-100 md:pb-8">
               At Top Players Agency, we provide end-to-end services designed to
               help you succeed on and off the pitch.
             </p>
 
-            <div className="arrows flex flex-row gap-4 h-min">
+            <div className="arrows flex flex-row h-min">
               <div
-                className="bg-slate-100 rounded-lg p-4 cursor-pointer hover:bg-gray-200 transition"
+                className="text-gray-500 hover:text-gold_primary pt-4 pl-4 pr-4 cursor-pointer transition"
                 onClick={handleCoursesPrevMobile}
               >
-                <FaArrowLeft />
+                <FaArrowLeft size={24}/>
               </div>
               <div
-                className="bg-slate-100 rounded-lg p-4 cursor-pointer hover:bg-gray-200 transition"
+                className="text-gray-500 hover:text-gold_primary pt-4 pl-4 pr-4 cursor-pointer transition"
                 onClick={handleCoursesNextMobile}
               >
-                <FaArrowRight />
+                <FaArrowRight size={24}/>
               </div>
             </div>
           </div>
@@ -293,8 +293,8 @@ we specialize in comprehensive support, including career management, legal servi
             ))}
           </div>
 
-          {/* Indikátory (pásiky) pre mobil */}
-          <div className="flex justify-center items-center mt-6 space-x-1 md:hidden">
+          {/* Indikátory (pásiky) pre mobil  zatial skryty*/}
+          <div className="hidden justify-center items-center mt-6 space-x-1 md:hidden">
             {cardData.map((_, index) => (
               <div
                 key={index}

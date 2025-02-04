@@ -18,7 +18,7 @@ const Card: React.FC<Props> = ({
   icon = <BsAsterisk size={20} className="text-white" /> 
 }) => {
   return (
-    <div className="relative w-[440px] h-[560px] lg:h-[640px] flex flex-col justify-between p-7 mr-4 rounded overflow-hidden">
+    <div className="relative w-[] lg:w-[440px] h-[560px] lg:h-[640px] flex flex-col justify-between p-7 mr-4 rounded overflow-hidden">
       {/* Video pozadie */}
       {backgroundVideo ? (
         <video 
@@ -50,8 +50,8 @@ const Card: React.FC<Props> = ({
           <p className="text-gold_primary text-sm md:text-md">{cardName}</p>
         </div>
         {/* Obsah karty */}
-        <div className="flex flex-col gap-3 md:gap-4 items-start">
-          <h1 className="text-xl md:text-2xl font-bold text-white uppercase leading-none">{title}</h1>
+        <div className="flex flex-col gap-6 md:gap-5 items-start">
+          <h1 className="text-2xl md:text-3xl font-bold text-white uppercase leading-6">{title}</h1>
           <ButtonComponent size="small" variant="primary">
             FIND OUT MORE
           </ButtonComponent>

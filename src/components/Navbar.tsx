@@ -21,7 +21,7 @@ const Navbar = () => {
   const navItems = [
     {
       id: 1,
-      text: 'Services',
+      text: 'SERVICES',
       dropdown: [
         { text: 'Player Representation', icon: <LuStar size={24} />, link: '/services/player-representation' },
         { text: 'Healthcare & Well-Being', icon: <LuPenTool size={24} />, link: '/services/healthcare-and-well-being' },
@@ -31,9 +31,9 @@ const Navbar = () => {
         { text: 'Youth Football Representation', icon: <LuCode size={24} />, link: '/services/youth-football-representation' },
       ],
     },
-    { id: 2, text: 'Players', link: '/players' },
-    { id: 3, text: 'Transfers', link: '/transfers' },
-    { id: 4, text: 'About Us', link: '/about' },
+    { id: 2, text: 'PLAYERS', link: '/players' },
+    { id: 3, text: 'TRANSFERS', link: '/transfers' },
+    { id: 4, text: 'ABOUT US', link: '/about' },
   ];
 
   const handleMouseLeaveWithDelay = () => {
@@ -51,7 +51,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="absolute top-0 left-0 w-full flex justify-between items-center h-24 mx-auto px-16 text-white z-[9999]">
+    <div className="absolute top-0 left-0 w-full flex justify-between items-center h-24 mx-auto px-6 md:px-16 text-white z-[9999]">
       {/* Logo */}
       <Link to="/">
       <div className="flex items-center">
@@ -147,7 +147,7 @@ const Navbar = () => {
         {navItems.map((item) => (
           <li
             key={item.id}
-            className="px-4 pb-2 transition-all duration-300 cursor-pointer border-gray-600 font-bold text-3xl uppercase"
+            className="px-4 pb-2 transition-all duration-300 cursor-pointer border-gray-600 font-bold text-3xl"
             onClick={() => item.dropdown && toggleMobileDropdown(item.id)}
           >
             {item.link ? (
@@ -158,7 +158,7 @@ const Navbar = () => {
               <span className="hover:text-gold_primary">{item.text}</span>
             )}
             {item.dropdown && mobileDropdownVisible === item.id && (
-              <ul className="pl-4 mt-2 text-lg">
+              <ul className="pl-4 mt-2 text-sm font-light">
                 {item.dropdown.map((subItem, index) => (
                   <li
                     key={index}
