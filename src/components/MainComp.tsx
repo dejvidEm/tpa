@@ -1,4 +1,6 @@
 import { FaArrowDown } from "react-icons/fa6";
+import { Link } from "react-router-dom";
+import ButtonComponent from "./ButtonComponent";
 
 interface MainCompProps {
   nadpisStranky: string;
@@ -12,6 +14,7 @@ interface MainCompProps {
   icon1:string;
   icon2:string;
   icon3:string;
+  buttonText:string;
 }
 
 const MainComp: React.FC<MainCompProps> = ({
@@ -26,6 +29,7 @@ const MainComp: React.FC<MainCompProps> = ({
   icon1,
   icon2,
   icon3,
+  buttonText
 }) => {
   return (
     <div className="bg-[#0A2125] text-white px-8 py-16 md:py-24 lg:py-32 flex flex-col items-center">
@@ -79,9 +83,16 @@ const MainComp: React.FC<MainCompProps> = ({
                     {zltyNadpis}
                   </span>
                 </h2>
+                <div className="flex flex-col gap-6">
                 <p className="text-lg md:text-xl text-gray-300 mt-4">
                   {pravText}
                 </p>
+                <Link to="/contact">
+          <ButtonComponent variant="primary" size="small">
+            {buttonText}
+          </ButtonComponent>
+          </Link>
+                </div>
               </div>
             </div>
           </div>

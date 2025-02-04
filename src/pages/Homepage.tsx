@@ -13,6 +13,7 @@ import MainCompMobile from "../components/MainCompMobile";
 
 import { pageContent } from "../components/data";
 import ImageWavyBanner from "../components/ImageWavyBanner";
+import MobileTransfer from "../components/PlayerTransfersMobile";
 
 // data kariet s podsránkami
 const cardData = [
@@ -162,10 +163,12 @@ const Homepage: React.FC = () => {
           icon1="/images/fifa_logo.png"
           icon2="/images/icons/check.png"
           icon3="/images/icons/target.png"
+          buttonText="GET TO KNOW US"
         />
       </section>
       <section className="block md:hidden">
         <MainCompMobile
+        buttonText="GET TO KNOW US"
           zltyNadpis={"a rising star or an established professional"}
           prvyText={
             "Top Players Agency is your trusted partner in football player representation. Our mission is simple: to unlock your potential and guide you toward a legacy of success both on and off the pitch."
@@ -306,7 +309,13 @@ we specialize in comprehensive support, including career management, legal servi
         </div>
       </section>
 
+      <section className=" hidden md:block">
       <PlayerTransfers />
+      </section>
+
+      <section className="block md:hidden">
+      <MobileTransfer/>
+      </section>
 
       {/* Posuvny pas s partnermi */}
       <Partners logos={logos} title={"Built on Trust, Driven by Partnership"} />

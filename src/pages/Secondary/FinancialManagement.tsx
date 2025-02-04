@@ -58,11 +58,13 @@ const FinancialManagement: React.FC = () => {
       icon1="/images/icons/Finance.png"
       icon2="/images/icons/safe.png"
       icon3="/images/icons/graf_kolac.png"
+      buttonText="CONTACT US"
     />
     </section>
 
     <section className="block md:hidden">
     <MainCompMobile
+    buttonText="CONTACT US"
   zltyNadpis={mainCompMobileContent.zltyNadpis}
   prvyText={mainCompMobileContent.prvyText}
   nadpisStranky={mainCompMobileContent.nadpisStranky}

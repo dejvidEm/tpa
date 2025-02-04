@@ -32,11 +32,13 @@ const HealthCare: React.FC = () => {
       icon1='/images/icons/Health.png'
       icon2='/images/icons/Physio.png'
       icon3='/images/icons/srdce.png'
+      buttonText="CONTACT US"
     />
     </section>
 
     <section className="block md:hidden">
     <MainCompMobile
+    buttonText="CONTACT US"
   zltyNadpis={mainCompMobileContent.zltyNadpis}
   prvyText={mainCompMobileContent.prvyText}
   nadpisStranky={mainCompMobileContent.nadpisStranky}

@@ -57,11 +57,13 @@ const PlayerRepresentation: React.FC = () => {
       icon1='/images/icons/Representation.png'
       icon2='/images/icons/sipka_hore.png'
       icon3='/images/icons/Global.png'
+      buttonText="CONTACT US"
     />
     </section>
 
     <section className="block md:hidden">
     <MainCompMobile
+    buttonText="CONTACT US"
   zltyNadpis={mainCompMobileContent.zltyNadpis}
   prvyText={mainCompMobileContent.prvyText}
   nadpisStranky={mainCompMobileContent.nadpisStranky}

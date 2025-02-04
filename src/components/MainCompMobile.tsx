@@ -1,5 +1,7 @@
 import { BsLinkedin } from "react-icons/bs";
 import { FC } from "react";
+import { Link } from "react-router-dom";
+import ButtonComponent from "./ButtonComponent";
 
 type MainCompMobileProps = {
   zltyNadpis: string;
@@ -12,6 +14,7 @@ type MainCompMobileProps = {
   podnadpisZltehoTextu: string;
   playerImage: string;
   icon?: React.ElementType;
+  buttonText:string;
 };
 
 const MainCompMobile: FC<MainCompMobileProps> = ({
@@ -25,6 +28,7 @@ const MainCompMobile: FC<MainCompMobileProps> = ({
   podnadpisZltehoTextu,
   playerImage,
   icon: Icon = BsLinkedin,
+  buttonText
 }) => {
   return (
     <div className="bg-[#0A2125] text-white px-4 py-16 md:py-24 lg:py-32 flex flex-col items-center">
@@ -47,11 +51,16 @@ const MainCompMobile: FC<MainCompMobileProps> = ({
         <div className="text-left max-w-full">
           <h2 className="text-lg font-light text-gray-300">
             {prednadpis}
-            <span className="text-gold_primary text-3xl font-bold ml-2 uppercase">
+            <span className="text-gold_primary text-3xl font-extrabold ml-2 uppercase">
               {zltyNadpis}
             </span>
           </h2>
-          <p className="text-lg text-gray-300 mt-4">{podnadpisZltehoTextu}</p>
+          <p className="text-lg text-gray-300 my-4">{podnadpisZltehoTextu}</p>
+          <Link to="/contact">
+          <ButtonComponent variant="primary" size="small">
+            {buttonText}
+          </ButtonComponent>
+          </Link>
         </div>
 
         <div className="relative">
