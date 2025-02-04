@@ -188,7 +188,7 @@ we specialize in comprehensive support, including career management, legal servi
         <div className="flex max-w-[1500px] mx-auto flex-col justify-between items-start px-4 md:px-8 lg:px-12">
           <div className="w-full flex flex-row pb-8 justify-between items-end">
             <div className="flex flex-col gap-2 w-3/5">
-              <h1 className="text-3xl md:text-6xl font-bold mb-4 max-w-[600px] uppercase text-gold_primary">
+              <h1 className="text-3xl md:text-5xl font-extrabold mb-4 max-w-[600px] uppercase text-gold_primary bg-gradient-to-r from-gold_secondary to-gold_primary inline-block text-transparent bg-clip-text">
                 <span className="ml-20">Comprehensive</span> services tailored
                 to your needs
               </h1>

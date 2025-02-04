@@ -29,8 +29,8 @@ const MainComp: React.FC<MainCompProps> = ({
 }) => {
   return (
     <div className="bg-[#0A2125] text-white px-8 py-16 md:py-24 lg:py-32 flex flex-col items-center">
-      <div className="flex justify-between items-center w-full max-w-[1400px]">
-        <div className="flex flex-col items-start space-y-8">
+      <div className="flex justify-between items-center w-full max-w-[1400px] gap-8">
+        <div className="flex flex-col items-start space-y-8 w-1/3">
           <div className="text-left">
             <div className="flex items-center space-x-4 mb-4">
               <div className="flex items-center justify-center gap-2 bg-[#112A2F] border border-gray-500 p-4 rounded-lg mb-4">
@@ -49,7 +49,7 @@ const MainComp: React.FC<MainCompProps> = ({
             </div>
           </div>
         </div>
-        <div className="relative z-10 -ml-32 -mr-32 mt-16">
+        <div className="relative z-10 -ml-32 -mr-32 mt-16 w-2/3">
           <div className="absolute w-[200px] h-[200px] bg-[#1cad9a] rounded-full opacity-60 blur-[100px] -top-30 left-[30%] -z-10"></div>
           <img
             src={image}
@@ -57,7 +57,7 @@ const MainComp: React.FC<MainCompProps> = ({
             className="h-auto w-[2000px] -ml-10 -mt-20 object-cover"
           />
         </div>
-        <div className="flex flex-col items-end space-y-8">
+        <div className="flex flex-col items-end space-y-8 w-3/6">
           <div className="text-left">
             <div className="flex flex-col space-x-4 mb-4">
               <p className="mb-6 max-w-96">{careerMessage}</p>
@@ -72,11 +72,10 @@ const MainComp: React.FC<MainCompProps> = ({
                   <h3 className="text-gold_primary">{pravyBadge}</h3>
                 </div>
               </div>
-
-              <div className="text-left max-w-3xl mb-16">
-                <h2 className="text-lg font-light text-gray-300">
-                  Our strategies help
-                  <span className="text-gold_primary text-4xl md:text-4xl font-extrabold uppercase">
+              <div className="text-left max-w-xl mb-16">
+              <h2 className="text-lg font-light text-gray-300">
+                  Our strategies help{" "}
+                  <span className="text-gold_primary max-w-92 ml-6 text-4xl md:text-[36px] font-extrabold uppercase max-w-lg leading-tight">
                     {zltyNadpis}
                   </span>
                 </h2>
