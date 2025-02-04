@@ -40,7 +40,8 @@ const FinancialManagement: React.FC = () => {
         mainHeading={"Where Financial Goals Meet Football Dreams"}
         maxWidth="max-w-[800px]"
         rotateClass="-rotate-2"
-        backgroundImage='/images/hero5.png'
+        backgroundVideo="/videos/homepage.mp4"
+        gradientOverlay="/images/gradient.png"
       />
 
       <section className="hidden md:block">

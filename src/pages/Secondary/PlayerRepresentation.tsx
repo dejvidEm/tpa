@@ -39,7 +39,8 @@ const PlayerRepresentation: React.FC = () => {
         mainHeading={"Dedicated to the Details That Define Greatness"}
         maxWidth="max-w-[800px]"
         rotateClass="-rotate-2"
-        backgroundImage='/images/hero2.png'
+        backgroundVideo="/videos/homepage.mp4"
+        gradientOverlay="/images/gradient.png"
       />
 
       <section className="hidden md:block">

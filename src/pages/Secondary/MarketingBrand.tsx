@@ -39,7 +39,8 @@ const MarketingBrand: React.FC = () => {
         mainHeading={"Transforming Players into Global brands"}
         maxWidth="max-w-[800px]"
         rotateClass="-rotate-2"
-        backgroundImage='/images/hero6.png'
+        backgroundVideo="/videos/homepage.mp4"
+        gradientOverlay="/images/gradient.png"
       />
 
       <section className="hidden md:block">

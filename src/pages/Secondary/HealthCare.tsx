@@ -14,7 +14,8 @@ const HealthCare: React.FC = () => {
         mainHeading={"Empowering Your Game Through Optimal Health"}
         maxWidth="max-w-[800px]"
         rotateClass="-rotate-2"
-        backgroundImage='/images/hero3.png'
+        backgroundVideo="/videos/homepage.mp4"
+        gradientOverlay="/images/gradient.png"
       />
 
       <section className="hidden md:block">

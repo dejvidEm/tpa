@@ -39,7 +39,8 @@ const LegalServices: React.FC = () => {
         mainHeading={"Defending Your Rights, Protecting Your Career"}
         maxWidth="max-w-[800px]"
         rotateClass="-rotate-2"
-        backgroundImage='/images/hero4.png'
+        backgroundVideo="/videos/homepage.mp4"
+        gradientOverlay="/images/gradient.png"
       />
 
       <section className="hidden md:block">

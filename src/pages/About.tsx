@@ -8,7 +8,8 @@ import ImageWavyBanner from '../components/ImageWavyBanner';
 const About: React.FC = () => {
   return (
     <div>
-      <Heading mainHeading={'Top Players Agency: Shaping the Future of Football'} backgroundImage='/images/hero8.png' rotateClass='-rotate-2'/>
+      <Heading mainHeading={'Top Players Agency: Shaping the Future of Football'} backgroundVideo="/videos/homepage.mp4"
+        gradientOverlay="/images/gradient.png" rotateClass='-rotate-2'/>
 
       <section className="hidden md:block">
       <AboutComp/>
