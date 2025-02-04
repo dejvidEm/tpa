@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import ButtonComponent from './ButtonComponent';
-import { LuStar, LuPenTool, LuCode } from 'react-icons/lu';
 import { Link } from 'react-router-dom';
 import { CiGlobe } from 'react-icons/ci';
 
@@ -23,12 +22,12 @@ const Navbar = () => {
       id: 1,
       text: 'SERVICES',
       dropdown: [
-        { text: 'Player Representation', icon: <LuStar size={24} />, link: '/services/player-representation' },
-        { text: 'Healthcare & Well-Being', icon: <LuPenTool size={24} />, link: '/services/healthcare-and-well-being' },
-        { text: 'Legal Services for Players', icon: <LuCode size={24} />, link: '/services/legal-services-for-players' },
-        { text: 'Financial Management', icon: <LuCode size={24} />, link: '/services/financial-management' },
-        { text: 'Marketing & Brand Development', icon: <LuCode size={24} />, link: '/services/marketing-and-brand-development' },
-        { text: 'Youth Football Representation', icon: <LuCode size={24} />, link: '/services/youth-football-representation' },
+        { text: 'Player Representation', icon: "/images/icons/Representation.png", link: '/services/player-representation' },
+        { text: 'Healthcare & Well-Being', icon: "/images/icons/Health.png", link: '/services/healthcare-and-well-being' },
+        { text: 'Legal Services for Players', icon: "/images/icons/retaz.png", link: '/services/legal-services-for-players' },
+        { text: 'Financial Management', icon: "/images/icons/Finance.png", link: '/services/financial-management' },
+        { text: 'Marketing & Brand Development', icon: "/images/icons/hviezda.png", link: '/services/marketing-and-brand-development' },
+        { text: 'Youth Football Representation', icon: "/images/icons/Youth.png", link: '/services/youth-football-representation' },
       ],
     },
     { id: 2, text: 'PLAYERS', link: '/players' },
@@ -86,7 +85,7 @@ const Navbar = () => {
                   >
                     <Link to={subItem.link} className="flex items-center">
                       <span className="mr-2 border-r-2 pr-4 border-opacity-30 border-gray-500">
-                        {subItem.icon}
+                        <img src={subItem.icon} alt="" />
                       </span>{' '}
                       <span className="hover:text-gold_primary pl-2 normal-case font-light">
                         {subItem.text}
@@ -166,7 +165,7 @@ const Navbar = () => {
                   >
                     <Link to={subItem.link} className="flex items-center" onClick={handleNav}>
                       <span className="mr-2 border-r-2 pr-3 border-opacity-30 border-gray-500">
-                        {subItem.icon}
+                        <img src={subItem.icon} alt="" />
                       </span>{' '}
                       <span className="ml-2 hover:text-gold_primary">{subItem.text}</span>
                     </Link>

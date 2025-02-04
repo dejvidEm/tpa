@@ -24,7 +24,7 @@ const Heading: React.FC<HeadingProps> = ({
       {/* Video pozadie */}
       {backgroundVideo && (
         <video
-          className="absolute inset-0 w-full h-full object-cover opacity-70"
+          className="absolute inset-0 w-full h-full object-cover opacity-50"
           src={backgroundVideo}
           autoPlay
           loop
