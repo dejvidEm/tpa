@@ -13,6 +13,9 @@ module.exports = {
           blue_primary: '#0E2A2F',
           green_primary: '#144736',
       },
+      fontFamily: {
+        barlow: ["Barlow Semi Condensed", "sans-serif"],
+      },
     },
   },
   plugins: [],

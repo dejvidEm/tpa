@@ -39,7 +39,7 @@ const PlayerRepresentation: React.FC = () => {
         mainHeading={"Dedicated to the Details That Define Greatness"}
         maxWidth="max-w-[800px]"
         rotateClass="-rotate-2"
-        backgroundVideo="/videos/homepage.mp4"
+        backgroundVideo="/videos/playerRepresentation.mp4"
         gradientOverlay="/images/gradient.png"
       />
 

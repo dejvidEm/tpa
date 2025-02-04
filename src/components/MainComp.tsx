@@ -55,10 +55,10 @@ const MainComp: React.FC<MainCompProps> = ({
         <div className="flex flex-col items-end space-y-8">
           <div className="text-left">
             <div className="flex flex-col space-x-4 mb-4">
-              <p className="mb-6">{careerMessage}</p>
+              <p className="mb-6 max-w-96">{careerMessage}</p>
               <div className="flex flex-row gap-3">
-                <FaArrowDown className="mt-1 text-gold_primary" />
-                <h3 className="text-gold_primary mb-28 uppercase">Scroll to explore</h3>
+                <FaArrowDown className="mt-1 -ml-4 text-gold_primary" />
+                <h3 className="text-gold_primary mb-28 uppercase font-bold">Scroll to explore</h3>
               </div>
               <div className="flex items-center space-x-4 mb-4">
                 <div className="flex justify-start gap-2 border-gray-400 bg-[#0c2327] p-4 rounded-lg w-max mb-40">
@@ -71,7 +71,7 @@ const MainComp: React.FC<MainCompProps> = ({
               <div className="text-left max-w-3xl mb-16">
                 <h2 className="text-lg font-light text-gray-300">
                   Our strategies help
-                  <span className="text-gold_primary text-4xl md:text-5xl font-bold max-w-92 ml-6 uppercase">
+                  <span className="text-gold_primary text-4xl md:text-4xl font-extrabold uppercase">
                     {zltyNadpis}
                   </span>
                 </h2>

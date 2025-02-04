@@ -39,7 +39,7 @@ const LegalServices: React.FC = () => {
         mainHeading={"Defending Your Rights, Protecting Your Career"}
         maxWidth="max-w-[800px]"
         rotateClass="-rotate-2"
-        backgroundVideo="/videos/homepage.mp4"
+        backgroundVideo="/videos/legal.mp4"
         gradientOverlay="/images/gradient.png"
       />
 

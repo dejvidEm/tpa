@@ -14,7 +14,7 @@ const HealthCare: React.FC = () => {
         mainHeading={"Empowering Your Game Through Optimal Health"}
         maxWidth="max-w-[800px]"
         rotateClass="-rotate-2"
-        backgroundVideo="/videos/homepage.mp4"
+        backgroundVideo="/videos/healthCare.mp4"
         gradientOverlay="/images/gradient.png"
       />
 

@@ -37,12 +37,11 @@ const Heading: React.FC<HeadingProps> = ({
         <img
           src={gradientOverlay}
           alt="gradient overlay"
-          className="absolute bottom-0 lg:-bottom-16 left-0 w-full h-auto z-[99] pointer-events-none"
+          className="absolute bottom-0 lg:-bottom-20 left-0 w-full h-auto z-[99] pointer-events-none"
         />
       )}
 
       {/* Overlay pre lepšiu čitateľnosť textu */}
-      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
 
       <div className="relative flex flex-row items-center z-[100]">
         <CiGlobe size={64} className="z-40 relative" />
@@ -54,7 +53,7 @@ const Heading: React.FC<HeadingProps> = ({
         />
       </div>
       <h1
-        className={`text-3xl md:text-6xl font-bold uppercase mt-4 my-16 ${maxWidth} ${rotateClass} break-words bg-gradient-to-r from-gold_secondary to-gold_primary inline-block text-transparent bg-clip-text relative  z-[100]`}
+        className={`text-3xl md:text-6xl font-extrabold uppercase mt-4 my-16 ${maxWidth} ${rotateClass} break-words font-barlow bg-gradient-to-r from-gold_secondary to-gold_primary inline-block text-transparent bg-clip-text relative  z-[100]`}
       >
         {mainHeading}
       </h1>

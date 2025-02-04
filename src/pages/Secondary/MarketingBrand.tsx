@@ -39,7 +39,7 @@ const MarketingBrand: React.FC = () => {
         mainHeading={"Transforming Players into Global brands"}
         maxWidth="max-w-[800px]"
         rotateClass="-rotate-2"
-        backgroundVideo="/videos/homepage.mp4"
+        backgroundVideo="/videos/marketing.mp4"
         gradientOverlay="/images/gradient.png"
       />
 
