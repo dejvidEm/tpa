@@ -1,0 +1,27 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+.nadpis_bold {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 900; /* Nastaví bold verziu */
+  }
+  
