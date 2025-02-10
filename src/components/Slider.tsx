@@ -34,7 +34,7 @@ const ResponsiveSlider = forwardRef((props: SliderProps, ref) => {
   }, [visibleItems]);
 
   const handleNext = () => {
-    if (currentIndex + itemsToShow < items.length) {
+    if (currentIndex + itemsToShow < items.length - 1) { // Stop skôr
       setCurrentIndex((prevIndex) => prevIndex + 1);
     }
   };
@@ -73,6 +73,8 @@ const ResponsiveSlider = forwardRef((props: SliderProps, ref) => {
 
   const partialVisibleWidth = window.innerWidth < 768 ? 10 : showPartialNext ? 10 : 0;
 
+  const isLastItemAlmostVisible = currentIndex + itemsToShow >= items.length - 1; // Stop skôr
+
   return (
     <div
       className="relative w-full overflow-hidden"
@@ -98,6 +100,14 @@ const ResponsiveSlider = forwardRef((props: SliderProps, ref) => {
             {item}
           </div>
         ))}
+      </div>
+      <div className="flex justify-between mt-2">
+        <button onClick={handlePrev} disabled={currentIndex === 0}>
+          Prev
+        </button>
+        <button onClick={handleNext} disabled={isLastItemAlmostVisible}>
+          Next
+        </button>
       </div>
     </div>
   );
