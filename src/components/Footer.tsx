@@ -111,7 +111,7 @@ const Footer: React.FC<FooterProps> = ({ backgroundImage }) => {
           <p className="text-[14px] text-gold_primary">Certified agents</p>
         </div>
         <div className="flex md:hidden flex-row items-center mb-4 md:mb-0 p-4 ">
-          <img src="/images/Logo_png.png" alt="" className="w-10 mr-2" />
+          <img src="/images/Logo_png.png" alt="" className="w-8 mr-2" />
           <span className="bg-gray-500 opacity-30 h-[40%] w-0.5 ml-2 mr-4"></span>
           <p className="text-sm text-gold_primary">
             2025 © All rights reserved
