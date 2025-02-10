@@ -96,6 +96,40 @@ const Navbar = () => {
               )}
             </li>
           ))}
+          <div className="absolute flex flex-row justify-between w-full items-center px-4 pr-8 bottom-20">
+          <li className="px-4 py-2 list-none">
+            <Link to="/contact" onClick={handleNav}>
+              <ButtonComponent variant="secondary" size="small">
+                Contact
+              </ButtonComponent>
+            </Link>
+          </li>
+
+          <li className="px-4 py-2 list-none relative">
+            <div
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              className="flex items-center cursor-pointer gap-2"
+            >
+              <CiGlobe size={24} />
+              <h2>{selectedLanguage}</h2>
+            </div>
+            {isDropdownOpen && (
+              <div className="absolute bottom-10 right-0 bg-[#0A2125] shadow-md rounded-md border border-gray-200 border-opacity-20 z-10">
+                {languages
+                  .filter((lang) => lang !== selectedLanguage)
+                  .map((lang) => (
+                    <div
+                      key={lang}
+                      onClick={() => handleLanguageSelect(lang)}
+                      className="px-4 m-1 py-2 hover:bg-[#11353b] cursor-pointer text-white"
+                    >
+                      {lang}
+                    </div>
+                  ))}
+              </div>
+            )}
+          </li>
+        </div>
         </ul>
       </div>
 

@@ -42,11 +42,11 @@ const Contact: React.FC = () => {
                 </h3>
                 <div className="flex items-center gap-4 mt-2">
                   <TbPhoneCall size={24} />
-                  <p>00421 911 212 482</p>
+                  <a href="tel:+421911212482" className="text-white">00421 911 212 482</a>
                 </div>
                 <div className="flex items-center gap-4 mt-2 text-[18px] leading-[24px]">
                   <BsEnvelope size={24} />
-                  <p>info@topplayersagency.com</p>
+                  <a href="mailto:info@topplayersagency.com" className="text-white">info@topplayersagency.com</a>
                 </div>
                 <div className="flex items-center gap-4 mt-2">
                   <BsFlag size={24} />
@@ -65,11 +65,11 @@ const Contact: React.FC = () => {
                 </p>
                 <div className="flex items-center gap-4 mt-2">
                   <TbPhoneCall size={24} />
-                  <p>00421 905 366 031</p>
+                  <a href="tel:+421905366031" className="text-white">00421 905 366 031</a>
                 </div>
                 <div className="flex items-center gap-4 mt-2 text-[18px] leading-[24px] md:mb-32">
                   <BsEnvelope size={24} />
-                  <p>RadovanKollar@topplayersagency.com</p>
+                  <a href="mailto:RadovanKollar@topplayersagency.com" className="text-white">RadovanKollar@topplayersagency.com</a>
                 </div>
               </div>
 
@@ -82,11 +82,11 @@ const Contact: React.FC = () => {
                 </p>
                 <div className="flex items-center gap-4 mt-2 text-[18px] leading-[24px]">
                   <TbPhoneCall size={24} />
-                  <p>00421 911 212 482</p>
+                  <a href="tel:+421911212482" className="text-white">00421 911 212 482</a>
                 </div>
                 <div className="flex flex-row items-center gap-4 mt-2 text-[18px] leading-[24px]">
                   <BsEnvelope size={24} />
-                  <p>JakubFilip@topplayersagency.com</p>
+                  <a href="mailto:JakubFilip@topplayersagency.com" className="text-white">JakubFilip@topplayersagency.com</a>
                 </div>
               </div>
             </div>
@@ -109,11 +109,11 @@ const Contact: React.FC = () => {
               </p>
               <div className="flex items-center gap-4 mt-2 md:text-[18px] leading-[24px] text-[16px]">
                 <TbPhoneCall size={24} />
-                <p>00421 911 212 482</p>
+                <a href="tel:+421911212482" className="text-white">00421 911 212 482</a>
               </div>
               <div className="flex items-center gap-4 mt-2 md:text-[18px] leading-[24px] text-[16px]">
                 <BsEnvelope size={24} />
-                <p>JakubFilip@topplayersagency.com</p>
+                <a href="mailto:JakubFilip@topplayersagency.com" className="text-white">JakubFilip@topplayersagency.com</a>
               </div>
             </div>
             <div>
@@ -125,11 +125,11 @@ const Contact: React.FC = () => {
               </p>
               <div className="flex items-center gap-4 mt-2">
                 <TbPhoneCall size={24} />
-                <p>00421 905 366 031</p>
+                <a href="tel:+421905366031" className="text-white">00421 905 366 031</a>
               </div>
               <div className="flex items-center gap-4 mt-2 text-[18px] leading-[24px] ">
                 <BsEnvelope size={24} />
-                <p>RadovanKollar@topplayersagency.com</p>
+                <a href="mailto:RadovanKollar@topplayersagency.com" className="text-white">RadovanKollar@topplayersagency.com</a>
               </div>
             </div>
             <div className="border-t border-gray-500 my-8 max-w-[480px]"></div>
@@ -139,11 +139,11 @@ const Contact: React.FC = () => {
               </h3>
               <div className="flex items-center gap-4 mt-2">
                 <TbPhoneCall size={24} />
-                <p>00421 911 212 482</p>
+                <a href="tel:+421911212482" className="text-white">00421 911 212 482</a>
               </div>
               <div className="flex items-center gap-4 mt-2 text-[18px] leading-[24px]">
                 <BsEnvelope size={24} />
-                <p>info@topplayersagency.com</p>
+                <a href="mailto:info@topplayersagency.com">info@topplayersagency.com</a>
               </div>
               <div className="flex items-center gap-4 mt-2">
                 <BsFlag size={24} />
