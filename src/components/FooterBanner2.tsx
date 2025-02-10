@@ -7,26 +7,22 @@ type BannerProps = {
   mainHeading: string; // Veľký nadpis je povinný
   buttonText?: string; // Tlačidlo je voliteľné
   maxWidth?: string; // Možnosť nastaviť max-width pre h1
-  height?:string;
   rotateClass?: string; // Možnosť nastaviť rotáciu pre h1
   smallFirst?: boolean; // Určuje, či sa malý nadpis zobrazuje pred veľkým
   backgroundImage?: string; // URL pozadia
   backgroundVideo?: string; // URL videa na pozadie
   link?: string; // link na ktory odkazuje button
-  bgOpacity?:string;
 };
 
-const Banner: React.FC<BannerProps> = ({
+const BannerD: React.FC<BannerProps> = ({
   mainHeading,
   smallHeading,
   buttonText,
   maxWidth = "max-w-2xl",
-  height,
   rotateClass = "",
   smallFirst = false,
   backgroundImage,
   backgroundVideo,
-  bgOpacity,
   link="/"
 }) => {
   const navigate = useNavigate();
@@ -38,7 +34,7 @@ const Banner: React.FC<BannerProps> = ({
 
   return (
     <div
-      className={`relative ${height} bg-blue_primary text-white flex flex-col items-center justify-center text-center`}
+      className="relative h-[860px] bg-blue_primary text-white flex flex-col items-center justify-center text-center"
       style={{
         backgroundImage: backgroundImage && !backgroundVideo ? `url(${backgroundImage})` : undefined,
         backgroundSize: "cover",
@@ -62,12 +58,12 @@ const Banner: React.FC<BannerProps> = ({
       <img
         src="/images/gradient.png"
         alt="Gradient Overlay"
-        className={`absolute left-0 w-full ${bgOpacity} h-full object-cover z-10`}
+        className="absolute left-0 w-full opacity-0 h-full object-cover z-10"
       />
 
       <div className="relative z-20 flex flex-col items-center">
         {smallFirst && smallHeading && (
-          <h4 className="text-[18px] text-gray-200 mb-8">{smallHeading}</h4>
+          <h4 className="text-sm text-gray-400 mb-8">{smallHeading}</h4>
         )}
 
         <h1
@@ -81,7 +77,7 @@ const Banner: React.FC<BannerProps> = ({
         </h1>
 
         {!smallFirst && smallHeading && (
-          <h4 className="px-14 md:px-0 text-[18px] text-gray-200 mb-6 mt-10 max-w-[400px]">{smallHeading}</h4>
+          <h4 className="text px-14 md:px-0 text-gray-400 mb-2 mt-10 max-w-[400px]">{smallHeading}</h4>
         )}
 
         {buttonText && (
@@ -98,4 +94,4 @@ const Banner: React.FC<BannerProps> = ({
   );
 };
 
-export default Banner; 
+export default BannerD; 

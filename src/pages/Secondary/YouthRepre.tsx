@@ -12,7 +12,7 @@ const YouthRepre: React.FC = () => {
       {/* Nadpis podnadpis a button */}
       <Heading
         mainHeading={"We support young athletes with integrity & care"}
-        maxWidth="max-w-[1100px]"
+        maxWidth="max-w-[1300px]"
         rotateClass="-rotate-2"
         backgroundVideo="/videos/mladez.mp4"
         gradientOverlay="/images/gradient.png"

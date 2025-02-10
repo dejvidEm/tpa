@@ -111,6 +111,8 @@ const FinancialManagement: React.FC = () => {
         }
         smallFirst={false}
         maxWidth="max-w-5xl"
+        height="h-[860px]"
+        bgOpacity="opacity-0"
         buttonText="Contact us"
         backgroundImage="/images/footerBanner.png"
       />
@@ -124,6 +126,7 @@ const FinancialManagement: React.FC = () => {
         }
         smallFirst={true}
         maxWidth="max-w-5xl"
+        height='h-[500px]'
         buttonText="Find out more"
         backgroundVideo='/videos/mark.mp4'
         rotateClass='-rotate-2'

@@ -31,7 +31,7 @@ const HealthCare: React.FC = () => {
       zltyNadpis={pageContent3.zltyNadpis}
       pravText={pageContent3.pravText}
       predNadpis={pageContent3.predNadpis}
-      image="/images/figures/healthcare.png"
+      image="/images/figures/zdravickoNew.png"
       icon1='/images/icons/Health.png'
       icon2='/images/icons/Physio.png'
       icon3='/images/icons/srdce.png'
@@ -75,6 +75,8 @@ const HealthCare: React.FC = () => {
         }
         smallFirst={false}
         maxWidth="max-w-5xl"
+        height="h-[860px]"
+        bgOpacity="opacity-0"
         buttonText="Contact us"
         backgroundImage="/images/footerBanner.png"
       />
@@ -88,6 +90,7 @@ const HealthCare: React.FC = () => {
         }
         smallFirst={true}
         maxWidth="max-w-5xl"
+        height='h-[500px]'
         buttonText="Find out more"
         backgroundVideo='/videos/hc2AndLegal1.mp4'
         rotateClass='-rotate-2'

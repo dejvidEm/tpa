@@ -27,10 +27,10 @@ const PlayerTransfers = () => {
       </div>
 
       <div className="flex justify-start gap-24 lg:gap-32 text-xl font-semibold mb-16">
-        <span className="text-2xl bg-gradient-to-r from-gold_secondary to-gold_primary inline-block text-transparent bg-clip-text font-bold">
+        <span className="text-3xl scale-x-90 bg-gradient-to-r from-gold_secondary to-gold_primary inline-block text-transparent bg-clip-text font-bold">
           {players.length} PLAYERS
         </span>
-        <span className="text-2xl font-bold">12 TRANSFERS</span>
+        <span className="text-3xl font-bold scale-x-90">12 TRANSFERS</span>
       </div>
 
       <img src="/images/blur.png" alt="" className='absolute -left-48 top-10'/>
@@ -48,7 +48,7 @@ const PlayerTransfers = () => {
             <span className={`${selectedPlayer.name === player.name ? 'text-gold_primary' : ''}`}>{player.name}</span>
             <span className="hidden lg:flex justify-center relative h-0">
               {selectedPlayer.name === player.name && (
-                <img src={player.photo} className="w-32 h-32 md:w-56 md:h-56 absolute -top-16 md:-left-10 lg:-left-28 z-[50] object-cover -rotate-2" alt={player.name} />
+                <img src={player.photo} className="w-32 h-32 md:w-[314px] md:h-[314px] absolute -top-16 md:-left-10 lg:-left-28 z-[50] object-cover -rotate-2" alt={player.name} />
               )}
             </span>
             <span className={`${selectedPlayer.name === player.name ? 'text-gold_primary' : ''}`}>{player.position}</span>

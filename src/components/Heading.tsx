@@ -57,7 +57,7 @@ const Heading: React.FC<HeadingProps> = ({
         />
       </div>
       <h1
-        className={`text-3xl md:text-6xl font-extrabold uppercase mt-4 my-16 ${maxWidth} ${rotateClass} break-words font-barlow bg-gradient-to-r from-gold_secondary to-gold_primary inline-block text-transparent bg-clip-text relative ${HeadingOpaciy} z-[100]`}
+        className={`text-3xl md:text-[70px] font-extrabold uppercase mt-4 my-16 ${maxWidth} ${rotateClass} break-words font-barlow bg-gradient-to-r from-gold_secondary to-gold_primary inline-block text-transparent bg-clip-text relative ${HeadingOpaciy} z-[10000] leading-[64px] scale-x-90`}
       >
         {mainHeading}
       </h1>

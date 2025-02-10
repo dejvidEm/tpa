@@ -2,7 +2,7 @@ import React from "react";
 
 const FullWidthVideoBackground: React.FC = () => {
   return (
-    <div className="relative w-screen h-[700px] overflow-hidden">
+    <div className="relative w-screen h-[500px] overflow-hidden">
       {/* Background Video */}
       <video
         autoPlay
@@ -20,7 +20,7 @@ const FullWidthVideoBackground: React.FC = () => {
       <img
         src="/images/gradient.png"
         alt="Gradient Transition"
-        className="absolute bottom-0 md:-bottom-20 left-0 w-full h-auto object-cover z-[99]"
+        className="absolute bottom-0 md:-bottom-28 left-0 w-full h-auto object-cover z-[99]"
       />
 
       {/* Image Content */}
@@ -30,7 +30,7 @@ const FullWidthVideoBackground: React.FC = () => {
           <img
             src="/images/wavyTextImage.png"
             alt="Full Screen"
-            className="w-[90%] md:w-[60%] mx-auto object-cover block"
+            className="w-[90%] md:w-[100%] mx-auto object-cover block"
           />
         </picture>
       </div>

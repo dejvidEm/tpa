@@ -49,7 +49,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="absolute top-0 left-0 w-full flex justify-between items-center h-24 mx-auto px-6 md:px-16 text-white z-[9999]">
+    <div className="absolute top-0 left-0 w-full flex justify-between items-center h-24 mx-auto px-6 md:px-16 text-white z-[999999999]">
       <Link to="/">
         <img src="/images/g8.png" alt="company logo" className="w-32" />
       </Link>

@@ -37,7 +37,7 @@ const PlayerRepresentation: React.FC = () => {
       {/* Nadpis podnadpis a button */}
       <Heading
         mainHeading={"Dedicated to the Details That Define Greatness"}
-        maxWidth="max-w-[1000px]"
+        maxWidth="max-w-[1200px]"
         rotateClass="-rotate-2"
         backgroundVideo="/videos/repre.mp4"
         gradientOverlay="/images/gradient.png"
@@ -54,7 +54,7 @@ const PlayerRepresentation: React.FC = () => {
       zltyNadpis={pageContent2.zltyNadpis}
       pravText={pageContent2.pravText}
       predNadpis={pageContent2.predNadpis}
-      image="/images/figures/representation.png"
+      image="/images/figures/novyPR.png"
       icon1='/images/icons/Representation.png'
       icon2='/images/icons/sipka_hore.png'
       icon3='/images/icons/Global.png'
@@ -105,6 +105,8 @@ zltyNadpis={pageContent2.zltyNadpis}
         }
         smallFirst={false}
         maxWidth="max-w-5xl"
+        height='h-[860px]'
+        bgOpacity='opacity-0'
         buttonText="Contact us"
         backgroundImage="/images/footerBanner.png"
       />
@@ -118,6 +120,7 @@ zltyNadpis={pageContent2.zltyNadpis}
         }
         smallFirst={true}
         maxWidth="max-w-5xl"
+        height='h-[500px]'
         buttonText="Find out more"
         backgroundVideo='/videos/hc.mp4'
         rotateClass='-rotate-2'

@@ -110,6 +110,8 @@ zltyNadpis={pageContent6.zltyNadpis}
         }
         smallFirst={false}
         maxWidth="max-w-5xl"
+        height="h-[860px]"
+        bgOpacity="opacity-0"
         buttonText="Contact us"
         backgroundImage="/images/footerBanner.png"
       />
@@ -123,6 +125,7 @@ zltyNadpis={pageContent6.zltyNadpis}
         }
         smallFirst={true}
         maxWidth="max-w-6xl"
+        height='h-[500px]'
         buttonText="Find out more"
         backgroundVideo='/videos/mladez.mp4'
         rotateClass='-rotate-2'
