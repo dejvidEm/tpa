@@ -41,7 +41,7 @@ const MainCompHome: React.FC<MainCompProps> = ({
             HeadingOpaciy="opacity-0"
             maxWidth="max-w-[800px]"
             rotateClass="-rotate-2"
-            backgroundVideo="/videos/domov.mp4"
+            backgroundVideo="/videos/hpnovy.mp4"
             gradientOverlay="/images/gradient.png"
             icon="/images/icons/Global.png"
           />
