@@ -1,5 +1,5 @@
 import React from "react";
-import FeatureItem from "../components/FeatureItem";
+import FeatureItemM from "./FeatureItemM";
 
 type Feature = {
   number: string;
@@ -25,7 +25,7 @@ const StepsCompMobile: React.FC<StepsCompMobileProps> = ({ heading, features }) 
           </h1>
           <div className="space-y-6">
             {features.map((feature, index) => (
-              <FeatureItem
+              <FeatureItemM
                 key={index}
                 number={feature.number}
                 title={feature.title}
