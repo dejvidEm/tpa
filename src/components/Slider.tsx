@@ -101,7 +101,7 @@ const ResponsiveSlider = forwardRef((props: SliderProps, ref) => {
           </div>
         ))}
       </div>
-      <div className="flex justify-between mt-2">
+      <div className="flex justify-between mt-2 opacity-0">
         <button onClick={handlePrev} disabled={currentIndex === 0}>
           Prev
         </button>
