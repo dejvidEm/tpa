@@ -5,8 +5,8 @@ import Heading from '../../components/Heading';
 import MainComp from '../../components/MainComp';
 import MainCompMobile from '../../components/MainCompMobile';
 import StepsCompMobile from '../../components/StepsCompMobile';
-import StepsComp from '../../components/StepsComp';
 import FooterBanner from '../../components/FooterBanner';
+import StepsCompL from '../../components/StepsCompL';
 
 const features = [
   {
@@ -81,7 +81,7 @@ const LegalServices: React.FC = () => {
       </section>
 
       <section className="hidden md:block">
-        <StepsComp
+        <StepsCompL
           heading="SPORTS LAW PROFESSIONALS SPECIALIZES IN"
           features={features}
           imageSrc="/images/novaLopta.png"

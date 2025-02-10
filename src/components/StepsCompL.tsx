@@ -14,7 +14,7 @@ type StepsCompProps = {
   imageAlt: string;
 };
 
-const StepsComp: React.FC<StepsCompProps> = ({
+const StepsCompL: React.FC<StepsCompProps> = ({
   features,
   imageSrc,
   imageAlt,
@@ -26,7 +26,7 @@ const StepsComp: React.FC<StepsCompProps> = ({
         {/* Ľavý stĺpec */}
         <div className="flex-1 mb-12">
         <h1 className="text-4xl md:text-6xl relative font-extrabold uppercase mx-4 md:max-w-2xl break-words bg-gradient-to-r from-gold_secondary to-gold_primary inline-block text-transparent bg-clip-text ">
-        <span className="ml-20">Our player</span> representation services
+        <span className="">sports law</span> professionals specializes in
       </h1>
 
           <div className="space-y-64 ml-80 mt-32 max-w-[490px]">
@@ -67,4 +67,4 @@ const StepsComp: React.FC<StepsCompProps> = ({
   );
 };
 
-export default StepsComp;
+export default StepsCompL;

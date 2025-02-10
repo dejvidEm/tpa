@@ -1,5 +1,5 @@
 import React from "react";
-import FeatureItem from "../components/FeatureItem";
+import FeatureItemF from "./FeatureItemF";
 
 type Feature = {
   number: string;
@@ -33,7 +33,7 @@ const StepsCompF: React.FC<StepsCompProps> = ({
             {features
               .filter((_, index) => index % 2 === 1) // Nepárne indexy
               .map((feature, index) => (
-                <FeatureItem
+                <FeatureItemF
                   key={index}
                   number={feature.number}
                   title={feature.title}
@@ -48,7 +48,7 @@ const StepsCompF: React.FC<StepsCompProps> = ({
           {features
             .filter((_, index) => index % 2 === 0) // Párne indexy
             .map((feature, index) => (
-              <FeatureItem
+              <FeatureItemF
                 key={index}
                 number={feature.number}
                 title={feature.title}
