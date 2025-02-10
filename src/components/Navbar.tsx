@@ -109,7 +109,7 @@ const Navbar = () => {
         {navItems.map((item) => (
           <li
             key={item.id}
-            className="relative py-2 px-11 cursor-pointer transition-all duration-300 hover:text-gold_primary font-semibold uppercase"
+            className="relative py-2 px-8 cursor-pointer transition-all duration-300 hover:text-gold_primary font-semibold uppercase"
             onMouseEnter={() => item.dropdown && handleMouseEnter()}
             onMouseLeave={() => item.dropdown && handleMouseLeave()}
           >
