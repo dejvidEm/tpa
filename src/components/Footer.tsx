@@ -81,7 +81,7 @@ const Footer: React.FC<FooterProps> = ({ backgroundImage }) => {
           </Link>
         </div>
 
-        <div className="flex flex-col gap-8 md:hidden justify-center items-center relative">
+        <div className="flex flex-col md:flex-row gap-8 justify-center items-center relative">
           <Link to="/contact">
             <ButtonComponent variant="secondary" size="small">
               Contact
