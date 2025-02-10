@@ -26,7 +26,7 @@ const Heading: React.FC<HeadingProps> = ({
       {/* Video pozadie */}
       {backgroundVideo && (
         <video
-          className="absolute inset-0 w-full h-full object-cover opacity-50"
+          className="absolute inset-0 w-full h-full object-cover"
           src={backgroundVideo}
           autoPlay
           loop
@@ -41,7 +41,7 @@ const Heading: React.FC<HeadingProps> = ({
         <img
           src={gradientOverlay}
           alt="gradient overlay"
-          className="absolute bottom-0 lg:-bottom-24 left-0 w-full h-auto z-[999] pointer-events-none"
+          className="absolute bottom-0 lg:-bottom-[140px] left-0 w-full h-auto z-[999] pointer-events-none"
         />
       )}
 
