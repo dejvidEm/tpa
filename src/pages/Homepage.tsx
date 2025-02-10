@@ -172,7 +172,7 @@ we specialize in comprehensive support, including career management, legal servi
 
       {/* Sekcia s kartami podstránok */}
       <section className="w-full mx-auto slider bg-[#0A2125] py-16 mb-32 px-8 hidden md:flex flex-col gap-12">
-        <div className="flex max-w-[1500px] mx-auto flex-col justify-between items-start px-4 md:px-8 lg:px-12">
+        <div className="flex max-w-[1500px] flex-col justify-between items-start px-4 md:px-8 lg:px-12">
           <div className="w-full flex flex-row pb-8 justify-between items-end">
             <div className="flex flex-col gap-2 w-3/5">
               <h1 className="text-3xl md:text-5xl font-extrabold mb-4 max-w-[600px] uppercase text-gold_primary bg-gradient-to-r from-gold_secondary to-gold_primary inline-block text-transparent bg-clip-text">

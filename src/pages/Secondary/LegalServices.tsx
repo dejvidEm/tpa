@@ -37,7 +37,7 @@ const LegalServices: React.FC = () => {
       {/* Nadpis podnadpis a button */}
       <Heading
         mainHeading={"Defending Your Rights, Protecting Your Career"}
-        maxWidth="max-w-[800px]"
+        maxWidth="max-w-[950px]"
         rotateClass="-rotate-2"
         backgroundVideo="/videos/hc2AndLegal1.mp4"
         gradientOverlay="/images/gradient.png"
