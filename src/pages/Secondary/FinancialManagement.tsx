@@ -127,6 +127,7 @@ const FinancialManagement: React.FC = () => {
         buttonText="Find out more"
         backgroundVideo='/videos/mark.mp4'
         rotateClass='-rotate-2'
+        link='/services/marketing-and-brand-development'
       />
 
     </div>

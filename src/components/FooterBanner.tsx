@@ -1,6 +1,6 @@
 import React from "react";
 import ButtonComponent from "./ButtonComponent";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 type BannerProps = {
   smallHeading?: string; // Malý nadpis je voliteľný
@@ -11,6 +11,7 @@ type BannerProps = {
   smallFirst?: boolean; // Určuje, či sa malý nadpis zobrazuje pred veľkým
   backgroundImage?: string; // URL pozadia
   backgroundVideo?: string; // URL videa na pozadie
+  link?: string; // link na ktory odkazuje button
 };
 
 const Banner: React.FC<BannerProps> = ({
@@ -22,6 +23,7 @@ const Banner: React.FC<BannerProps> = ({
   smallFirst = false,
   backgroundImage,
   backgroundVideo,
+  link="/"
 }) => {
   const navigate = useNavigate();
 
@@ -80,9 +82,11 @@ const Banner: React.FC<BannerProps> = ({
 
         {buttonText && (
           <div className="mt-4">
+            <Link to={link}>
             <ButtonComponent variant="primary" size="large" onClick={handleClick}>
               {buttonText}
             </ButtonComponent>
+            </Link>
           </div>
         )}
       </div>

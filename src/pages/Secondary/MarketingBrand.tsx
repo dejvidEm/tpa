@@ -59,7 +59,7 @@ const MarketingBrand: React.FC = () => {
       zltyNadpis={pageContent6.zltyNadpis}
       pravText={pageContent6.pravText}
       predNadpis={pageContent6.predNadpis}
-      image="/images/figures/marketing.png"
+      image="/images/marketingNew.png"
       icon1='/images/icons/hviezda.png'
       icon2='/images/icons/zamok.png'
       icon3='/images/icons/oktagon.png'
@@ -81,7 +81,7 @@ zltyNadpis={pageContent6.zltyNadpis}
   druhyText={pageContent6.prvyText}
   prednadpis={pageContent6.predNadpis}
   podnadpisZltehoTextu={pageContent6.pravText}
-  playerImage="/images/figures/marketing.png"
+  playerImage="/images/marketingNew.png"
 />
       </section>
 
@@ -126,6 +126,7 @@ zltyNadpis={pageContent6.zltyNadpis}
         buttonText="Find out more"
         backgroundVideo='/videos/mladez.mp4'
         rotateClass='-rotate-2'
+        link='/services/youth-football-representation'
       />
 
     </div>

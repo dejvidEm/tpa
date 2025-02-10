@@ -121,6 +121,7 @@ zltyNadpis={pageContent2.zltyNadpis}
         buttonText="Find out more"
         backgroundVideo='/videos/hc.mp4'
         rotateClass='-rotate-2'
+        link='/services/healthcare-and-well-being'
       />
 
     </div>

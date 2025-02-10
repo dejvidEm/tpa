@@ -91,6 +91,7 @@ const HealthCare: React.FC = () => {
         buttonText="Find out more"
         backgroundVideo='/videos/hc2AndLegal1.mp4'
         rotateClass='-rotate-2'
+        link='/services/legal-services-for-players'
       />
 
     </div>

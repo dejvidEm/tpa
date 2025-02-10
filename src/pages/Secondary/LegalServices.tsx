@@ -121,6 +121,7 @@ const LegalServices: React.FC = () => {
         buttonText="FIND OUT MORE"
         backgroundVideo='/videos/vilaVideo.mp4'
         rotateClass='-rotate-2'
+        link='/services/financial-management'
       />
 
     </div>
