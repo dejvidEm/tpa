@@ -43,7 +43,7 @@ const FinancialManagement: React.FC = () => {
       {/* Nadpis podnadpis a button */}
       <Heading
         mainHeading={"Where Financial Goals Meet Football Dreams"}
-        maxWidth="max-w-[900px]"
+        maxWidth="max-w-[1100px]"
         rotateClass="-rotate-2"
         backgroundVideo="/videos/vilaVideo.mp4"
         gradientOverlay="/images/gradient.png"

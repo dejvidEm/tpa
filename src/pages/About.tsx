@@ -9,7 +9,7 @@ const About: React.FC = () => {
   return (
     <div>
       <HeadingA mainHeading={'Top Players Agency: Shaping the Future of Football'} backgroundVideo="/videos/Aboutus.mp4"
-        gradientOverlay="/images/gradient.png" rotateClass='-rotate-2'/>
+        gradientOverlay="/images/gradient.png" rotateClass='-rotate-2' maxWidth='w-[1200px]'/>
       <section className="hidden md:block">
       <AboutComp/>
       </section>

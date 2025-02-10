@@ -169,7 +169,7 @@ const Players: React.FC = () => {
   return (
     <div className='bg-[#0A2125]'>
       <div className='mx-10'>
-      <Heading mainHeading={'Players proudly represented by the top players agency'} maxWidth='max-w-[500px]' rotateClass='-rotate-2'/>
+      <Heading mainHeading={'Players proudly represented by the top players agency'} maxWidth='max-w-[1200px]' rotateClass='-rotate-2'/>
       </div>
       <section className="bg-[#0A2125] py-8 px-8">
   <div className="max-w-[1500px] md:mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 gap-y-20">

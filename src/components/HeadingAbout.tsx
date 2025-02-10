@@ -36,7 +36,7 @@ const HeadingA: React.FC<HeadingProps> = ({
         <img
           src={gradientOverlay}
           alt="gradient overlay"
-          className="absolute bottom-0 lg:-bottom-20 left-0 w-full h-auto z-[99] pointer-events-none"
+          className="absolute bottom-0 lg:-bottom-32 left-0 w-full h-auto z-[99] pointer-events-none"
         />
       )}
 
@@ -51,7 +51,7 @@ const HeadingA: React.FC<HeadingProps> = ({
       </div>
       <div className="mx-4">
       <h1
-        className={`text-4xl md:text-6xl font-extrabold uppercase mt-4 my-16 ${maxWidth} ${rotateClass} break-words font-barlow bg-gradient-to-r from-gold_secondary to-gold_primary inline-block text-transparent bg-clip-text relative  z-[100]`}
+        className={`text-4xl md:text-6xl font-extrabold uppercase mt-10 my-16 ${maxWidth} ${rotateClass} break-words font-barlow bg-gradient-to-r from-gold_secondary to-gold_primary inline-block text-transparent bg-clip-text relative  z-[100]`}
       >
         {mainHeading}
       </h1>

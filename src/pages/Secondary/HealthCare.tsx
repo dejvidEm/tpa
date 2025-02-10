@@ -14,7 +14,7 @@ const HealthCare: React.FC = () => {
       {/* Nadpis podnadpis a button */}
       <Heading
         mainHeading={"Empowering Your Game Through Optimal Health"}
-        maxWidth="max-w-[1000px]"
+        maxWidth="max-w-[1200px]"
         rotateClass="-rotate-2"
         backgroundVideo="/videos/hc.mp4"
         gradientOverlay="/images/gradient.png"

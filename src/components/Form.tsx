@@ -60,7 +60,7 @@ const Form: React.FC = () => {
       <InputField placeholder="Link to your video No.1" name="link1" value={formData.link1} onChange={handleChange} />
       <InputField placeholder="Link to your video No.2" name="link2" value={formData.link2} onChange={handleChange} />
       <InputField placeholder="Link to your video No.3" name="link3" value={formData.link3} onChange={handleChange} />
-      <Button variant="primary">Submit</Button>
+      <Button variant="primary" size='large'>Submit</Button>
     </form>
   );
 };

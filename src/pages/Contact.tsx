@@ -24,9 +24,9 @@ const Contact: React.FC = () => {
         className="absolute top-0 left-[-10%] w-full h-full object-cover opacity-20 z-[-1]"
       />
       <section className="bg-[#0A2125] text-white md:py-16 mx-8 md:px-16 md:pr-16 z-10">
-        <div className="flex flex-col lg:flex-row items-start gap-10 max-w-[1600px] mx-auto">
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-10 max-w-[1600px] mx-auto">
           <div className="lg:w-1/2">
-            <h1 className="md:text-[60px] md:leading-[60px] text-[38px] leading-[40px] mb-4 text-gold_primary font-extrabold">
+            <h1 className="md:text-[68px] md:leading-[60px] text-[38px] leading-[40px] mb-8 text-gold_primary font-extrabold">
               LET’S BUILD YOUR FOOTBALL LEGACY
             </h1>
             <p className="md:mb-12 mb:2 md:text-[18px] md:leading-[24px] text-[16px] leading-[24px] max-w-[480px] font-light">
@@ -42,11 +42,18 @@ const Contact: React.FC = () => {
                 </h3>
                 <div className="flex items-center gap-4 mt-2">
                   <TbPhoneCall size={24} />
-                  <a href="tel:+421911212482" className="text-white">00421 911 212 482</a>
+                  <a href="tel:+421911212482" className="text-white">
+                    00421 911 212 482
+                  </a>
                 </div>
                 <div className="flex items-center gap-4 mt-2 text-[18px] leading-[24px]">
                   <BsEnvelope size={24} />
-                  <a href="mailto:info@topplayersagency.com" className="text-white">info@topplayersagency.com</a>
+                  <a
+                    href="mailto:info@topplayersagency.com"
+                    className="text-white"
+                  >
+                    info@topplayersagency.com
+                  </a>
                 </div>
                 <div className="flex items-center gap-4 mt-2">
                   <BsFlag size={24} />
@@ -65,11 +72,18 @@ const Contact: React.FC = () => {
                 </p>
                 <div className="flex items-center gap-4 mt-2">
                   <TbPhoneCall size={24} />
-                  <a href="tel:+421905366031" className="text-white">00421 905 366 031</a>
+                  <a href="tel:+421905366031" className="text-white">
+                    00421 905 366 031
+                  </a>
                 </div>
                 <div className="flex items-center gap-4 mt-2 text-[18px] leading-[24px] md:mb-32">
                   <BsEnvelope size={24} />
-                  <a href="mailto:RadovanKollar@topplayersagency.com" className="text-white">RadovanKollar@topplayersagency.com</a>
+                  <a
+                    href="mailto:RadovanKollar@topplayersagency.com"
+                    className="text-white"
+                  >
+                    RadovanKollar@topplayersagency.com
+                  </a>
                 </div>
               </div>
 
@@ -82,40 +96,61 @@ const Contact: React.FC = () => {
                 </p>
                 <div className="flex items-center gap-4 mt-2 text-[18px] leading-[24px]">
                   <TbPhoneCall size={24} />
-                  <a href="tel:+421911212482" className="text-white">00421 911 212 482</a>
+                  <a href="tel:+421911212482" className="text-white">
+                    00421 911 212 482
+                  </a>
                 </div>
                 <div className="flex flex-row items-center gap-4 mt-2 text-[18px] leading-[24px]">
                   <BsEnvelope size={24} />
-                  <a href="mailto:JakubFilip@topplayersagency.com" className="text-white">JakubFilip@topplayersagency.com</a>
+                  <a
+                    href="mailto:JakubFilip@topplayersagency.com"
+                    className="text-white"
+                  >
+                    JakubFilip@topplayersagency.com
+                  </a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="lg:w-1/2">
+          <div className="lg:w-2/5">
             <h2 className="md:text-[40px] md:leading-[40px] text-[38px] leading-[40px]  mb-10 md:mt-4 mt-0 font-bold">
               I AM LOOKING FOR AN AGENT!
             </h2>
             <Form />
           </div>
 
-          <div className="space-y-8 block lg:hidden">
-            <div className="">
-              <h3 className="text-[24px] leading-[24px] font-bold text-white pb-2">
-                JAKUB FILIP
+          <div className="space-y-8 block lg:hidden mb-16">
+            <div>
+              <h3 className="text-[24px] leading-[24px] font-bold text-white pb-3">
+                TOP PLAYERS AGENCY
               </h3>
-              <p className="text-gray-300 text-[14px] leading-[20px] pb-2">
-                CEO and Certified Fifa Agent
-              </p>
-              <div className="flex items-center gap-4 mt-2 md:text-[18px] leading-[24px] text-[16px]">
+              <div className="flex items-center gap-4 mt-2">
                 <TbPhoneCall size={24} />
-                <a href="tel:+421911212482" className="text-white">00421 911 212 482</a>
+                <a href="tel:+421911212482" className="text-white">
+                  00421 911 212 482
+                </a>
               </div>
-              <div className="flex items-center gap-4 mt-2 md:text-[18px] leading-[24px] text-[16px]">
+              <div className="flex items-center gap-4 mt-2 text-[18px] leading-[24px]">
                 <BsEnvelope size={24} />
-                <a href="mailto:JakubFilip@topplayersagency.com" className="text-white">JakubFilip@topplayersagency.com</a>
+                <a
+                  href="mailto:info@topplayersagency.com"
+                  className="text-white"
+                >
+                  info@topplayersagency.com
+                </a>
+              </div>
+              <div className="flex items-center gap-4 mt-2">
+                <BsFlag size={24} />
+                <p>
+                  Landererova 7743/8, <br />
+                  Bratislava, Slovakia
+                </p>
               </div>
             </div>
+
+            <div className="border-t border-gray-500 my-8 max-w-[480px]"></div>
+
             <div>
               <h3 className="text-[24px] leading-[24px] font-bold text-white pb-2">
                 RADOVAN KOLLAR
@@ -125,32 +160,42 @@ const Contact: React.FC = () => {
               </p>
               <div className="flex items-center gap-4 mt-2">
                 <TbPhoneCall size={24} />
-                <a href="tel:+421905366031" className="text-white">00421 905 366 031</a>
-              </div>
-              <div className="flex items-center gap-4 mt-2 text-[18px] leading-[24px] ">
-                <BsEnvelope size={24} />
-                <a href="mailto:RadovanKollar@topplayersagency.com" className="text-white">RadovanKollar@topplayersagency.com</a>
-              </div>
-            </div>
-            <div className="border-t border-gray-500 my-8 max-w-[480px]"></div>
-            <div>
-              <h3 className="text-[24px] leading-[24px] font-bold text-white pb-3">
-                TOP PLAYERS AGENCY
-              </h3>
-              <div className="flex items-center gap-4 mt-2">
-                <TbPhoneCall size={24} />
-                <a href="tel:+421911212482" className="text-white">00421 911 212 482</a>
+                <a href="tel:+421905366031" className="text-white">
+                  00421 905 366 031
+                </a>
               </div>
               <div className="flex items-center gap-4 mt-2 text-[18px] leading-[24px]">
                 <BsEnvelope size={24} />
-                <a href="mailto:info@topplayersagency.com">info@topplayersagency.com</a>
+                <a
+                  href="mailto:RadovanKollar@topplayersagency.com"
+                  className="text-white"
+                >
+                  RadovanKollar@topplayersagency.com
+                </a>
               </div>
-              <div className="flex items-center gap-4 mt-2">
-                <BsFlag size={24} />
-                <p>
-                  Landererova 7743/8, <br />
-                  Bratislava, Slovakia
-                </p>
+            </div>
+
+            <div>
+              <h3 className="text-[24px] leading-[24px] font-bold text-white pb-2">
+                JAKUB FILIP
+              </h3>
+              <p className="text-gray-300 text-[14px] leading-[20px] pb-2">
+                CEO and Certified Fifa Agent
+              </p>
+              <div className="flex items-center gap-4 mt-2 md:text-[18px] leading-[24px] text-[16px]">
+                <TbPhoneCall size={24} />
+                <a href="tel:+421911212482" className="text-white">
+                  00421 911 212 482
+                </a>
+              </div>
+              <div className="flex items-center gap-4 mt-2 md:text-[18px] leading-[24px] text-[16px]">
+                <BsEnvelope size={24} />
+                <a
+                  href="mailto:JakubFilip@topplayersagency.com"
+                  className="text-white"
+                >
+                  JakubFilip@topplayersagency.com
+                </a>
               </div>
             </div>
           </div>

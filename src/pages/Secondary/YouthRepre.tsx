@@ -55,7 +55,7 @@ zltyNadpis={pageContent7.zltyNadpis}
 />
       </section>
 
-      <img src="/images/mladezSmile.png" alt="" className='absolute z-[0] -bottom-[500px] left-40 xl:left-80'/>
+      <img src="/images/mladezSmile.png" alt="" className='absolute -bottom-[720px] left-[14%] z-[0]'/>
       
       <ImageWavyBanner/>
 

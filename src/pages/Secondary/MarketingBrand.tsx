@@ -42,7 +42,7 @@ const MarketingBrand: React.FC = () => {
       {/* Nadpis podnadpis a button */}
       <Heading
         mainHeading={"Transforming Players into Global brands"}
-        maxWidth="max-w-[900px]"
+        maxWidth="max-w-[1100px]"
         rotateClass="-rotate-2"
         backgroundVideo="/videos/mark.mp4"
         gradientOverlay="/images/gradient.png"
