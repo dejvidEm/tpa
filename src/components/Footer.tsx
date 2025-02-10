@@ -82,34 +82,34 @@ const Footer: React.FC<FooterProps> = ({ backgroundImage }) => {
         </div>
 
         <div className="flex flex-col gap-8 md:hidden justify-center items-center relative">
-  <Link to="/contact">
-    <ButtonComponent variant="secondary" size="small">
-      Contact
-    </ButtonComponent>
-  </Link>
-  <div
-    className="flex flex-row items-center gap-2 cursor-pointer"
-    onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-  >
-    <CiGlobe size={24} />
-    <h2>{selectedLanguage}</h2>
-  </div>
-  {isDropdownOpen && (
-    <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-[#0A2125] shadow-md rounded-md border border-gray-200 border-opacity-20 z-10 flex flex-row">
-      {languages
-        .filter((lang) => lang !== selectedLanguage)
-        .map((lang) => (
+          <Link to="/contact">
+            <ButtonComponent variant="secondary" size="small">
+              Contact
+            </ButtonComponent>
+          </Link>
           <div
-            key={lang}
-            className="px-4 py-2 hover:bg-[#11353b] cursor-pointer text-white border-r last:border-r-0 border-gray-300 border-opacity-20"
-            onClick={() => handleLanguageSelect(lang)}
+            className="flex flex-row items-center gap-2 cursor-pointer"
+            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
           >
-            {lang}
+            <CiGlobe size={24} />
+            <h2>{selectedLanguage}</h2>
           </div>
-        ))}
-    </div>
-  )}
-</div>
+          {isDropdownOpen && (
+            <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-[#0A2125] shadow-md rounded-md border border-gray-200 border-opacity-20 z-10 flex flex-row">
+              {languages
+                .filter((lang) => lang !== selectedLanguage)
+                .map((lang) => (
+                  <div
+                    key={lang}
+                    className="px-2 py-2 hover:bg-[#11353b] cursor-pointer text-white border-r last:border-r-0 border-gray-300 border-opacity-20"
+                    onClick={() => handleLanguageSelect(lang)}
+                  >
+                    {lang}
+                  </div>
+                ))}
+            </div>
+          )}
+        </div>
       </div>
 
       <div className="flex justify-center my-24 md:my-16 pb-28">
