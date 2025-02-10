@@ -73,43 +73,43 @@ const Footer: React.FC<FooterProps> = ({ backgroundImage }) => {
         </div>
 
         <div className="opacity-0 flex flex-row justify-center items-center lg:flex-row gap-8">
-            <Link to="/services">
-              <h2 className="uppercase font-semibold">Services</h2>
-            </Link>
-            <Link to="/players">
-              <h2 className="uppercase font-semibold">Players</h2>
-            </Link>
-          </div>
-
-        <div className="flex flex-col gap-8 md:hidden justify-center items-center space-x-4 relative">
-          <Link to="/contact">
-            <ButtonComponent variant="secondary" size="small">
-              Contact
-            </ButtonComponent>
+          <Link to="/services">
+            <h2 className="uppercase font-semibold">Services</h2>
           </Link>
-          <div
-            className="flex flex-row items-center gap-2 cursor-pointer"
-            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-          >
-            <CiGlobe size={24} />
-            <h2>{selectedLanguage}</h2>
-          </div>
-          {isDropdownOpen && (
-            <div className="absolute bottom-10 right-0 bg-[#0A2125] shadow-md rounded-md border border-gray-200 z-10">
-              {languages
-                .filter((lang) => lang !== selectedLanguage)
-                .map((lang) => (
-                  <div
-                    key={lang}
-                    className="px-4 m-1 py-2 hover:bg-[#11353b] cursor-pointer text-white"
-                    onClick={() => handleLanguageSelect(lang)}
-                  >
-                    {lang}
-                  </div>
-                ))}
-            </div>
-          )}
+          <Link to="/players">
+            <h2 className="uppercase font-semibold">Players</h2>
+          </Link>
         </div>
+
+        <div className="flex flex-col gap-8 md:hidden justify-center items-center relative">
+  <Link to="/contact">
+    <ButtonComponent variant="secondary" size="small">
+      Contact
+    </ButtonComponent>
+  </Link>
+  <div
+    className="flex flex-row items-center gap-2 cursor-pointer"
+    onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+  >
+    <CiGlobe size={24} />
+    <h2>{selectedLanguage}</h2>
+  </div>
+  {isDropdownOpen && (
+    <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-[#0A2125] shadow-md rounded-md border border-gray-200 border-opacity-20 z-10 flex flex-row">
+      {languages
+        .filter((lang) => lang !== selectedLanguage)
+        .map((lang) => (
+          <div
+            key={lang}
+            className="px-4 py-2 hover:bg-[#11353b] cursor-pointer text-white border-r last:border-r-0 border-gray-300 border-opacity-20"
+            onClick={() => handleLanguageSelect(lang)}
+          >
+            {lang}
+          </div>
+        ))}
+    </div>
+  )}
+</div>
       </div>
 
       <div className="flex justify-center my-24 md:my-16 pb-28">
