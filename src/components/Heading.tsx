@@ -41,7 +41,7 @@ const Heading: React.FC<HeadingProps> = ({
         <img
           src={gradientOverlay}
           alt="gradient overlay"
-          className="absolute bottom-0 lg:-bottom-48 left-0 w-full h-auto z-[99] pointer-events-none"
+          className="absolute bottom-0 lg:-bottom-24 left-0 w-full h-auto z-[999] pointer-events-none"
         />
       )}
 

@@ -42,16 +42,16 @@ const MainCompH: React.FC<MainCompProps> = ({
               <div className="flex items-center justify-center gap-2 bg-[#112A2F] border border-gray-500 p-4 rounded-lg mb-4">
                 <img src={icon1} alt="icon1" className="w-7"/>
                 <span className="border-l border-gray-400 h-5 mx-2"></span>
-                <h3 className="text-gold_primary">{nadpisStranky}</h3>
+                <h3 className="text-gold_primary text-[14px]">{nadpisStranky}</h3>
               </div>
             </div>
-            <p className="text-gray-300 mb-40 mr-20">{prvyText}</p>
+            <p className="text-gray-300 mb-40 mr-20 text-[18px]">{prvyText}</p>
           </div>
           <div className="flex justify-end space-x-4 mb-4 w-max ml-44">
             <div className="flex flex-row gap-2 bg-[#0f2c31] mt- items-center h-16 justify-center p-4 rounded-lg w-max -mt-40">
             <img src={icon2} alt="icon2" className="w-7 h-auto"/>
               <span className="border-l border-gray-400 h-5 mx-2"></span>
-              <h3 className="text-gold_primary">{lavyBadge}</h3>
+              <h3 className="text-gold_primary text-[14px]">{lavyBadge}</h3>
             </div>
           </div>
         </div>
@@ -66,27 +66,27 @@ const MainCompH: React.FC<MainCompProps> = ({
         <div className="flex flex-col items-end space-y-8 w-3/6">
           <div className="text-left">
             <div className="flex flex-col space-x-4 mb-4">
-              <p className="mb-6 max-w-96">{careerMessage}</p>
+              <p className="mb-6 max-w-96 text-[18px]">{careerMessage}</p>
               <div className="flex flex-row gap-3">
                 <FaArrowDown className="mt-1 -ml-4 text-gold_primary" />
-                <h3 className="text-gold_primary mb-28 uppercase font-bold">Scroll to explore</h3>
+                <h3 className="text-gold_primary mb-28 uppercase font-bold text-[16px]">Scroll to explore</h3>
               </div>
               <div className="flex items-center space-x-4 mb-4">
                 <div className="flex justify-center items-center gap-2 border-gray-400 bg-[#0f2c31] p-4 rounded-lg w-max mb-20 -ml-28">
                 <img src={icon3} alt="icon3" className="w-7 h-auto"/>
                   <span className="border-l border-gray-400 h-5 mx-2"></span>
-                  <h3 className="text-gold_primary">{pravyBadge}</h3>
+                  <h3 className="text-gold_primary text-[14px]">{pravyBadge}</h3>
                 </div>
               </div>
               <div className="text-left max-w-xl mb-16">
-              <h2 className="text-lg font-light text-gray-300">
+              <h2 className="text-[18px] font-light text-gray-300">
                   {predNadpis}{" "}
-                  <span className="text-gold_primary max-w-92 ml-6 text-4xl md:text-[36px] font-extrabold uppercase max-w-lg leading-tight">
+                  <span className="text-gold_primary max-w-92 ml-6 text-4xl md:text-[64px] font-extrabold uppercase max-w-lg leading-tight">
                     {zltyNadpis}
                   </span>
                 </h2>
                 <div className="flex flex-col gap-6">
-                <p className="text-lg md:text-lg text-gray-300 mt-4">
+                <p className="text-[18px] md:text-lg text-gray-300 mt-4">
                   {pravText}
                 </p>
                 <Link to="/contact">

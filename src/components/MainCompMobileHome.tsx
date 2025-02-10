@@ -81,7 +81,7 @@ const MainCompMobile: FC<MainCompMobileProps> = ({
           </Link>
         </div>
 
-        <div className="relative w-[200%]">
+        <div className="relative w-[180%]">
           <img
             src={playerImage}
             alt="Player Holding Trophy"

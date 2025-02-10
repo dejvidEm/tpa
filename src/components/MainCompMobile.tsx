@@ -35,7 +35,7 @@ const MainCompMobile: FC<MainCompMobileProps> = ({
   icon3
 }) => {
   return (
-    <div className="bg-[#0A2125] text-white px-4 py-16 md:py-24 lg:py-32 flex flex-col items-center">
+    <div className="bg-[#0A2125] text-white px-4 pb-16 md:pb-24 lg:pb-32 flex flex-col items-center">
       <div className="flex flex-col items-center space-y-12 w-full">
         <div className="flex flex-col items-center text-center space-y-4">
           <p className="text-gray-300">{prvyText}</p>
