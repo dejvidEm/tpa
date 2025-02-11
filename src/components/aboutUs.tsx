@@ -2,7 +2,7 @@ import FeatureItem from "../components/FeatureItem";
 
 const AboutComp = () => {
   return (
-    <div className="bg-[#0A2125] text-white px-8 py-16 md:py-24 lg:py-32 flex flex-col items-center">
+    <div className="bg-[#0A2125] -mt-28 text-white px-8 pb-16 md:pb-24 lg:pb-32 flex flex-col items-center">
       <div className="flex justify-between items-center w-full max-w-[1700px]">
         <div className="flex flex-col items-start space-y-8">
         <div className="space-y-20">

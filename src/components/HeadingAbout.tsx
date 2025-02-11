@@ -17,12 +17,12 @@ const HeadingA: React.FC<HeadingProps> = ({
 }) => {
   return (
     <div
-      className="bg-[#0A2125] text-white py-20 pt-40 flex flex-col items-center justify-center text-center relative overflow-hidden w-full h-full"
+      className="bg-[#0A2125] text-white py-20 pt-40 flex flex-col items-center justify-center text-center relative overflow-hidden w-full h-[650px]"
     >
       {/* Video pozadie */}
       {backgroundVideo && (
         <video
-          className="absolute inset-0 w-full h-full object-cover opacity-30"
+          className="absolute inset-0 w-full h-full object-cover opacity-100"
           src={backgroundVideo}
           autoPlay
           loop
@@ -36,7 +36,7 @@ const HeadingA: React.FC<HeadingProps> = ({
         <img
           src={gradientOverlay}
           alt="gradient overlay"
-          className="absolute bottom-0 lg:-bottom-32 left-0 w-full h-auto z-[99] pointer-events-none"
+          className="absolute bottom-0 lg:-bottom-40 left-0 w-full h-auto z-[99] pointer-events-none"
         />
       )}
 

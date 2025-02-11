@@ -66,7 +66,7 @@ const MainCompMobile: FC<MainCompMobileProps> = ({
           <p className="text-gray-300">{druhyText}</p>
         </div>
 
-        <div className="text-left max-w-full">
+        <div className="text-left max-w-full  z-[99999999]">
           <h2 className="text-lg font-light text-gray-300">
             {prednadpis}
             <span className="text-gold_primary text-3xl font-extrabold ml-2 uppercase">
@@ -74,14 +74,14 @@ const MainCompMobile: FC<MainCompMobileProps> = ({
             </span>
           </h2>
           <p className="text-lg text-gray-300 my-4 mr-16">{podnadpisZltehoTextu}</p>
-          <Link to="/contact">
+          <Link to="/about" className="z-[999999]">
           <ButtonComponent variant="primary" size="small">
             {buttonText}
           </ButtonComponent>
           </Link>
         </div>
 
-        <div className="relative w-[180%]">
+        <div className="relative w-[180%] z-[0]">
           <img
             src={playerImage}
             alt="Player Holding Trophy"
