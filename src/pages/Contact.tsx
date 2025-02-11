@@ -17,13 +17,13 @@ import ImageWavyBanner from "../components/ImageWavyBanner";
 
 const Contact: React.FC = () => {
   return (
-    <div className="bg-[#0A2125] pt-40">
+    <div className="bg-[#0A2125] pt-40 relative">
       <img
-        src="/images/footerBanner.png"
-        alt="Background"
-        className="absolute top-0 left-[-10%] w-full h-full object-cover opacity-20 z-[-1]"
-      />
-      <section className="bg-[#0A2125] text-white md:py-16 mx-8 md:px-16 md:pr-16 z-10">
+    src="/images/footerBanner.png"
+    alt="Background"
+    className="absolute bottom-[46%] md:top-0 left-[-10%] w-[100%] md:w-[80%] h-auto object-cover opacity-70 md:opacity-80 z-[99]"
+  />
+      <section className=" text-white md:py-16 mx-8 md:px-16 md:pr-16 z-[9999] relative">
         <div className="flex flex-col lg:flex-row justify-between items-start gap-10 max-w-[1600px] mx-auto">
           <div className="lg:w-1/2">
             <h1 className="md:text-[68px] md:leading-[60px] text-[38px] leading-[40px] mb-8 text-gold_primary font-extrabold">
@@ -174,7 +174,6 @@ const Contact: React.FC = () => {
                 </a>
               </div>
             </div>
-            <img src="/images/footerBanner.png" alt="" className="absolute z-[0]"/>
 
             <div>
               <h3 className="text-[24px] leading-[24px] font-bold text-white pb-2">
