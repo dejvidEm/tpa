@@ -1,5 +1,5 @@
 
-import FeatureItem from "../components/FeatureItem";
+
 import FeatureItemM from "./FeatureItemM";
 
 const AboutCompMobile = () => {
