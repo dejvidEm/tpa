@@ -34,7 +34,7 @@ const ResponsiveSlider = forwardRef((props: SliderProps, ref) => {
   }, [visibleItems]);
 
   const handleNext = () => {
-    if (currentIndex + itemsToShow < items.length - 1) { // Stop skôr
+    if (currentIndex + itemsToShow < items.length - 2) { // Stop skôr o jedno kliknutie
       setCurrentIndex((prevIndex) => prevIndex + 1);
     }
   };
@@ -73,7 +73,7 @@ const ResponsiveSlider = forwardRef((props: SliderProps, ref) => {
 
   const partialVisibleWidth = window.innerWidth < 768 ? 10 : showPartialNext ? 10 : 0;
 
-  const isLastItemAlmostVisible = currentIndex + itemsToShow >= items.length - 1; // Stop skôr
+  const isLastItemAlmostVisible = currentIndex + itemsToShow >= items.length - 2; // Stop skôr o jedno kliknutie
 
   return (
     <div
