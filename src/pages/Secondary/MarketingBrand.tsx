@@ -5,8 +5,8 @@ import Heading from '../../components/Heading';
 import MainComp from '../../components/MainComp';
 import MainCompMobile from '../../components/MainCompMobile';
 import StepsCompMobile from '../../components/StepsCompMobile';
-import StepsComp from '../../components/StepsComp';
 import FooterBanner from '../../components/FooterBanner';
+import StepsCompM from '../../components/StepsCompM';
 
 const features = [
   {
@@ -86,7 +86,7 @@ zltyNadpis={pageContent6.zltyNadpis}
       </section>
 
       <section className="hidden md:block">
-        <StepsComp
+        <StepsCompM
           heading="   Our Marketing representation services"
           features={features}
           imageSrc="/images/novaLopta.png"
@@ -95,7 +95,7 @@ zltyNadpis={pageContent6.zltyNadpis}
       </section>
       <section className="block md:hidden">
         <StepsCompMobile
-          heading="SPORTS LAW PROFESSIONALS SPECIALIZES IN"
+          heading="OUR MARKETING REPRESENTATION SERVICES"
           features={features}
         />
       </section>
@@ -125,7 +125,7 @@ zltyNadpis={pageContent6.zltyNadpis}
         }
         smallFirst={true}
         maxWidth="max-w-6xl"
-        height='h-[500px]'
+        height='h-[700px]'
         buttonText="Find out more"
         backgroundVideo='/videos/mladez.mp4'
         rotateClass='-rotate-2'

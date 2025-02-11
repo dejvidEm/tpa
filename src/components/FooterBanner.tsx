@@ -62,7 +62,7 @@ const Banner: React.FC<BannerProps> = ({
       <img
         src="/images/gradient.png"
         alt="Gradient Overlay"
-        className={`absolute left-0 w-full ${bgOpacity} h-full object-cover z-10`}
+        className={`absolute left-0 -bottom-32 w-full ${bgOpacity} h-full object-cover z-10`}
       />
 
       <div className="relative z-20 flex flex-col items-center">

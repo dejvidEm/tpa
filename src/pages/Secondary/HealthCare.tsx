@@ -90,7 +90,7 @@ const HealthCare: React.FC = () => {
         }
         smallFirst={true}
         maxWidth="max-w-5xl"
-        height='h-[500px]'
+        height='h-[700px]'
         buttonText="Find out more"
         backgroundVideo='/videos/hc2AndLegal1.mp4'
         rotateClass='-rotate-2'

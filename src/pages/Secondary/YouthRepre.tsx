@@ -2,9 +2,9 @@ import React from 'react';
 
 import { pageContent7 } from '../../components/data';
 import Heading from '../../components/Heading';
-import MainComp from '../../components/MainComp';
 import MainCompMobile from '../../components/MainCompMobile';
 import ImageWavyBanner from '../../components/ImageWavyBanner';
+import MainCompY from '../../components/MainCompY';
 
 const YouthRepre: React.FC = () => {
   return (
@@ -20,7 +20,7 @@ const YouthRepre: React.FC = () => {
       />
 
       <section className="hidden md:block">
-      <MainComp
+      <MainCompY
       nadpisStranky={pageContent7.nadpisStranky}
       prvyText={pageContent7.prvyText}
       lavyBadge={pageContent7.lavyBadge}
