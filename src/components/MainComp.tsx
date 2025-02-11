@@ -94,7 +94,7 @@ const MainComp: React.FC<MainCompProps> = ({
                 </h2>
                 <div className="flex flex-col gap-6">
                   <p className=" text-gray-300 text-[18px] leading-[22px] font-light mt-8 mb-2">{pravText}</p>
-                  <Link to="/contact">
+                  <Link to="/contact" className="z-[999999]">
                     <ButtonComponent variant="primary" size="small">
                       {buttonText}
                     </ButtonComponent>

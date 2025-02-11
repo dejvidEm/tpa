@@ -100,7 +100,7 @@ const MainCompH: React.FC<MainCompProps> = ({
                   <p className="text-[18px] md:text-[18px] font-light text-gray-200 mt-8 mb-6 leading-[22px]">
                     {pravText}
                   </p>
-                  <Link to="/contact">
+                  <Link to="/contact" className="z-[999999]">
                     <ButtonComponent variant="primary" size="small">
                       {buttonText}
                     </ButtonComponent>
