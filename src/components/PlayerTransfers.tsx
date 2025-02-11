@@ -1,17 +1,17 @@
 import { useState } from 'react';
 
 const players = [
-  { name: 'Kylian Mbappé', position: 'Forward (LW)', team: 'Real Madrid', photo: "/images/mbape.png" },
-  { name: 'Erling Haaland', position: 'Forward (ST)', team: 'Manchester City', photo: "/images/haaland.png" },
-  { name: 'Lionel Messi', position: 'Forward (RW)', team: 'Inter Miami', photo: "/images/messi.png" },
-  { name: 'Harry Kane', position: 'Forward (ST)', team: 'Bayern Munich', photo: "/images/kane.png" },
-  { name: 'Cristiano Ronaldo', position: 'Forward (ST)', team: 'Al-Nassr', photo: "/images/ronaldo.png" },
-  { name: 'Kevin De Bruyne', position: 'Midfielder (CAM)', team: 'Manchester City', photo: "/images/debruyne.png" },
-  { name: 'Jude Bellingham', position: 'Midfielder (CM)', team: 'Real Madrid', photo: "/images/beli.png" },
-  { name: 'Vinícius Júnior', position: 'Forward (LW)', team: 'Real Madrid', photo: "/images/junior.png" },
-  { name: 'Robert Lewandowski', position: 'Forward (ST)', team: 'Barcelona', photo: "/images/lew.png" },
-  { name: 'Mohamed Salah', position: 'Forward (RW)', team: 'Liverpool', photo: "/images/salah.png" },
-  { name: 'Bruno Fernandes', position: 'Midfielder (CAM)', team: 'Manchester United', photo: "/images/fer.png" },
+  { name: 'Richard Grexa', position: 'Central Defender, Right Back Defender', team: 'FK Železiarne Podbrezová', photo: "/images/realFotka.png" },
+  { name: 'Richard Grexa1', position: 'Central Defender, Right Back Defender', team: 'FK Železiarne Podbrezová', photo: "/images/realFotka.png" },
+  { name: 'Richard Grexa2', position: 'Central Defender, Right Back Defender', team: 'FK Železiarne Podbrezová', photo: "/images/realFotka.png" },
+  { name: 'Richard Grexa3', position: 'Central Defender, Right Back Defender', team: 'FK Železiarne Podbrezová', photo: "/images/realFotka.png" },
+  { name: 'Richard Grexa4', position: 'Central Defender, Right Back Defender', team: 'FK Železiarne Podbrezová', photo: "/images/realFotka.png" },
+  { name: 'Richard Grexa5', position: 'Central Defender, Right Back Defender', team: 'FK Železiarne Podbrezová', photo: "/images/realFotka.png" },
+  { name: 'Richard Grexa6', position: 'Central Defender, Right Back Defender', team: 'FK Železiarne Podbrezová', photo: "/images/realFotka.png" },
+  { name: 'Richard Grexa7', position: 'Central Defender, Right Back Defender', team: 'FK Železiarne Podbrezová', photo: "/images/realFotka.png" },
+  { name: 'Richard Grexa8', position: 'Central Defender, Right Back Defender', team: 'FK Železiarne Podbrezová', photo: "/images/realFotka.png" },
+  { name: 'Richard Grexa9', position: 'Central Defender, Right Back Defender', team: 'FK Železiarne Podbrezová', photo: "/images/realFotka.png" },
+  { name: 'Richard Grexa10', position: 'Central Defender, Right Back Defender', team: 'FK Železiarne Podbrezová', photo: "/images/realFotka.png" },
 ];
 
 const PlayerTransfers = () => {
