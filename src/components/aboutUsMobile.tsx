@@ -1,9 +1,10 @@
 
 import FeatureItem from "../components/FeatureItem";
+import FeatureItemM from "./FeatureItemM";
 
 const AboutCompMobile = () => {
   return (
-    <div className="bg-[#0A2125] text-white px-8 py-16 md:py-24 lg:py-32 flex flex-col items-center">
+    <div className="bg-[#0A2125] text-white px-10 py-16 md:py-24 lg:py-32 flex flex-col items-center">
       <div className="flex flex-col items-center space-y-12 w-full ">
         <div className="flex flex-col items-center text-center space-y-4">
           <p className="mb-3 text-[16px] leading-[24px]">
@@ -47,18 +48,18 @@ const AboutCompMobile = () => {
           <h3 className="text-gold_primary">Player focused approach</h3>
         </div>
 
-        <div className="space-y-10">
-          <FeatureItem
+        <div className="space-y-10 mx-auto pt-12">
+          <FeatureItemM
             number="01"
             title="EXPERIENCE AND EXPERTISE"
             text="A track record of success representing world-class players."
           />
-          <FeatureItem
+          <FeatureItemM
             number="02"
             title="HOLISTIC APPROACH"
             text="Career, health, legal, and branding support under one roof."
           />
-          <FeatureItem
+          <FeatureItemM
             number="03"
             title="PLAYER-FIRST PHILOSOPHY"
             text="Your aspirations are at the heart of everything we do."

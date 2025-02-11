@@ -14,6 +14,7 @@ import { AiFillTikTok } from "react-icons/ai";
 
 import RotateLinks from "../components/rotateLinks";
 import ImageWavyBanner from "../components/ImageWavyBanner";
+import FeatureItemM from "../components/FeatureItemM";
 
 const Contact: React.FC = () => {
   return (
@@ -204,17 +205,17 @@ const Contact: React.FC = () => {
 
       <section className="bg-[#0A2125] text-white pb-10 pt-10 pl-8 pr-8 md:p-40">
         <div className="grid grid-cols-1 md:grid-cols-3 md:gap-12 gap-8">
-          <FeatureItem
+          <FeatureItemM
             number="01"
             title="EXPERIENCE AND EXPERTISE"
             text="A track record of success representing world-class players."
           />
-          <FeatureItem
+          <FeatureItemM
             number="02"
             title="HOLISTIC APPROACH"
             text="Career, health, legal, and branding support under one roof."
           />
-          <FeatureItem
+          <FeatureItemM
             number="03"
             title="PLAYER-FIRST PHILOSOPHY"
             text="Your aspirations are at the heart of everything we do."

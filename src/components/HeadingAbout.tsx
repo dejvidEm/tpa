@@ -17,7 +17,7 @@ const HeadingA: React.FC<HeadingProps> = ({
 }) => {
   return (
     <div
-      className="bg-[#0A2125] text-white py-20 pt-40 flex flex-col items-center justify-center text-center relative overflow-hidden w-full h-[650px]"
+      className="bg-[#0A2125] text-white py-20 pt-40 flex flex-col items-center justify-center text-center relative overflow-hidden w-full h-[840px]"
     >
       {/* Video pozadie */}
       {backgroundVideo && (
