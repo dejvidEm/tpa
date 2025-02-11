@@ -2,23 +2,13 @@ import { useState } from 'react';
 
 const players = [
   { name: 'Richard Grexa', position: 'Central Defender, Right Back Defender', team: 'FK Železiarne Podbrezová', photo: "/images/realFotka.png" },
-  { name: 'Richard Grexa1', position: 'Central Defender, Right Back Defender', team: 'FK Železiarne Podbrezová', photo: "/images/realFotka.png" },
-  { name: 'Richard Grexa2', position: 'Central Defender, Right Back Defender', team: 'FK Železiarne Podbrezová', photo: "/images/realFotka.png" },
-  { name: 'Richard Grexa3', position: 'Central Defender, Right Back Defender', team: 'FK Železiarne Podbrezová', photo: "/images/realFotka.png" },
-  { name: 'Richard Grexa4', position: 'Central Defender, Right Back Defender', team: 'FK Železiarne Podbrezová', photo: "/images/realFotka.png" },
-  { name: 'Richard Grexa5', position: 'Central Defender, Right Back Defender', team: 'FK Železiarne Podbrezová', photo: "/images/realFotka.png" },
-  { name: 'Richard Grexa6', position: 'Central Defender, Right Back Defender', team: 'FK Železiarne Podbrezová', photo: "/images/realFotka.png" },
-  { name: 'Richard Grexa7', position: 'Central Defender, Right Back Defender', team: 'FK Železiarne Podbrezová', photo: "/images/realFotka.png" },
-  { name: 'Richard Grexa8', position: 'Central Defender, Right Back Defender', team: 'FK Železiarne Podbrezová', photo: "/images/realFotka.png" },
-  { name: 'Richard Grexa9', position: 'Central Defender, Right Back Defender', team: 'FK Železiarne Podbrezová', photo: "/images/realFotka.png" },
-  { name: 'Richard Grexa10', position: 'Central Defender, Right Back Defender', team: 'FK Železiarne Podbrezová', photo: "/images/realFotka.png" },
 ];
 
 const PlayerTransfers = () => {
   const [selectedPlayer, setSelectedPlayer] = useState(players[0]);
 
   return (
-    <div className="bg-[#0A2125] max-w-[1600px] mx-auto text-white px-6 py-8 relative">
+    <div className="bg-[#0A2125] max-w-[1600px] mx-auto text-white px-6 py-8 mb-48 relative">
       <div className="flex lg:justify-end lg:-mb-20">
         <h1 className='font-barlow text-[64px] md:text-6xl bg-gradient-to-r from-gold_secondary to-gold_primary inline-block text-transparent bg-clip-text mb-10 uppercase font-extrabold leading-8'>
           From Players <br />

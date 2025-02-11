@@ -9,16 +9,6 @@ type Player = {
 
 const players: Player[] = [
   { name: 'Richard Grexa', position: 'Central Defender, Right Back Defender', team: 'FK Železiarne Podbrezová', photo: "/images/realFotka.png" },
-  { name: 'Richard Grexa1', position: 'Central Defender, Right Back Defender', team: 'FK Železiarne Podbrezová', photo: "/images/realFotka.png" },
-  { name: 'Richard Grexa2', position: 'Central Defender, Right Back Defender', team: 'FK Železiarne Podbrezová', photo: "/images/realFotka.png" },
-  { name: 'Richard Grexa3', position: 'Central Defender, Right Back Defender', team: 'FK Železiarne Podbrezová', photo: "/images/realFotka.png" },
-  { name: 'Richard Grexa4', position: 'Central Defender, Right Back Defender', team: 'FK Železiarne Podbrezová', photo: "/images/realFotka.png" },
-  { name: 'Richard Grexa5', position: 'Central Defender, Right Back Defender', team: 'FK Železiarne Podbrezová', photo: "/images/realFotka.png" },
-  { name: 'Richard Grexa6', position: 'Central Defender, Right Back Defender', team: 'FK Železiarne Podbrezová', photo: "/images/realFotka.png" },
-  { name: 'Richard Grexa7', position: 'Central Defender, Right Back Defender', team: 'FK Železiarne Podbrezová', photo: "/images/realFotka.png" },
-  { name: 'Richard Grexa8', position: 'Central Defender, Right Back Defender', team: 'FK Železiarne Podbrezová', photo: "/images/realFotka.png" },
-  { name: 'Richard Grexa9', position: 'Central Defender, Right Back Defender', team: 'FK Železiarne Podbrezová', photo: "/images/realFotka.png" },
-  { name: 'Richard Grexa10', position: 'Central Defender, Right Back Defender', team: 'FK Železiarne Podbrezová', photo: "/images/realFotka.png" },
 ];
 
 const MobileTransfer: React.FC = () => {
