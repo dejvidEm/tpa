@@ -386,7 +386,7 @@ we specialize in comprehensive support, including career management, legal servi
         }
         smallFirst={false}
         maxWidth="max-w-5xl"
-        height="h-[860px]"
+        height="h-[848px]"
         bgOpacity="opacity-0"
         buttonText="Contact us"
         backgroundImage="/images/footerBanner.png"

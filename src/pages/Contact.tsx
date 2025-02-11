@@ -156,7 +156,7 @@ const Contact: React.FC = () => {
                 RADOVAN KOLLAR
               </h3>
               <p className="text-gray-300 text-[14px] leading-[20px] pb-2">
-                Head Scout
+                Head of Scouting
               </p>
               <div className="flex items-center gap-4 mt-2">
                 <TbPhoneCall size={24} />
@@ -174,6 +174,7 @@ const Contact: React.FC = () => {
                 </a>
               </div>
             </div>
+            <img src="/images/footerBanner.png" alt="" className="absolute z-[0]"/>
 
             <div>
               <h3 className="text-[24px] leading-[24px] font-bold text-white pb-2">

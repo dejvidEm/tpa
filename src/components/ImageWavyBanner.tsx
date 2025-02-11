@@ -2,7 +2,7 @@ import React from "react";
 
 const FullWidthVideoBackground: React.FC = () => {
   return (
-    <div className="relative w-screen h-[700px] overflow-hidden">
+    <div className="relative w-screen h-[492px] overflow-hidden">
       {/* Background Video */}
       <video
         autoPlay
