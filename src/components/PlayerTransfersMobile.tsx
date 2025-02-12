@@ -29,9 +29,9 @@ const MobileTransfer: React.FC = () => {
         <div className="col-span-1 md:col-span-2 lg:col-span-2">
           <div className="flex justify-between text-xl font-semibold mb-8">
             <span className="text-[26px] bg-gradient-to-r from-gold_secondary to-gold_primary inline-block text-transparent bg-clip-text font-bold">
-              13 PLAYERS
+            {players.length} {players.length > 1 ? 'PLAYERS' : 'PLAYER'}
             </span>
-            <span className="text-[26px] font-bold">12 TRANSFERS</span>
+            <span className="text-[26px] font-bold">{players.length} {players.length > 1 ? 'TRANSFERS' : 'TRANSFER'}</span>
           </div>
           <div className="space-y-4 relative">
             {players.map((player, index) => (

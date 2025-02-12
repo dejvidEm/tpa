@@ -9,7 +9,7 @@ import { IoArrowForwardSharp, IoArrowBackSharp  } from "react-icons/io5";
 export const players = [
   {
     name: "Richard Grexa",
-    team: "RSC Hamšík Academy",
+    team: "FK Železiarne Podbrezová",
     image: "/images/realFotka.png",
     nationality: "Slovak",
     league: "First Youth Leage Slovakia (U17 - U19)",

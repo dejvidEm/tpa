@@ -18,9 +18,11 @@ const PlayerTransfers = () => {
 
       <div className="flex justify-start gap-24 lg:gap-32 text-xl font-semibold mb-16">
         <span className="text-3xl scale-x-90 bg-gradient-to-r from-gold_secondary to-gold_primary inline-block text-transparent bg-clip-text font-bold">
-          {players.length} PLAYERS
+        {players.length} {players.length > 1 ? 'PLAYERS' : 'PLAYER'}
         </span>
-        <span className="text-3xl font-bold scale-x-90">12 TRANSFERS</span>
+        <span className="text-3xl font-bold scale-x-90">
+  {players.length} {players.length > 1 ? 'TRANSFERS' : 'TRANSFER'}
+</span>
       </div>
 
       <img src="/images/blur.png" alt="" className='absolute -left-48 top-10'/>

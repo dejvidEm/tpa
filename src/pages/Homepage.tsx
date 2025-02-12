@@ -66,16 +66,7 @@ const cardData = [
 const Homepage: React.FC = () => {
 
   const stripData = [
-    "/images/messi.png",
-    "/images/ronaldo.png",
-    "/images/mbape.png",
-    "/images/haaland.png",
-    "/images/kane.png",
-    "/images/messi.png",
-    "/images/ronaldo.png",
-    "/images/mbape.png",
-    "/images/haaland.png",
-    "/images/kane.png",
+    "/images/realFotka.png",
   ];
 
   // Referencie pre oba slidery
