@@ -10,7 +10,7 @@ interface PlayerCardProps {
   weight: string;
   preferredFoot: string;
   position: string;
-  age: number;
+  age: string;
 }
 
 const PlayerCard: React.FC<PlayerCardProps> = ({
@@ -26,7 +26,7 @@ const PlayerCard: React.FC<PlayerCardProps> = ({
   age,
 }) => {
   return (
-    <div className="text-white rounded-lg overflow-hidden">
+    <div className="text-white rounded-lg overflow-hidden min-w-max">
       <h2 className="text-xl font-bold uppercase">{name}</h2>
       <p className="text-white">{team}</p>
       <div className="my-4">

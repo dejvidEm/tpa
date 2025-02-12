@@ -5,6 +5,19 @@ import Heading from '../components/HeadingPT';
 import ImageWavyBanner from '../components/ImageWavyBanner';
 import { IoArrowForwardSharp, IoArrowBackSharp  } from "react-icons/io5";
 
+// Funkcia na výpočet veku z dátumu narodenia
+const calculateAge = (dateOfBirth: string ) => {
+  const birthDate = new Date(dateOfBirth);
+  const today = new Date();
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const monthDiff = today.getMonth() - birthDate.getMonth();
+  
+  if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+  }
+  return age;
+};
+
 // eslint-disable-next-line react-refresh/only-export-components
 export const players = [
   {
@@ -17,7 +30,7 @@ export const players = [
     weight: 75,
     preferredFoot: "Right",
     position: "Central Defender, Right Back Defender",
-    age: 17,
+    age: "2008-01-23",
   }
 ];
 
@@ -77,7 +90,7 @@ const Players: React.FC = () => {
         weight={post.weight.toString()}
         preferredFoot={post.preferredFoot}
         position={post.position}
-        age={post.age}
+        age={calculateAge(post.age).toString()}
       />
     ))}
   </div>

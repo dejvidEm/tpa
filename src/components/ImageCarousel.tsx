@@ -4,18 +4,10 @@ import { useMeasure } from "@uidotdev/usehooks";
 import { useEffect } from "react";
 
 const logos = [
-      "/images/fifa_logo.png",
-      "/images/sfz_logo.png",
-      "/images/fifa_logo.png",
-      "/images/sfz_logo.png",
-      "/images/fifa_logo.png",
-      "/images/sfz_logo.png",
-      "/images/fifa_logo.png",
-      "/images/sfz_logo.png",
-      "/images/fifa_logo.png",
-      "/images/sfz_logo.png",
-      "/images/fifa_logo.png",
-      "/images/sfz_logo.png",
+      "/images/partner01.png",
+      "/images/partner01.png",
+      "/images/partner01.png",
+      "/images/partner01.png",
   ];
   
 
