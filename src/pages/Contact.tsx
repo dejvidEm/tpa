@@ -1,5 +1,4 @@
-import React from "react";
-import Form from "../components/Form";
+import React, { useRef, useState } from "react";
 import {
   BsEnvelope,
   BsFlag,
@@ -14,8 +13,129 @@ import { AiFillTikTok } from "react-icons/ai";
 import RotateLinks from "../components/rotateLinks";
 import ImageWavyBanner from "../components/ImageWavyBanner";
 import FeatureItemM from "../components/FeatureItemM";
+import InputField from "../components/InputField";
+import Button from "../components/ButtonComponent";
 
 const Contact: React.FC = () => {
+
+  interface FormData {
+    email: string;
+    photo: File | null;
+    name: string;
+    nationality: string;
+    club: string;
+    height: string;
+    weight: string;
+    foot: string;
+    position: string;
+    birthdate: string;
+    link1: string;
+    link2: string;
+    link3: string;
+  }
+  
+  const [formData, setFormData] = useState<FormData>({
+    email: '',
+    photo: null,
+    name: '',
+    nationality: '',
+    club: '',
+    height: '',
+    weight: '',
+    foot: '',
+    position: '',
+    birthdate: '',
+    link1: '',
+    link2: '',
+    link3: '',
+  });
+
+    const fileInputRef = useRef<HTMLInputElement>(null);
+  
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+      setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+      if (e.target.files && e.target.files.length > 0) {
+        setFormData({ ...formData, photo: e.target.files[0] });
+      }
+    };
+
+    const handleUploadClick = () => {
+      if (fileInputRef.current) {
+        fileInputRef.current.click();
+      }
+    };
+
+    console.log("Sending data:", formData); // Logovanie na kontrolu
+  
+    const handleSubmit = async (e: React.FormEvent) => {
+      e.preventDefault();
+      console.log("Sending data:", formData);
+  
+      const formDataToSend = new FormData();
+      formDataToSend.append("name", formData.name.trim());
+      formDataToSend.append("email", formData.email.trim());
+      formDataToSend.append("nationality", formData.nationality.trim());
+      formDataToSend.append("club", formData.club.trim());
+      formDataToSend.append("height", formData.height.trim());
+      formDataToSend.append("weight", formData.weight.trim());
+      formDataToSend.append("foot", formData.foot.trim());
+      formDataToSend.append("position", formData.position.trim());
+      formDataToSend.append("birthdate", formData.birthdate.trim());
+      formDataToSend.append("link1", formData.link1.trim());
+      formDataToSend.append("link2", formData.link2.trim());
+      formDataToSend.append("link3", formData.link3.trim());
+  
+      if (formData.photo) {
+        formDataToSend.append("photo", formData.photo);
+      }
+  
+      try {
+        const response = await fetch("https://topplayersagency.com/form.php", {
+          method: "POST",
+          body: formDataToSend,
+        });
+  
+        const textResponse = await response.text();
+        console.log("Raw response:", textResponse);
+  
+        try {
+          const result = JSON.parse(textResponse);
+          console.log("Parsed response:", result);
+  
+          if (response.ok) {
+            alert("Email successfully sent!");
+            setFormData({
+              email: "",
+              name: "",
+              photo: null,
+              nationality: "",
+              club: "",
+              height: "",
+              weight: "",
+              foot: "",
+              position: "",
+              birthdate: "",
+              link1: "",
+              link2: "",
+              link3: "",
+            });
+          } else {
+            alert(`Error: ${result.error}`);
+          }
+        } catch (jsonError) {
+          console.error("Failed to parse JSON:", textResponse);
+          alert("Invalid response from server.");
+        }
+      } catch (error) {
+        console.error("Error submitting form:", error);
+        alert("Failed to send message. Please try again.");
+      }
+    };
+    
+
   return (
     <div className="bg-[#0A2125] pt-40 relative">
       <img
@@ -117,7 +237,46 @@ const Contact: React.FC = () => {
             <h2 className="md:text-[40px] md:leading-[40px] text-[38px] leading-[40px]  mb-10 md:mt-4 mt-0 font-bold">
               I AM LOOKING FOR AN AGENT!
             </h2>
-            <Form />
+            <form className="space-y-6" onSubmit={handleSubmit}>
+      <InputField placeholder="Player's email" name="email" value={formData.email} onChange={handleChange} />
+
+      <div className="flex items-center border-b border-gray-500 p-2 overflow-hidden justify-between">
+                <input
+                  type="file"
+                  name="photo"
+                  accept="image/*"
+                  onChange={handleFileChange}
+                  ref={fileInputRef}
+                  className="hidden"
+                />
+                <span className="ml-2 text-white">
+                  {formData.photo ? formData.photo.name : "Import image"}
+                </span>
+                <button 
+                  type="button" 
+                  onClick={handleUploadClick} 
+                  className="ml-4 px-4 py-2 bg-gold_primary text-black rounded-md hover:bg-gold_secondary transition-all">
+                  Upload
+                </button>
+              </div>
+
+      <InputField placeholder="Name & Surname" name="name" value={formData.name} onChange={handleChange} />
+      <InputField placeholder="Nationality" name="nationality" value={formData.nationality} onChange={handleChange} />
+      <InputField placeholder="Club" name="club" value={formData.club} onChange={handleChange} />
+      <div className="flex space-x-4">
+        <InputField placeholder="Height" name="height" value={formData.height} onChange={handleChange} />
+        <InputField placeholder="Weight" name="weight" value={formData.weight} onChange={handleChange} />
+      </div>
+      <div className="flex space-x-4">
+        <InputField placeholder="Preferred foot" name="foot" value={formData.foot} onChange={handleChange} />
+        <InputField placeholder="Playing position" name="position" value={formData.position} onChange={handleChange} />
+      </div>
+      <InputField placeholder="Date of birth" name="birthdate" value={formData.birthdate} onChange={handleChange} />
+      <InputField placeholder="Link to your video No.1" name="link1" value={formData.link1} onChange={handleChange} />
+      <InputField placeholder="Link to your video No.2" name="link2" value={formData.link2} onChange={handleChange} />
+      <InputField placeholder="Link to your video No.3" name="link3" value={formData.link3} onChange={handleChange} />
+      <Button variant="primary" size='large'>Submit</Button>
+    </form>
           </div>
 
           <div className="space-y-8 block lg:hidden mb-16">
